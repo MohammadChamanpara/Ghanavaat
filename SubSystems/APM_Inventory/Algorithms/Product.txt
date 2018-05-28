@@ -1,0 +1,22 @@
+﻿function CreatePartsDocument(Receive ProductReceive)
+{
+	new Send
+	storesList=GetListOfStores()
+	Send.store=storesList.FindLast(store - >store.name.contains('اولیه'));
+	if(Send.store==null && storeslist.count>0)
+		send.Store=storeslist[0];
+	Send. ... = ...
+	
+	foreach ProductArticle product in ProductReceive
+	{
+		partsList=GetPartsList(product);
+		foreach partFormula in partsList
+		{
+			new SendArticle;
+			SendArticle.count=convertCountFromMeasure1ToMeasure2(product.goods_id,product.count,product.measure_id,partFormula.product_measure_id)*partFormula.count;
+			SendArticle.measure=partFormula.partMeasure;
+			SendArticle.Goods=partFormula.Goods;
+			Add SendArticle To Articles.
+		}
+	}
+}

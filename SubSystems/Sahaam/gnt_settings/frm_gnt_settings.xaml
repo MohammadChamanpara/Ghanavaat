@@ -1,0 +1,52 @@
+﻿<UIL:WindowOptions x:Class="APM_SubSystems.frm_gnt_settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_gnt_settings_selResult"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    Title="تنظیمات سیستم سهام" FontFamily="Tahoma" SizeToContent="WidthAndHeight" >
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbrMain"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox Name="grp_gnt_settings" DockPanel.Dock="Top" Header="تنظیمات سیستم سهام" Margin="20">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <APM:APMLabel Content=" هر سهم برابر با"/>
+                        <APM:APMIntTextBox Name="txt_gnt_settings_credit_meters" />
+                        <APM:APMLabel Content=" متر"/>
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content=" ارزش کل سهام شرکت :"/>
+                        <APM:APMMoneyTextBox Name="txt_gnt_settings_total_credit_price"  LostFocus="txt_gnt_settings_price_LostFocus"/>
+                        <APM:APMLabel Content="ریال"/>
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="تعداد سهام شرکت :" Margin="10,20,0,20"/>
+                        <APM:APMIntTextBox Name="txt_gnt_settings_total_credit_count" LostFocus="txt_gnt_settings_price_LostFocus" />
+                        <APM:APMLabel Content="سهم"/>
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="ارزش هر سهم:" />
+                        <APM:APMMoneyLabel Name="lbl_gnt_settings_one_credit_price"/>
+                        <APM:APMLabel Content="ریال"/>
+                    </StackPanel>
+                    <Line HorizontalAlignment="Stretch" Margin="3" Height="12"  Fill="AliceBlue"/>
+                    <StackPanel Orientation="Horizontal">
+                        <APM:APMLabel Content="مدیر عامل :"/>
+                        <APM:APMTextBox Name="txt_gnt_settings_executive_manager_name" />
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content=" رئیس هیئت مدیره :"/>
+                        <APM:APMTextBox Name="txt_gnt_settings_chairman_name"/>
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="حسابدار :" Margin="10,20,0,20"/>
+                        <APM:APMTextBox Name="txt_gnt_settings_accountant_name" />
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="مبلغ کمک های بلاعوض :" Margin="10,20,0,20"/>
+                        <APM:APMMoneyTextBox Name="txt_gnt_settings_help_price" />
+                        <APM:APMSeprator/>
+                    </StackPanel>
+                </StackPanel>
+            </APM:APMGroupBox>
+
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowOptions>

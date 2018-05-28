@@ -1,0 +1,3019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+  <gnt_service_masters>
+    <gnt_service_gnt_creditor_name>
+      <header>سهامدار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_gnt_creditor_name>
+    <gnt_service_code>
+      <header>شمارۀ سند خدمات</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_code>
+    <gnt_service_description>
+      <header>شرح سند خدمات</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_description>
+    <gnt_service_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_date>
+    <gnt_service_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_register_date>
+  </gnt_service_masters>
+  <gnt_service>
+    <gnt_service_selected>
+      <header>انتخاب</header>
+      <type>checkBoxcolumn</type>
+      <width>50</width>
+    </gnt_service_selected>
+    <gnt_service_code>
+      <header>شمارۀ سند خدمات</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_code>
+    <gnt_service_description>
+      <header>شرح سند خدمات</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_description>
+    <gnt_service_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_date>
+    <gnt_service_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_service_register_date>
+  </gnt_service>
+
+  <gnt_service_article>
+
+    <gnt_service_article_gnt_cost_type_name>
+      <header>نوع هزینه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_service_article_gnt_cost_type_name>
+
+    <gnt_service_article_count>
+      <header>تعداد جریب</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_service_article_count>
+
+    <gnt_service_article_unit_price>
+      <header>تعرفه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_service_article_unit_price>
+
+    <gnt_service_article_total_price>
+      <header>مبلغ کل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_service_article_total_price>
+
+  </gnt_service_article>
+  
+  <gnt_rpt_creditor_credits>
+
+    <gnt_rpt_creditor_credits_gnt_water_name>
+      <header> نام آب </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_gnt_water_name>
+
+    <gnt_rpt_creditor_credits_jerib>
+      <header>جریب</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_jerib>
+
+    <gnt_rpt_creditor_credits_minute>
+      <header>دقیقه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_minute>
+
+    <gnt_rpt_creditor_credits_second>
+      <header>ثانیه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_second>
+
+    <gnt_rpt_creditor_credits_earth>
+      <header>سهم زمین</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_earth>
+
+    <gnt_rpt_creditor_credits_credit>
+      <header>میزان سهام</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_rpt_creditor_credits_credit>
+
+  </gnt_rpt_creditor_credits>
+
+  <gnt_rpt_creditor_deals>
+    <gnt_rpt_creditor_deals_gnt_deal_date>
+      <header>تاریخ انتقال</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_deal_date>
+    <gnt_rpt_creditor_deals_gnt_sell_creditor_name>
+      <header>فروشنده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_sell_creditor_name>
+    <gnt_rpt_creditor_deals_gnt_buy_creditor_name>
+      <header>خریدار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_buy_creditor_name>
+    <gnt_rpt_creditor_deals_gnt_water_name>
+      <header>آب مورد معامله</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_water_name>
+    <gnt_rpt_creditor_deals_gnt_earth_name>
+      <header>مالک زمین مورد معامله</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_earth_name>
+    <gnt_rpt_creditor_deals_gnt_earth_surface>
+      <header>مساحت زمین</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_gnt_earth_surface>
+    <gnt_rpt_creditor_deals_sell_earth>
+      <header>متراژ انتقال یافته</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_sell_earth>
+    <gnt_rpt_creditor_deals_sell_credit>
+      <header>سهام انتقال یافته</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_sell_credit>
+    <gnt_rpt_creditor_deals_sell_price>
+      <header>ارزش هر سهم</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_sell_price>
+    <gnt_rpt_creditor_deals_sell_all_price>
+      <header>قیمت کل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_sell_all_price>
+    <gnt_rpt_creditor_deals_sell_agreement_price>
+      <header>مبلغ توافقی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_sell_agreement_price>
+    <gnt_rpt_creditor_deals_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_rpt_creditor_deals_description>
+
+  </gnt_rpt_creditor_deals>
+
+  <gnt_cost_type>
+
+    <gnt_cost_type_name>
+      <header>نام هزینه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_cost_type_name>
+
+    <gnt_cost_type_price>
+      <header>تعرفه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_cost_type_price>
+
+    <gnt_cost_type_is_public>
+      <header>هزینه عمومی</header>
+      <type>checkboxcolumn</type>
+      <width>100</width>
+    </gnt_cost_type_is_public>
+
+    <gnt_cost_type_glb_fiscal_year_name>
+      <header>دوره مالی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_cost_type_glb_fiscal_year_name>
+
+  </gnt_cost_type>
+
+  <gnt_creditor_account>
+
+    <gnt_creditor_account_title>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_creditor_account_title>
+
+    <gnt_creditor_account_date>
+      <header>تاریخ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_creditor_account_date>
+
+    <gnt_creditor_account_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_creditor_account_debt>
+
+    <gnt_creditor_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_creditor_account_credit>
+
+    <gnt_creditor_account_description>
+      <header>توضیحات</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_creditor_account_description>
+
+  </gnt_creditor_account>
+
+  <gnt_earth>
+
+    <gnt_earth_name>
+      <header>مالک زمین</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_name>
+
+    <gnt_earth_street>
+      <header>خیابان</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_street>
+
+    <gnt_earth_line>
+      <header>ردیف</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_line>
+
+    <gnt_earth_block>
+      <header>بلوک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_block>
+
+    <gnt_earth_plaque>
+      <header>پلاک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_plaque>
+    
+    <gnt_earth_surface>
+      <header>مساحت زمین</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_earth_surface>
+    
+  </gnt_earth>
+
+  <gnt_deal>
+    <gnt_deal_selected>
+      <header>انتخاب</header>
+      <type>checkBoxcolumn</type>
+      <width>50</width>
+    </gnt_deal_selected>
+    <gnt_deal_code>
+      <header>شمارۀ سند انتقال</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_deal_code>
+    <gnt_deal_description>
+      <header>شرح سند انتقال</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_deal_description>
+    <gnt_deal_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_deal_date>
+    <gnt_deal_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </gnt_deal_register_date>
+  </gnt_deal>
+
+  <gnt_deal_article>
+    <gnt_deal_article_gnt_sell_creditor_name>
+      <header>فروشنده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_gnt_sell_creditor_name>
+    <gnt_deal_article_gnt_buy_creditor_name>
+      <header>خریدار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_gnt_buy_creditor_name>
+    <gnt_deal_article_gnt_water_name>
+      <header>آب مورد معامله</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_gnt_water_name>
+    <gnt_deal_article_gnt_earth_name>
+      <header>مالک زمین مورد معامله</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_gnt_earth_name>
+    <gnt_deal_article_gnt_earth_surface>
+      <header>مساحت زمین</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_gnt_earth_surface>
+    <gnt_deal_article_sell_earth>
+      <header>متراژ انتقال یافته</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_sell_earth>
+    <gnt_deal_article_sell_credit>
+      <header>سهام انتقال یافته</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_sell_credit>
+    <gnt_deal_article_sell_price>
+      <header>ارزش هر سهم</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_sell_price>
+    <gnt_deal_article_sell_all_price>
+      <header>قیمت کل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_sell_all_price>
+    <gnt_deal_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_deal_article_description>
+
+  </gnt_deal_article>
+
+  <gnt_ownership>
+
+    <gnt_ownership_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </gnt_ownership_selected>
+
+    <gnt_ownership_gnt_water_name>
+      <header> نام آب </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_water_name>
+
+    <gnt_ownership_jerib>
+      <header>جریب</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_jerib>
+
+    <gnt_ownership_minute>
+      <header>دقیقه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_minute>
+
+    <gnt_ownership_second>
+      <header>ثانیه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_second>
+
+    <gnt_ownership_earth>
+      <header>سهم زمین</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_earth>
+
+    <gnt_ownership_credit>
+      <header>میزان سهام</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_credit>
+
+  </gnt_ownership>
+
+  <gnt_creditor>
+
+    <gnt_creditor_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </gnt_creditor_selected>
+
+    <gnt_creditor_name>
+      <header> نام و نام خانوادگی  </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_name>
+
+    <gnt_creditor_child_code>
+      <header>شماره پرونده</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_child_code>
+
+    <gnt_creditor_national_code>
+      <header> کد ملی </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_national_code>
+
+    <gnt_creditor_father_name>
+      <header> نام پدر</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_father_name>
+
+    <gnt_creditor_mobile>
+      <header> شماره موبایل</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_mobile>
+
+    <gnt_creditor_sum_credit>
+      <header>مجموع سهام</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_sum_credit>
+
+    <gnt_creditor_sum_earth>
+      <header>مجموع زمین ها(متر)</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_sum_earth>
+
+    <gnt_creditor_account_remaining_c>
+      <header>مانده حساب (ریال)</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_account_remaining_c>
+
+    <gnt_creditor_account_status>
+      <header>وضعیت حساب</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_account_status>
+
+    <gnt_creditor_earth_count>
+      <header>تعداد زمین</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_earth_count>
+
+    <gnt_creditor_num>
+      <header> کد سهامدار در سیستم قدیم  </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_num>
+
+    <gnt_creditor_parent>
+      <header> کد سهامدار اصلی در سیستم قدیم </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_creditor_parent>
+
+  </gnt_creditor>
+
+  <gnt_creditor_Group>
+    <gnt_creditor_group_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </gnt_creditor_group_selected>
+    <gnt_creditor_group_name>
+      <header>  نام </header>
+      <type> textcolumn </type>
+      <width> 150 </width>
+    </gnt_creditor_group_name>
+  </gnt_creditor_Group>
+
+  <gnt_water1>
+
+    <gnt_water1_name>
+      <header>نام آب اصلی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water1_name>
+
+    <gnt_water1_period>
+      <header>دورۀ آب</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water1_period>
+
+  </gnt_water1>
+
+  <gnt_water2>
+
+    <gnt_water2_gnt_water1_name>
+      <header>نام آب اصلی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water2_gnt_water1_name>
+
+    <gnt_water2_name>
+      <header>نام جوی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water2_name>
+
+  </gnt_water2>
+
+  <gnt_water>
+
+    <gnt_water_gnt_water1_name>
+      <header>نام آب اصلی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water_gnt_water1_name>
+
+    <gnt_water_gnt_water2_name>
+      <header>نام جوی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water_gnt_water2_name>
+
+    <gnt_water_taagh_name>
+      <header>نام طاق</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </gnt_water_taagh_name>
+
+  </gnt_water>
+
+  <gnt_water_ownerships>
+
+    <gnt_ownership_gnt_creditor_child_code>
+      <header>شماره پرونده</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_creditor_child_code>
+    <gnt_ownership_gnt_creditor_name>
+      <header> نام و نام خانوادگی  </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_creditor_name>
+    <gnt_ownership_gnt_creditor_father_name>
+      <header> نام پدر</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_creditor_father_name>
+    <gnt_ownership_gnt_creditor_identity_no>
+      <header> شماره شناسنامه </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_creditor_identity_no>
+    <gnt_ownership_gnt_creditor_national_code>
+      <header> کد ملی </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_gnt_creditor_national_code>
+    <gnt_ownership_jerib>
+      <header>جریب</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_jerib>
+
+    <gnt_ownership_minute>
+      <header>دقیقه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_minute>
+
+    <gnt_ownership_second>
+      <header>ثانیه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_second>
+
+    <gnt_ownership_credit>
+      <header>میزان سهام</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </gnt_ownership_credit>
+  </gnt_water_ownerships>
+
+
+  <acc_document>
+    <acc_document_selected>
+      <header>انتخاب</header>
+      <type>checkboxcolumn</type>
+      <width>50</width>
+    </acc_document_selected>
+
+    <acc_document_code>
+      <header>شماره عطف</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_code>
+
+    <acc_document_no>
+      <header>شماره سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_no>
+
+    <acc_document_status_glb_coding_name>
+      <header>وضعیت سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_status_glb_coding_name>
+
+    <acc_document_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_date>
+
+    <acc_document_description>
+      <header>شرح سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_description>
+
+    <acc_document_registerer_glb_user_name>
+      <header>ثبت کننده</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_registerer_glb_user_name>
+
+    <acc_document_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_register_date>
+
+  </acc_document>
+
+  <acc_document_type>
+    <acc_document_type_name>
+      <header> نام </header>
+      <type> textcolumn </type>
+      <width> 150 </width>
+    </acc_document_type_name>
+  </acc_document_type>
+
+  <acc_entity>
+    <glb_entity_type_option_glb_entity_type_name>
+      <header>نام موجودیت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_entity_type_option_glb_entity_type_name>
+    <glb_entity_type_option_pre_code>
+      <header>پیش کد موجودیت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_entity_type_option_pre_code>
+    <glb_entity_type_option_digit_count>
+      <header>تعداد ارقام کد موجودیت </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_entity_type_option_digit_count>
+    <glb_entity_type_option_code_edit_by_user>
+      <header>امکان ویرایش کد توسط کاربر</header>
+      <type>checkboxcolumn</type>
+      <width>50</width>
+    </glb_entity_type_option_code_edit_by_user>
+  </acc_entity>
+
+  <acc_document_article>
+    <acc_document_article_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_acc_chart_account_code>
+    <acc_document_article_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_acc_chart_account_name>
+    <acc_document_article_inventory_information>
+      <header>سند انبار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_inventory_information>
+    <acc_document_article_acc_chart_account_glb_entity_type_name>
+      <header>نوع حساب</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_acc_chart_account_glb_entity_type_name>
+    <acc_document_article_acc_chart_account_group_name>
+      <header>گروه حساب</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_acc_chart_account_group_name>
+    <acc_document_article_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_debt>
+    <acc_document_article_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_credit>
+    <acc_document_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </acc_document_article_description>
+  </acc_document_article>
+
+  <acc_chart_account>
+    <acc_chart_account_code>
+      <header>کد حساب </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_code>
+    <acc_chart_account_name>
+      <header>نام حساب </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_name>
+    <acc_chart_account_parent_names>
+      <header>کدینگ حسابداری </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_parent_names>
+  </acc_chart_account>
+
+  <acc_chart_account_for_form>
+    <acc_chart_account_code>
+      <header>کد حساب </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_code>
+    <acc_chart_account_name>
+      <header>نام حساب </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_name>
+    <acc_chart_account_glb_entity_type_name>
+      <header>نوع موجودیت</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_glb_entity_type_name>
+    <acc_chart_account_debt>
+      <header>بدهکار </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_debt>
+    <acc_chart_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_credit>
+    <acc_chart_account_remaining_debt>
+      <header>مانده بدهکار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_remaining_debt>
+    <acc_chart_account_remaining_credit>
+      <header>مانده بستانکار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_chart_account_remaining_credit>
+  </acc_chart_account_for_form>
+
+  <acc_detail>
+    <acc_detail_selected>
+      <header>انتخاب</header>
+      <type>checkboxcolumn</type>
+      <width>100</width>
+    </acc_detail_selected>
+    <acc_detail_code>
+      <header>کد تفصیل </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_detail_code>
+    <acc_detail_name>
+      <header>نام تفصیل </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_detail_name>
+    <acc_detail_glb_entity_type_name>
+      <header>نوع تفصیل </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </acc_detail_glb_entity_type_name>
+  </acc_detail>
+
+
+  <acc_rpt_account_balance>
+    <acc_rpt_account_balance_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_acc_chart_account_code>
+    <acc_rpt_account_balance_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_acc_chart_account_name>
+    <acc_rpt_account_balance_no>
+      <header>شماره سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_no>
+    <acc_rpt_account_balance_acc_document_type_name>
+      <header>نوع سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_acc_document_type_name>
+    <acc_rpt_account_balance_description>
+      <header>شرح سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_description>
+    <acc_rpt_account_balance_article_description>
+      <header>شرح آرتیکل</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_article_description>
+    <acc_rpt_account_balance_article_debt>
+      <header>مبلغ بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_article_debt>
+    <acc_rpt_account_balance_article_credit>
+      <header>مبلغ بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_article_credit>
+    <acc_rpt_account_balance_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_remaining>
+    <acc_rpt_account_balance_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_account_balance_specification>
+
+  </acc_rpt_account_balance>
+
+  <acc_rpt_chart_balance>
+    <acc_rpt_chart_balance_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_acc_chart_account_code>
+    <acc_rpt_chart_balance_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_acc_chart_account_name>
+    <acc_rpt_chart_balance_acc_chart_account_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_acc_chart_account_debt>
+    <acc_rpt_chart_balance_acc_chart_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_acc_chart_account_credit>
+    <acc_rpt_chart_balance_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_specification>
+    <acc_rpt_chart_balance_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_remaining>
+  </acc_rpt_chart_balance>
+
+  <acc_rpt_chart_balance_all_levels>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_code>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_name>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_debt>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_credit>
+    <acc_rpt_chart_balance_all_levels_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_specification>
+    <acc_rpt_chart_balance_all_levels_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_remaining>
+  </acc_rpt_chart_balance_all_levels>
+
+  <acc_rpt_cover>
+
+    <acc_rpt_cover_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_acc_chart_account_code>
+    <acc_rpt_cover_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_acc_chart_account_name>
+    <acc_rpt_cover_acc_chart_account_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_acc_chart_account_debt>
+    <acc_rpt_cover_acc_chart_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_acc_chart_account_credit>
+    <acc_rpt_cover_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_specification>
+    <acc_rpt_cover_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_cover_remaining>
+
+
+
+
+
+  </acc_rpt_cover>
+
+  <acc_rpt_cover2>
+
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_code>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_name>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_debt>
+    <acc_rpt_chart_balance_all_levels_acc_chart_account_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_acc_chart_account_credit>
+    <acc_rpt_chart_balance_all_levels_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_specification>
+    <acc_rpt_chart_balance_all_levels_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_chart_balance_all_levels_remaining>
+  </acc_rpt_cover2>
+
+  <acc_rpt_notebooks>
+    <acc_rpt_notebooks_acc_document_code>
+      <header>شماره عطف</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_acc_document_code>
+    <acc_rpt_notebooks_acc_document_no>
+      <header>شماره سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_acc_document_no>
+    <acc_rpt_notebooks_acc_document_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_acc_document_date>
+    <acc_rpt_notebooks_acc_document_description>
+      <header>شرح سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_acc_document_description>
+    <acc_rpt_notebooks_sum_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_sum_debt>
+    <acc_rpt_notebooks_sum_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_sum_credit>
+    <acc_rpt_notebooks_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_specification>
+    <acc_rpt_notebooks_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_notebooks_remaining>
+  </acc_rpt_notebooks>
+
+  <acc_rpt_daily_notebooks>
+    <acc_rpt_daily_notebooks_acc_document_code>
+      <header>شماره عطف</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_acc_document_code>
+    <acc_rpt_daily_notebooks_acc_document_no>
+      <header>شماره سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_acc_document_no>
+    <acc_rpt_daily_notebooks_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_acc_chart_account_name>
+
+    <acc_rpt_daily_notebooks_acc_document_date>
+      <header>تاریخ سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_acc_document_date>
+    <acc_rpt_daily_notebooks_acc_document_article_description>
+      <header>شرح آرتیکل</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_acc_document_article_description>
+    <acc_rpt_daily_notebooks_article_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_article_debt>
+    <acc_rpt_daily_notebooks_article_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_article_credit>
+    <acc_rpt_daily_notebooks_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_specification>
+    <acc_rpt_daily_notebooks_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_daily_notebooks_remaining>
+  </acc_rpt_daily_notebooks>
+
+  <acc_rpt_kol_notebook_rule>
+    <acc_rpt_kol_notebook_rule_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_chart_account_code>
+    <acc_rpt_kol_notebook_rule_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_chart_account_name>
+    <acc_rpt_kol_notebook_rule_acc_document_no>
+      <header>شماره روزنامه</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_acc_document_no>
+    <acc_rpt_kol_notebook_rule_day>
+      <header>روز</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_day>
+    <acc_rpt_kol_notebook_rule_month>
+      <header>ماه</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_month>
+    <acc_rpt_kol_notebook_rule_acc_document_description>
+      <header>شرح سند</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_acc_document_description>
+    <acc_rpt_kol_notebook_rule_sum_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_sum_debt>
+    <acc_rpt_kol_notebook_rule_sum_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_sum_credit>
+    <acc_rpt_kol_notebook_rule_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_specification>
+    <acc_rpt_kol_notebook_rule_remaining>
+      <header>مانده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_kol_notebook_rule_remaining>
+  </acc_rpt_kol_notebook_rule>
+
+  <acc_rpt_balance_4columns>
+    <acc_rpt_balance_4columns_acc_chart_account_code>
+      <header>کد حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_acc_chart_account_code>
+    <acc_rpt_balance_4columns_acc_chart_account_name>
+      <header>نام حساب</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_acc_chart_account_name>
+    <acc_rpt_balance_4columns_sum_debt>
+      <header>بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_sum_debt>
+    <acc_rpt_balance_4columns_sum_credit>
+      <header>بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_sum_credit>
+    <acc_rpt_balance_4columns_specification>
+      <header>تشخیص</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_specification>
+    <acc_rpt_balance_4columns_remaining_debt>
+      <header>مانده بدهکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_remaining_debt>
+    <acc_rpt_balance_4columns_remaining_credit>
+      <header>مانده بستانکار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_rpt_balance_4columns_remaining_credit>
+  </acc_rpt_balance_4columns>
+
+
+
+
+
+  <inv_physical_counting>
+
+    <inv_physical_counting_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_inv_store_name>
+
+    <inv_physical_counting_glb_personel_name>
+      <header>نام حسابدار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_glb_personel_name>
+
+    <inv_physical_counting_warden_name>
+      <header>نام بازرس</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_warden_name>
+
+    <inv_physical_counting_start_date>
+      <header>تاریخ شروع</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_start_date>
+
+    <inv_physical_counting_end_date>
+      <header>تاریخ پایان</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_end_date>
+
+    <inv_physical_counting_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_register_date>
+
+    <inv_physical_counting_registerer_glb_user_name>
+      <header>ثبت کننده</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_registerer_glb_user_name>
+
+    <inv_physical_counting_description>
+      <header>توضیحات</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_description>
+
+  </inv_physical_counting>
+
+  <inv_physical_counting_article>
+
+    <inv_physical_counting_article_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_inv_group_goods_name>
+
+    <inv_physical_counting_article_glb_measure_name>
+      <header>واحد شمارش</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_glb_measure_name>
+
+    <inv_physical_counting_article_first_count>
+      <header>تعداد در شمارش اول</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_first_count>
+
+    <inv_physical_counting_article_second_count>
+      <header>تعداد در شمارش دوم</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_second_count>
+
+    <inv_physical_counting_article_third_count>
+      <header>تعداد در شمارش سوم</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_third_count>
+
+    <inv_physical_counting_article_shortage>
+      <header>کسری</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_shortage>
+
+    <inv_physical_counting_article_surplus>
+      <header>مازاد</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_surplus>
+
+    <inv_physical_counting_article_description>
+      <header>توضیحات</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_physical_counting_article_description>
+
+  </inv_physical_counting_article>
+
+  <inv_groups>
+    <inv_group_goods_code>
+      <header>  کد  </header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </inv_group_goods_code>
+    <inv_group_goods_real_name>
+      <header>  نام </header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </inv_group_goods_real_name>
+  </inv_groups>
+
+  <inv_goods>
+    <inv_group_goods_code>
+      <header>  کد  </header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </inv_group_goods_code>
+    <inv_group_goods_real_name>
+      <header>  نام </header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </inv_group_goods_real_name>
+    <inv_group_goods_glb_measure_name>
+      <header>واحد شمارش</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_group_goods_glb_measure_name>
+
+
+  </inv_goods>
+
+  <inv_group_attribute>
+    <inv_attribute_selected>
+      <header> انتخاب </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_attribute_selected>
+    <inv_attribute_name>
+      <header>نام خصوصیت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_attribute_name>
+  </inv_group_attribute>
+
+  <inv_attribute>
+    <inv_attribute_selected>
+      <header>انتخاب </header>
+      <type>checkboxcolumn</type>
+      <width>100</width>
+    </inv_attribute_selected>
+    <inv_attribute_name>
+      <header>نام خصوصیت </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_attribute_name>
+    <inv_attribute_inv_goods_attribute_value>
+      <header>مقدار/محتوی </header>
+      <type>textcolumn</type>
+      <width>100</width>
+      <Editable/>
+    </inv_attribute_inv_goods_attribute_value>
+  </inv_attribute>
+
+  <inv_goods_request>
+
+    <inv_goods_request_selected>
+      <header>انتخاب</header>
+      <type>checkBoxcolumn</type>
+      <width>50</width>
+    </inv_goods_request_selected>
+
+    <inv_goods_request_code>
+      <header>شماره درخواست کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_code>
+
+    <inv_goods_request_inv_store_name>
+      <header>انبار مورد درخواست</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_inv_store_name>
+
+    <inv_goods_request_description>
+      <header>شرح درخواست</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_description>
+
+    <inv_goods_request_date>
+      <header>تاریخ درخواست </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_date>
+
+    <inv_goods_request_send_deadline_date>
+      <header>مهلت ارسال</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_send_deadline_date>
+
+    <inv_goods_request_register_date>
+      <header>تاریخ ثبت درخواست</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_register_date>
+
+    <inv_goods_request_register_time>
+      <header>زمان ثبت درخواست  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_register_time>
+
+  </inv_goods_request>
+
+  <inv_goods_request_article>
+    <inv_goods_request_article_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_inv_group_goods_code>
+    <inv_goods_request_article_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_inv_group_goods_name>
+    <inv_goods_request_article_count_measure>
+      <header>مقدار درخواست کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_count_measure>
+    <inv_goods_request_article_all_send_count_measure>
+      <header>مقدار حواله شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_all_send_count_measure>
+    <inv_goods_request_article_all_buy_request_count_measure>
+      <header>مقدار درخواست خرید شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_all_buy_request_count_measure>
+    <inv_goods_request_article_consume_place>
+      <header>محل مصرف</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_consume_place>
+    <inv_goods_request_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_request_article_description>
+  </inv_goods_request_article>
+
+  <inv_goods_send>
+
+    <inv_goods_send_selected>
+      <header> انتخاب </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_goods_send_selected>
+
+    <inv_goods_send_no>
+      <header>شماره سریال</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_no>
+
+    <inv_goods_send_code>
+      <header>شماره حواله</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_code>
+
+    <inv_goods_send_type_glb_coding_name>
+      <header>نوع حواله</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_type_glb_coding_name>
+
+    <inv_goods_send_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_inv_store_name>
+
+    <inv_goods_send_destination_glb_entity_type_name>
+      <header>نوع طرف سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_destination_glb_entity_type_name>
+
+    <inv_goods_send_destination_acc_detail_name>
+      <header>طرف سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_destination_acc_detail_name>
+
+    <inv_goods_send_have_acc_document>
+      <header>سند حسابداری  </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_goods_send_have_acc_document>
+
+    <inv_goods_send_description>
+      <header>شرح حواله</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_description>
+
+    <inv_goods_send_registerer_glb_user_name>
+      <header>ثبت کننده</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_registerer_glb_user_name>
+
+    <inv_goods_send_date>
+      <header>تاریخ حواله</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_date>
+
+    <inv_goods_send_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_register_date>
+
+    <inv_goods_send_register_time>
+      <header>زمان ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_send_register_time>
+
+
+
+  </inv_goods_send>
+
+  <inv_goods_send_article>
+    <inv_goods_send_article_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_inv_group_goods_code>
+    <inv_goods_send_article_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_inv_group_goods_name>
+    <inv_goods_send_article_inv_goods_request_article_count_measure>
+      <header>مقدار درخواست کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_inv_goods_request_article_count_measure>
+    <inv_goods_send_article_all_send_count_measure>
+      <header>مقدار حوالۀ سایر اسناد</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_all_send_count_measure>
+    <inv_goods_send_article_all_buy_request_count_measure>
+      <header>مقدار درخواست خرید شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_all_buy_request_count_measure>
+
+    <inv_goods_send_article_count_measure>
+      <header>مقدار حوالۀ این سند</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_count_measure>
+    <inv_goods_send_article_inv_goods_request_article_consume_place>
+      <header>محل مصرف</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_inv_goods_request_article_consume_place>
+    <inv_goods_send_article_price>
+      <header>قیمت واحد</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_price>
+
+    <inv_goods_send_article_all_price>
+      <header>قیمت کل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_all_price>
+    <inv_goods_send_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_send_article_description>
+  </inv_goods_send_article>
+
+  <inv_buy_request>
+    <inv_buy_request_selected>
+      <header>انتخاب</header>
+      <type>checkBoxcolumn</type>
+      <width>50</width>
+    </inv_buy_request_selected>
+    <inv_buy_request_code>
+      <header>شمارۀ درخواست خرید</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_buy_request_code>
+    <inv_buy_request_inv_store_name>
+      <header>انبار درخواست کننده</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_buy_request_inv_store_name>
+    <inv_buy_request_description>
+      <header>شرح درخواست خرید</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_buy_request_description>
+    <inv_buy_request_date>
+      <header>تاریخ درخواست</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_buy_request_date>
+    <inv_buy_request_send_deadline_date>
+      <header>مهلت ارسال</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_buy_request_send_deadline_date>
+  </inv_buy_request>
+
+  <inv_buy_request_article>
+    <inv_buy_request_article_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_inv_group_goods_code>
+    <inv_buy_request_article_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_inv_group_goods_name>
+    <inv_buy_request_article_inv_goods_request_article_count_measure>
+      <header>مقدار در خواست کالا </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_inv_goods_request_article_count_measure>
+    <inv_buy_request_article_all_send_count_measure>
+      <header>مقدار حواله شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_all_send_count_measure>
+    <inv_buy_request_article_all_buy_request_count_measure>
+      <header>درخواست خرید سایر اسناد</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_all_buy_request_count_measure>
+    <inv_buy_request_article_all_receive_count_measure>
+      <header>مقدار خریداری شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_all_receive_count_measure>
+    <inv_buy_request_article_count_measure>
+      <header>درخواست خرید این سند</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_count_measure>
+    <inv_buy_request_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_buy_request_article_description>
+  </inv_buy_request_article>
+
+  <inv_goods_receive>
+
+    <inv_goods_receive_selected>
+      <header> انتخاب </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_goods_receive_selected>
+
+    <inv_goods_receive_no>
+      <header>شماره سریال</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_no>
+
+    <inv_goods_receive_code>
+      <header>شماره رسید</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_code>
+
+    <inv_goods_receive_type_glb_coding_name>
+      <header>نوع رسید</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_type_glb_coding_name>
+
+    <inv_goods_receive_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_inv_store_name>
+
+    <inv_goods_receive_destination_glb_entity_type_name>
+      <header>نوع طرف سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_destination_glb_entity_type_name>
+
+    <inv_goods_receive_destination_acc_detail_name>
+      <header>طرف سند</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_destination_acc_detail_name>
+
+    <inv_goods_receive_have_acc_document>
+      <header>سند حسابداری  </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_goods_receive_have_acc_document>
+
+    <inv_goods_receive_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_description>
+
+    <inv_goods_receive_registerer_glb_user_name>
+      <header>ثبت کننده</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_registerer_glb_user_name>
+
+    <inv_goods_receive_date>
+      <header>تاریخ رسید</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_date>
+
+    <inv_goods_receive_register_date>
+      <header>تاریخ ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_register_date>
+
+    <inv_goods_receive_register_time>
+      <header>زمان ثبت</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </inv_goods_receive_register_time>
+
+
+
+  </inv_goods_receive>
+
+  <inv_goods_receive_article>
+    <inv_goods_receive_article_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_inv_group_goods_code>
+
+    <inv_goods_receive_article_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_inv_group_goods_name>
+
+    <inv_goods_receive_article_inv_buy_request_article_count_measure>
+      <header> مقدار در خواست خرید</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_inv_buy_request_article_count_measure>
+
+    <inv_goods_receive_article_all_receive_count_measure>
+      <header>مقدار سایر رسید ها</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_all_receive_count_measure>
+
+    <inv_goods_receive_article_count_measure>
+      <header>مقدار این رسید</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_count_measure>
+
+    <inv_goods_receive_article_price>
+      <header>قیمت واحد</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_price>
+
+    <inv_goods_receive_article_all_price>
+      <header>قیمت کل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_all_price>
+
+    <inv_goods_receive_article_description>
+      <header>شرح</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_receive_article_description>
+
+  </inv_goods_receive_article>
+
+  <inv_store>
+
+    <inv_store_selected>
+      <header> انتخاب </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </inv_store_selected>
+    <inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>120</width>
+    </inv_store_code>
+    <inv_store_real_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>120</width>
+    </inv_store_real_name>
+    <inv_store_glb_personel_name>
+      <header>نام انباردار</header>
+      <type>textcolumn</type>
+      <width>120</width>
+    </inv_store_glb_personel_name>
+  </inv_store>
+
+  <inv_goods_store>
+
+    <inv_goods_store_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>120</width>
+    </inv_goods_store_store_name>
+
+    <inv_goods_store_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>120</width>
+    </inv_goods_store_goods_name>
+
+    <inv_goods_store_stock>
+      <header>مقدار موجودی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_store_stock>
+
+    <inv_goods_store_glb_measure_name>
+      <header>واحد اصلی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_goods_store_glb_measure_name>
+
+  </inv_goods_store>
+
+  <inv_goods_receive_inv_goods_send>
+
+    <inv_goods_receive_inv_goods_send_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </inv_goods_receive_inv_goods_send_selected>
+
+    <inv_goods_receive_inv_goods_send_no>
+      <header> شماره سریال </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_no>
+
+    <inv_goods_receive_inv_goods_send_type>
+      <header> نوع سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_type>
+
+    <inv_goods_receive_inv_goods_send_code>
+      <header> شماره سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_code>
+
+    <inv_goods_receive_inv_goods_send_inv_store_name>
+      <header>  نام انبار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_inv_store_name>
+
+    <inv_goods_receive_inv_goods_send_register_date>
+      <header> تاریخ سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_register_date>
+
+    <inv_goods_receive_inv_goods_send_destination_glb_entity_type_name>
+      <header> نوع طرف سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_destination_glb_entity_type_name>
+
+    <inv_goods_receive_inv_goods_send_destination_acc_detail_name>
+      <header> طرف سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_destination_acc_detail_name>
+
+    <inv_goods_receive_inv_goods_send_description>
+      <header> شرح سند </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_receive_inv_goods_send_description>
+
+  </inv_goods_receive_inv_goods_send>
+
+  <inv_product_part>
+    <har>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </har>
+    <inv_product_part_product_glb_measure_name>
+      <header>واحد محصول</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_product_part_product_glb_measure_name>
+    <inv_product_part_product_inv_group_goods_name>
+      <header>نام محصول</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_product_part_product_inv_group_goods_name>
+    <shamel>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </shamel>
+    <inv_product_part_part_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_product_part_part_inv_group_goods_name>
+    <amount>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </amount>
+    <inv_product_part_formula>
+      <header>مقدار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_product_part_formula>
+    <inv_product_part_part_glb_measure_name>
+      <header>واحد کالا</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_product_part_part_glb_measure_name>
+    <ast>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </ast>
+  </inv_product_part>
+
+  <inv_goods_glb_measure>
+    <inv_goods_glb_measure_har>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </inv_goods_glb_measure_har>
+    <inv_goods_glb_measure_Main_glb_measure_name>
+      <header>واحد</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_glb_measure_Main_glb_measure_name>
+    <inv_goods_glb_measure_az>
+      <header></header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </inv_goods_glb_measure_az>
+    <inv_goods_glb_measure_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_glb_measure_inv_group_goods_name>
+    <inv_goods_glb_measure_equals>
+      <header></header>
+      <type>textcolumn</type>
+      <width>30</width>
+    </inv_goods_glb_measure_equals>
+    <inv_goods_glb_measure_formula_for_show>
+      <header>ضریب</header>
+      <type>textcolumn</type>
+      <width>20</width>
+    </inv_goods_glb_measure_formula_for_show>
+    <inv_goods_glb_measure_Second_glb_measure_name>
+      <header>واحد</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </inv_goods_glb_measure_Second_glb_measure_name>
+  </inv_goods_glb_measure>
+
+  <inv_rpt_goods_cardex>
+    <inv_rpt_goods_cardex_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_inv_store_code>
+
+    <inv_rpt_goods_cardex_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_inv_store_name>
+
+    <inv_rpt_goods_cardex_date>
+      <header>تاریخ  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_date>
+
+    <inv_rpt_goods_cardex_type>
+      <header>نوع سند</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_type>
+
+    <inv_rpt_goods_cardex_opening_count>
+      <header>مقدار اولیه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_opening_count>
+
+    <inv_rpt_goods_cardex_opening_price>
+      <header>مبلغ اولیه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_opening_price>
+
+    <inv_rpt_goods_cardex_receive_count>
+      <header>مقدار وارده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_receive_count>
+
+    <inv_rpt_goods_cardex_receive_price>
+      <header>مبلغ وارده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_receive_price>
+
+    <inv_rpt_goods_cardex_send_count>
+      <header>مقدار صادره</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_send_count>
+
+    <inv_rpt_goods_cardex_send_price>
+      <header>مبلغ صادره</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_send_price>
+
+    <inv_rpt_goods_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_measure_name>
+
+    <inv_rpt_goods_cardex_destination_acc_detail_name>
+      <header>طرف سند</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_cardex_destination_acc_detail_name>
+
+  </inv_rpt_goods_cardex>
+
+  <inv_rpt_goods_stock_all_sel>
+    <inv_rpt_goods_stock_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_inv_store_code>
+
+    <inv_rpt_goods_stock_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_inv_store_name>
+
+    <inv_rpt_goods_stock_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_inv_group_goods_code>
+
+    <inv_rpt_goods_stock_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_inv_group_goods_name>
+
+    <inv_rpt_goods_stock_all_glb_measure_name>
+      <header>واحد اندازه گیری  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_glb_measure_name>
+
+    <inv_rpt_goods_stock_all_opening_count>
+      <header>مقدار افتتاحیه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_opening_count>
+
+    <inv_rpt_goods_stock_all_goods_request_count>
+      <header>مقدار درخواست کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_goods_request_count>
+
+    <inv_rpt_goods_stock_all_receive_count>
+      <header>مقدار رسید شده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_receive_count>
+
+    <inv_rpt_goods_stock_all_buy_request_count>
+      <header>مقدار درخواست خرید</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_buy_request_count>
+
+    <inv_rpt_goods_stock_all_send_count>
+      <header>مقدار حواله صادره</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_all_send_count>
+
+  </inv_rpt_goods_stock_all_sel>
+
+  <inv_rpt_goods_stock_sel>
+    <inv_rpt_goods_stock_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_inv_store_code>
+    <inv_rpt_goods_stock_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_inv_store_name>
+    <inv_rpt_goods_stock_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_inv_group_goods_code>
+
+    <inv_rpt_goods_stock_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_inv_group_goods_name>
+
+    <inv_rpt_goods_stock_glb_measure_name>
+      <header>واحد اندازه گیری  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_glb_measure_name>
+
+    <inv_rpt_goods_stock_opening_count>
+      <header>مقدار اولیه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_opening_count>
+
+    <inv_rpt_goods_stock_opening_price>
+      <header>مبلغ اولیه</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_opening_price>
+
+    <inv_rpt_goods_stock_receive_count>
+      <header>مقدار وارده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_receive_count>
+
+    <inv_rpt_goods_stock_receive_price>
+      <header>مبلغ وارده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_receive_price>
+
+    <inv_rpt_goods_stock_send_count>
+      <header>مقدار صادره</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_send_count>
+
+    <inv_rpt_goods_stock_send_price>
+      <header>مبلغ صادره</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_send_price>
+
+    <inv_rpt_goods_stock_remaining_count>
+      <header>مقدار مانده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_remaining_count>
+
+    <inv_rpt_goods_stock_remaining_price>
+      <header>مبلغ مانده</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_stock_remaining_price>
+
+  </inv_rpt_goods_stock_sel>
+
+  <inv_rpt_goods_send_all>
+    <inv_rpt_goods_send_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_inv_store_code>
+    <inv_rpt_goods_send_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_inv_store_name>
+    <inv_rpt_goods_send_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_inv_group_goods_code>
+
+    <inv_rpt_goods_send_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_inv_group_goods_name>
+
+    <inv_rpt_goods_send_all_send_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_send_count>
+
+    <inv_rpt_goods_send_all_send_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_send_glb_measure_name>
+
+    <inv_rpt_goods_send_all_send_price>
+      <header>مبلغ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_all_send_price>
+
+  </inv_rpt_goods_send_all>
+
+  <inv_rpt_goods_send>
+    <inv_rpt_goods_send_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_inv_store_code>
+
+    <inv_rpt_goods_send_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_inv_store_name>
+
+    <inv_rpt_goods_send_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_inv_group_goods_code>
+
+    <inv_rpt_goods_send_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_inv_group_goods_name>
+
+    <inv_rpt_goods_send_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_count>
+
+    <glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_measure_name>
+
+
+    <inv_rpt_goods_send_inv_goods_price>
+      <header>مبلغ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_send_inv_goods_price>
+
+  </inv_rpt_goods_send>
+
+  <inv_rpt_goods_receive_all>
+
+    <inv_rpt_goods_receive_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_inv_store_code>
+
+    <inv_rpt_goods_receive_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_inv_store_name>
+
+    <inv_rpt_goods_receive_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_inv_group_goods_code>
+
+    <inv_rpt_goods_receive_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_inv_group_goods_name>
+
+    <inv_rpt_goods_receive_all_receive_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_receive_count>
+
+    <inv_rpt_goods_receive_all_receive_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_receive_glb_measure_name>
+
+    <inv_rpt_goods_receive_all_receive_price>
+      <header>مبلغ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_all_receive_price>
+
+  </inv_rpt_goods_receive_all>
+
+  <inv_rpt_goods_receive>
+
+    <inv_rpt_goods_receive_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_inv_store_code>
+
+    <inv_rpt_goods_receive_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_inv_store_name>
+
+    <inv_rpt_goods_receive_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_inv_group_goods_code>
+
+    <inv_rpt_goods_receive_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_inv_group_goods_name>
+
+    <inv_rpt_goods_receive_receive_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_receive_count>
+
+    <inv_rpt_goods_receive_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_glb_measure_name>
+
+    <inv_rpt_goods_receive_receive_price>
+      <header>مبلغ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_receive_receive_price>
+
+  </inv_rpt_goods_receive>
+
+  <inv_rpt_goods_opening_all>
+
+    <inv_rpt_goods_opening_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_inv_store_code>
+
+    <inv_rpt_goods_opening_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_inv_store_name>
+
+    <inv_rpt_goods_opening_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_inv_group_goods_code>
+
+    <inv_rpt_goods_opening_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_inv_group_goods_name>
+
+    <inv_rpt_goods_opening_all_receive_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_receive_count>
+
+    <inv_rpt_goods_opening_all_receive_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_receive_glb_measure_name>
+
+    <inv_rpt_goods_opening_all_receive_price>
+      <header>مبلغ</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_opening_all_receive_price>
+
+  </inv_rpt_goods_opening_all>
+
+  <inv_rpt_goods_request_article>
+    <inv_rpt_goods_request_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_inv_store_code>
+
+    <inv_rpt_goods_request_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_inv_store_name>
+
+    <inv_rpt_goods_request_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_inv_group_goods_code>
+
+    <inv_rpt_goods_request_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_inv_group_goods_name>
+
+    <inv_rpt_goods_request_all_goods_request_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_goods_request_count>
+
+    <inv_rpt_goods_request_all_goods_request_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_goods_request_all_goods_request_glb_measure_name>
+
+  </inv_rpt_goods_request_article>
+
+  <inv_rpt_buy_request_article>
+    <inv_rpt_buy_request_all_inv_store_code>
+      <header>کد انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_inv_store_code>
+
+    <inv_rpt_buy_request_all_inv_store_name>
+      <header>نام انبار</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_inv_store_name>
+
+    <inv_rpt_buy_request_all_inv_group_goods_code>
+      <header>کد کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_inv_group_goods_code>
+    <inv_rpt_buy_request_all_inv_group_goods_name>
+      <header>نام کالا</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_inv_group_goods_name>
+
+    <inv_rpt_buy_request_all_buy_request_count>
+      <header>مقدار  </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_buy_request_count>
+
+    <inv_rpt_buy_request_all_buy_request_glb_measure_name>
+      <header>واحد اندازه گیری</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </inv_rpt_buy_request_all_buy_request_glb_measure_name>
+
+  </inv_rpt_buy_request_article>
+
+
+
+
+
+
+  <glb_secondary_measure>
+
+    <glb_measure_selected>
+      <header>انتخاب </header>
+      <type>checkboxcolumn</type>
+      <width>100</width>
+    </glb_measure_selected>
+
+    <glb_measure_name>
+      <header>واحد فرعی </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_measure_name>
+
+    <glb_measure_formula>
+      <header>فرمول</header>
+      <type>textcolumn</type>
+      <width>100</width>
+      <readonly>false</readonly>
+    </glb_measure_formula>
+
+  </glb_secondary_measure>
+
+  <glb_bank_account_type>
+
+    <glb_bank_account_type_name>
+      <header>نوع حساب بانکی </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_account_type_name>
+
+  </glb_bank_account_type>
+
+  <glb_bank>
+    <glb_bank_code>
+      <header>کد بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_code>
+
+    <glb_bank_real_name>
+      <header>نام بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_real_name>
+  </glb_bank>
+
+  <glb_bank_branch>
+
+    <glb_bank_branch_code>
+      <header>کد شعبه بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_branch_code>
+
+    <glb_bank_branch_glb_bank_name>
+      <header>نام بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_branch_glb_bank_name>
+
+    <glb_bank_branch_real_name>
+      <header>نام شعبه بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_branch_real_name>
+
+  </glb_bank_branch>
+
+  <glb_bank_account>
+
+    <glb_bank_account_code>
+      <header>کد حساب بانکی </header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_account_code>
+
+
+    <glb_bank_account_glb_bank_name>
+      <header>نام  بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_account_glb_bank_name>
+
+
+    <glb_bank_account_glb_bank_branch_name>
+      <header>نام شعبه بانک</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_account_glb_bank_branch_name>
+
+    <glb_bank_account_real_name>
+      <header>نام حساب بانکی</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_bank_account_real_name>
+
+
+
+  </glb_bank_account>
+
+  <glb_person>
+    <glb_person_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_person_selected>
+    <glb_person_name>
+      <header> نام و نام خانوادگی  </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_person_name>
+
+    <glb_person_code>
+      <header> کد شخص  </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_person_code>
+
+    <glb_person_national_code>
+      <header> کد ملی </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_person_national_code>
+
+    <glb_person_identity_no>
+      <header> شماره شناسنامه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_person_identity_no>
+
+  </glb_person>
+
+  <glb_personel>
+    <glb_personel_selected>
+      <header> انتخاب </header>
+      <type> checkBoxcolumn </type>
+      <width> 70 </width>
+    </glb_personel_selected>
+    <glb_personel_code>
+      <header>  کد </header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </glb_personel_code>
+    <glb_personel_name>
+      <header> نام و نام خانوادگی  </header>
+      <type> textcolumn </type>
+      <width>250 </width>
+    </glb_personel_name>
+    <glb_personel_national_code>
+      <header> کد ملی </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_personel_national_code>
+    <glb_personel_identity_no>
+      <header> شماره شناسنامه</header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_personel_identity_no>
+    <glb_personel_glb_cost_center_name>
+      <header> نام مرکز هزینه</header>
+      <type> textcolumn </type>
+      <width>200 </width>
+    </glb_personel_glb_cost_center_name>
+
+
+  </glb_personel>
+
+  <glb_personel_group>
+
+    <glb_personel_group_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_personel_group_selected>
+
+    <glb_personel_group_name>
+      <header>نام گروه پرسنل</header>
+      <type> textcolumn </type>
+      <width> 100 </width>
+    </glb_personel_group_name>
+  </glb_personel_group>
+
+  <glb_cost_center>
+    <glb_cost_center_selected>
+      <header>انتخاب</header>
+      <type>checkBoxcolumn</type>
+      <width>50</width>
+    </glb_cost_center_selected>
+
+    <glb_cost_center_code>
+      <header>کد مرکز هزینه</header>
+      <type> Textcolumn </type>
+      <Width> 100 </Width>
+    </glb_cost_center_code>
+    <glb_cost_center_real_name>
+      <header>نام مرکز هزینه</header>
+      <type> Textcolumn </type>
+      <Width> 200 </Width>
+    </glb_cost_center_real_name>
+    <glb_cost_center_latin_name>
+      <header>نام لاتین</header>
+      <type> Textcolumn </type>
+      <Width> 200 </Width>
+    </glb_cost_center_latin_name>
+    <glb_cost_center_status>
+      <header>فعال</header>
+      <type> CheckBoxColumn </type>
+      <Width> 100 </Width>
+    </glb_cost_center_status>
+    <glb_cost_center_typ_glb_coding_name>
+      <header>نوع مرکز هزینه</header>
+      <type> Textcolumn </type>
+      <Width> 200 </Width>
+    </glb_cost_center_typ_glb_coding_name>
+    <glb_cost_center_description>
+      <header>شرح</header>
+      <type> Textcolumn </type>
+      <Width> 300 </Width>
+    </glb_cost_center_description>
+  </glb_cost_center>
+
+  <glb_person_Group>
+    <glb_person_group_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_person_group_selected>
+    <glb_person_group_name>
+      <header>  نام </header>
+      <type> textcolumn </type>
+      <width> 150 </width>
+    </glb_person_group_name>
+  </glb_person_Group>
+
+  <glb_project>
+    <glb_project_code>
+      <header> کد </header>
+      <type> TextColumn </type>
+      <width> 50 </width>
+    </glb_project_code>
+    <glb_project_real_name>
+      <header> عنوان </header>
+      <type> TextColumn </type>
+      <width> 150 </width>
+    </glb_project_real_name>
+    <glb_project_description>
+      <header> شرح </header>
+      <type> TextColumn </type>
+      <width> 230 </width>
+    </glb_project_description>
+    <glb_project_latin_name>
+      <header> عنوان لاتین </header>
+      <type> TextColumn </type>
+      <width> 100 </width>
+    </glb_project_latin_name>
+    <glb_project_status>
+      <header> فعال </header>
+      <type> CheckBoxColumn </type>
+      <width> 50 </width>
+    </glb_project_status>
+  </glb_project>
+
+  <glb_user>
+    <glb_user_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_user_selected>
+    <glb_user_glb_personel_code>
+      <header> کد پرسنلی </header>
+      <type> TextColumn </type>
+      <width> 200 </width>
+    </glb_user_glb_personel_code>
+    <glb_user_glb_personel_name>
+      <header> نام کاربری </header>
+      <type> TextColumn </type>
+      <width> 300 </width>
+    </glb_user_glb_personel_name>
+
+  </glb_user>
+
+  <glb_user_access>
+    <glb_user_access_glb_user_name>
+      <header>نام کاربر</header>
+      <type> TextColumn </type>
+      <width> 200 </width>
+    </glb_user_access_glb_user_name>
+    <glb_user_access_glb_user_access_items_subsystem>
+      <header>زیر سیستم</header>
+      <type> TextColumn </type>
+      <width> 300 </width>
+    </glb_user_access_glb_user_access_items_subsystem>
+    <glb_user_access_glb_user_access_items_name>
+      <header>نام قسمت</header>
+      <type> TextColumn </type>
+      <width> 300 </width>
+    </glb_user_access_glb_user_access_items_name>
+  </glb_user_access>
+
+  <glb_user_access_items>
+
+    <glb_user_access_items_subsystem>
+      <header>زیر سیستم</header>
+      <type> TextColumn </type>
+      <width> 200 </width>
+    </glb_user_access_items_subsystem>
+
+    <glb_user_access_items_name>
+      <header>نام قسمت</header>
+      <type> TextColumn </type>
+      <width> 300 </width>
+    </glb_user_access_items_name>
+
+    <glb_user_access_items_control_name>
+      <header>شناسه قسمت</header>
+      <type> TextColumn </type>
+      <width> 300 </width>
+    </glb_user_access_items_control_name>
+
+  </glb_user_access_items>
+
+  <glb_branch>
+    <glb_branch_name>
+      <header> نام شعبه </header>
+      <type> TextColumn </type>
+      <width> 100 </width>
+    </glb_branch_name>
+    <glb_branch_address>
+      <header> آدرس شعبه </header>
+      <type> TextColumn </type>
+      <width> 30 </width>
+    </glb_branch_address>
+  </glb_branch>
+
+  <glb_user_group>
+    <glb_user_group_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_user_group_selected>
+    <glb_user_group_name>
+      <header> نام گروه کاربری </header>
+      <type> TextColumn </type>
+      <width> 100 </width>
+    </glb_user_group_name>
+  </glb_user_group>
+
+  <glb_fiscal_year>
+    <glb_fiscal_year_name>
+      <header>نام دوره مالی</header>
+      <type> TextColumn </type>
+      <width>100</width>
+    </glb_fiscal_year_name>
+    <glb_fiscal_year_start_date>
+      <header>تاریخ شروع دوره مالی</header>
+      <type> TextColumn </type>
+      <width>150</width>
+    </glb_fiscal_year_start_date>
+    <glb_fiscal_year_end_date>
+      <header>تاریخ پایان دوره مالی</header>
+      <type> TextColumn </type>
+      <width>150</width>
+    </glb_fiscal_year_end_date>
+  </glb_fiscal_year>
+
+  <glb_company>
+    <glb_company_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_company_selected>
+    <glb_company_code>
+      <header>  کد </header>
+      <type> textcolumn </type>
+      <width> 150 </width>
+    </glb_company_code>
+    <glb_company_real_name>
+      <header> نام </header>
+      <type> textcolumn </type>
+      <width>200 </width>
+    </glb_company_real_name>
+    <glb_company_economy_code>
+      <header> کد اقتصادی </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_company_economy_code>
+    <glb_company_registration_no>
+      <header> شماره ثبت </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_company_registration_no>
+    <glb_company_type_glb_coding_name>
+      <header>نوع شرکت </header>
+      <type> textcolumn </type>
+      <width>150 </width>
+    </glb_company_type_glb_coding_name>
+  </glb_company>
+
+  <glb_company_group>
+    <glb_company_group_selected>
+      <header> انتخاب </header>
+      <type>checkBoxColumn</type>
+      <width> 70 </width>
+    </glb_company_group_selected>
+    <glb_company_group_name>
+      <header>  نام </header>
+      <type> textcolumn </type>
+      <width> 150 </width>
+    </glb_company_group_name>
+
+  </glb_company_group>
+
+  <glb_measure>
+    <glb_measure_name>
+      <header>نام واحد</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_measure_name>
+    <glb_measure_full_formula>
+      <header>فرمول</header>
+      <type>textcolumn</type>
+      <width>150</width>
+    </glb_measure_full_formula>
+  </glb_measure>
+
+  <glb_user_group>
+    <glb_user_group_glb_branch_id>
+      <header>کد شاخه</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_user_group_glb_branch_id>
+    <acc_entity_pre_code>
+      <header>پیش کد موجودیت</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </acc_entity_pre_code>
+  </glb_user_group>
+
+  <glb_cash>
+    <glb_cash_code>
+      <header>کد صندوق</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_cash_code>
+    <glb_cash_real_name>
+      <header>نام صندوق</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_cash_real_name>
+    <glb_cash_cashier_glb_personel_name>
+      <header>صندوق دار</header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_cash_cashier_glb_personel_name>
+  </glb_cash>
+
+  <glb_entity_type>
+    <glb_entity_type_name>
+      <header>نام نوع تفصیل</header>
+      <type>textcolumn</type>
+      <width>100</width>
+    </glb_entity_type_name>
+  </glb_entity_type>
+
+  <glb_user_entity>
+    <glb_user_entity_code>
+      <header> کد </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_user_entity_code>
+    <glb_user_entity_real_name>
+      <header> نام  </header>
+      <type>textcolumn</type>
+      <width>50</width>
+    </glb_user_entity_real_name>
+  </glb_user_entity>
+
+
+
+</root>

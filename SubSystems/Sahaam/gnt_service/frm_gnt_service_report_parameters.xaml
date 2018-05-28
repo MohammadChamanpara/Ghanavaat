@@ -1,0 +1,44 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_service_report_parameters"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_gnt_settings_selResult"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    Title="تنظیمات گزارش سند خدمات" FontFamily="Tahoma" SizeToContent="WidthAndHeight" >
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Center">
+                <APM:APMToolbarButton  XImage="Save" Click="APMToolbarButton_Click" />
+                <APM:APMToolbarButton  XImage="Cancel" Click="APMToolbarButton_Click_1" />
+            </StackPanel>
+            <APM:APMGroupBox Name="grp_gnt_settings" DockPanel.Dock="Top" Header="تنظیمات گزارش سند خدمات" Margin="20,20,20,10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <APM:APMRadioButton Name="rad_store" Grid.Column="0" Grid.Row="0" Content="انبار دار" Margin="10"/>
+                    <APM:APMRadioButton Name="rad_truck" Grid.Column="0" Grid.Row="1" Content="راننده تراکتور" Margin="10"/>
+                    <StackPanel Name="stk_store" Orientation="Horizontal" Grid.Column="1">
+                        <APM:APMTextBox Name="txt_store1" Text="انبار دار لطفاً کالاهای فوق را تحویل"/>
+                        <APM:APMInfoLabel Name="lbl_Creditor2" BorderBrush="LightGray" BorderThickness="1" Content="..." VerticalAlignment="Center"/>
+                        <APM:APMTextBox Name="txt_store2" Text="بفرمائید."/>
+                    </StackPanel>
+                    <StackPanel Name="stk_truck" Orientation="Horizontal" Grid.Column="1" Grid.Row="1">
+                        <APM:APMTextBox Name="txt_truck1" Text="راننده تراکتور لطفاً عملیات فوق را روی زمین"/>
+                        <APM:APMInfoLabel Name="lbl_Creditor1" BorderBrush="LightGray" BorderThickness="1" Content="..." VerticalAlignment="Center"/>
+                        <APM:APMTextBox Name="txt_truck2" Text="واقع در"/>
+                        <APM:APMTextBox Name="txt_address" Text="..." MinWidth="20"/>
+                        <APM:APMTextBox Name="txt_truck3" Text="انجام داده و نتیجه را در دفتر ثبت حواله ها درج نمائید."/>
+                    </StackPanel>
+                </Grid>
+            </APM:APMGroupBox>
+
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

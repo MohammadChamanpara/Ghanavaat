@@ -1,0 +1,59 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_UserAccessItems"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"    
+    x:TypeArguments="DDB:stp_glb_user_access_items_selResult"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"        
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+     Title="معرفی آیتم های مورد دسترسی"  Height="541" Width="741" FontFamily="TAHOMA" FontSize="13">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow" />     
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox Header="ردیف جاری" Name="grpInputInfo" DockPanel.Dock="Bottom" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                       
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel                        Grid.Row="0" Grid.Column="0" Content="زیر سیستم:"/>
+                    <APM:APMTextBox         Name="txt_glb_user_access_items_subsystem" Grid.Row="0" Grid.Column="1 "/>
+                    <APM:APMLabel           Grid.Row="0" Grid.Column="3" Content="شناسه آیتم:" />
+                    <APM:APMTextBox         Name="txt_glb_user_access_items_control_name" Grid.Column="4"  />
+                    <APM:APMLabel           Grid.Row="0" Grid.Column="6" Content="عنوان آیتم :" />
+                    <APM:APMTextBox         Name="txt_glb_user_access_items_name" Grid.Column="7"  />
+
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست آیتم های مورد دسترسی" >
+                <APM:APMDataGridExtended Margin="10" Name="dbgUsers" >
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="به روز رسانی کلیه آیتم ها" Name="btnUpdateItems" Click="btnUpdateItems_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

@@ -1,0 +1,30 @@
+﻿<UIL:WindowReport x:Class="APM_SubSystems.frm_inv_rpt_goods_cardex"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:crystal="clr-namespace:CrystalDecisions.Windows.Forms;assembly=CrystalDecisions.Windows.Forms"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    x:TypeArguments="DDB:stp_inv_rpt_goods_cardex_selResult"
+    Title="گزارش کاردکس کالا" WindowState="Maximized">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_filter" />
+            <APM:APMDocumentHeader XType="CardexReport"
+                                       Name="dh_cardex"
+                                       XBrowseClick_CardexGoods="goods_Browser_Click"
+                                       XBrowseClick_MainStore="store_Browser_Click"
+                                       XBrowseClick_DestinationDetail="Destination_Detail_Browser_Click"
+                                       XBrowseClick_RegistererUser="dh_cardex_XBrowseClick_RegistererUser"   />
+            <APM:APMGroupBox Header="نتایج جستجو" DockPanel.Dock="Bottom" >
+                <APM:APMDataGridExtended Name="userDataGrid">
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="مشاهدۀ سند اصلی" Click="APMMenuItem_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowReport>

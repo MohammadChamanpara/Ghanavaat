@@ -1,0 +1,55 @@
+﻿<UIL:WindowEntityGroup x:Class="APM_SubSystems.frm_glb_bank_branch"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_glb_bank_branch_selResult,
+                     DDB:stp_glb_bank_branch_selResult,
+                     DDB:stp_glb_bank_selResult" 
+    Title="شعبه بانک"  Height="454">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Top" Header="نمایش شعب یک بانک">
+                <WrapPanel Margin="8">
+                    <APM:APMComboBox Name="cmb_glb_bank_branch_glb_bank_id"/>
+                </WrapPanel>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox   Name="grpInfo"      Grid.Row="1"  Header="ردیف جاری" DockPanel.Dock="Bottom" >
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+
+
+                    </Grid.RowDefinitions>
+                    <APM:APMBrowser Grid.Column="1" XBrowseClick="APMBrowser_XBrowseClick" Name="brw_glb_bank_branch_glb_bank_id" XTextBoxKeyDown="brw_glb_bank_branch_glb_bank_id_XTextBoxKeyDown" />
+                    <APM:APMLabel Content="نام بانک:" />
+                    <APM:APMLabel Content="کد شعبه :" HorizontalAlignment="Left"  Grid.Column="3"/>
+                    <APM:APMTwoPartCode Name="tpc_glb_bank_branch_child_code" Grid.Row="0" Grid.Column="4"/>
+                    <APM:APMLabel Content="نام شعبه:" Grid.Row="0" Grid.Column="6"/>
+                    <APM:APMTextBox Name="txt_glb_bank_branch_real_name" Grid.Column="7"/>
+
+                </Grid>
+
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست شعب بانکها">
+                <APM:APMDataGridExtended  Name="grd_bank_branch"></APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntityGroup>
+

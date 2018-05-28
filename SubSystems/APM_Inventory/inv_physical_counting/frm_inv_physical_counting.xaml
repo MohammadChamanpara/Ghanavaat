@@ -1,0 +1,104 @@
+﻿<UIL:WindowTwoTabs x:Class="APM_SubSystems.frm_inv_physical_counting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:wpf="http://schemas.microsoft.com/wpf/2008/toolkit"         
+    x:TypeArguments="DDB:stp_inv_physical_counting_selResult,DDB:stp_inv_physical_counting_article_selResult"
+    Title="انبار گردانی" >
+    <APM:APMBorder>
+        <DockPanel>
+            <APM:APMToolBar Name="tbr_physical_count" XType="NormalWindow">
+                <APM:APMLabel/>
+                <APM:APMToolbarButton XImage="Adjustment"  Grid.Column="9" Grid.Row="4" Click="APMToolbarButton_Click"  HorizontalAlignment="Center"   />
+            </APM:APMToolBar>
+            <APM:APMStatusBar XType="InvDocumentWindow"/>
+            <APM:APMTabControl Background="Transparent" Name="tab_main" >
+                <APM:APMTabItem Header="لیست شمارش های انجام شده" Name="tbi_inv_physical">
+                    <APM:APMDataGridExtended  Name="dbg_physical_master"   />
+                </APM:APMTabItem>
+                <APM:APMTabItem  Header="لیست جزئیات شمارش" Name="tbi_inv_physical_article">
+                    <DockPanel>
+                        <APM:APMGroupBoxExtended DockPanel.Dock="Bottom" Header="پر کردن اطلاعات جزئیات" Name="grp_article_current_row" >
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" MinWidth="42" />
+                                    <ColumnDefinition Width="auto" MinWidth="84" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto" MinWidth="80" />
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="auto" MinWidth="73" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto" MinWidth="75" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto" MinWidth="95" />
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto" MinWidth="32" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto"  />
+                                    <RowDefinition Height="auto"  />
+                                    <RowDefinition Height="auto"  />
+                                    <RowDefinition Height="auto"  />
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.RowSpan="6" VerticalAlignment="Center">
+                                    <APM:APMToolbarButton XImage="Previous"  XSize="Small"/>
+                                    <APM:APMToolbarButton XImage="Next" XSize="Small"  />
+                                </StackPanel>
+                                <StackPanel Grid.Column="14" Grid.RowSpan="6" VerticalAlignment="Center">
+                                    <APM:APMToolbarButton XImage="Delete"  XSize="Small"/>
+                                    <APM:APMToolbarButton XImage="Insert"  XSize="Small" />
+                                </StackPanel>
+                                <APM:APMLabel Content="انتخاب کالا" Grid.Column="1" HorizontalAlignment="Left"  />
+                                <APM:APMBrowser Name="brw_inv_physical_counting_article_inv_group_goods_id" Grid.Row="1" Grid.Column="1" XBrowseClick="brw_inv_physical_counting_article_inv_group_goods_id_XBrowseClick" />
+                                <APM:APMLabel Content="واحد شمارش" Grid.Row="0" Grid.Column="3"/>
+                                <APM:APMComboBox Name="cmb_inv_physical_counting_article_glb_measure_id" Grid.Row="1" Grid.Column="3"/>
+                                <APM:APMLabel Content="شمارش اول" Grid.Column="5" Grid.Row="0"/>
+                                <APM:APMFloatTextBox Name="txt_inv_physical_counting_article_first_count" Grid.Row="1" Grid.Column="5"/>
+                                <APM:APMLabel Content="شمارش دوم" Grid.Column="7" Grid.Row="0"/>
+                                <APM:APMFloatTextBox Name="txt_inv_physical_counting_article_second_count" Grid.Row="1" Grid.Column="7"/>
+                                <APM:APMLabel Content="شمارش نهایی" Grid.Column="9" Grid.Row="0"/>
+                                <APM:APMFloatTextBox Name="txt_inv_physical_counting_article_third_count" Grid.Row="1" Grid.Column="9" LostFocus="txt_inv_physical_counting_article_third_count_LostFocus" />
+                                <APM:APMLabel Content="تعداد کسری" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center"/>
+                                <APM:APMInfoLabel Name="lbl_inv_physical_counting_article_shortage" Grid.Row="3" Grid.Column="1" BorderThickness="1" HorizontalAlignment="Center"/>
+                                <APM:APMLabel Content="تعداد مازاد" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center"/>
+                                <APM:APMInfoLabel Name="lbl_inv_physical_counting_article_surplus" Grid.Row="3" Grid.Column="3" BorderThickness="1" HorizontalAlignment="Center"/>
+                                <APM:APMLabel Content="توضیحات" Grid.Column="6" Grid.Row="2" HorizontalAlignment="Center"/>
+                                <APM:APMTextBox Name="txt_inv_physical_counting_article_description" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="3" />
+                                <APM:APMBorder Grid.Row="4" Grid.Column="1" Name="brd_info"  Grid.ColumnSpan="12" Width="auto" Visibility="Visible">
+                                    <StackPanel   Orientation="Horizontal">
+                                        <APM:APMToolbarButton XImage="Refresh" Height="25" Name="btn_selected_good_info" Click="btn_selected_good_info_Click" />
+                                        <APM:APMLabel Grid.Column="2" Content=" نام کالا:" Name="lbl_goods_name_title"  />
+                                        <APM:APMInfoLabel  Name="lbl_inv_physical_counting_article_inv_group_goods_name" BorderThickness="1"/>
+                                        <APM:APMLabel Grid.Column="2" Content="  موجودی در" Name="lbl_stock_title"  />
+                                        <APM:APMInfoLabel  Name="lbl_inv_physical_counting_article_inv_store_name" BorderThickness="1"/>
+                                        <APM:APMInfoLabel  Name="lbl_inv_physical_counting_article_inv_goods_store_stock" BorderThickness="1"/>
+                                        <APM:APMInfoLabel  Name="lab_inv_physical_counting_article_main_glb_measure_name" BorderThickness="1"/>
+                                    </StackPanel>
+                                </APM:APMBorder>
+                            </Grid>
+                        </APM:APMGroupBoxExtended>
+                        <APM:APMDocumentHeader XType="PhysicalCounting" Name="documentHeader" 
+                         XBrowseClick_MainStore="documentHeader_XBrowseClick_MainStore"
+                         XBrowseClick_AccountingPersonel="documentHeader_XBrowseClick_AccountingPersonel"/>
+                        <APM:APMGroupBox Grid.Row="1" Header="جزئیات شمارش" Name="grp_physical_article_Base">
+                            <APM:APMDataGridExtended  Name="dbg_inv_physical_count_sum"  XShowTotalAmount="False">
+                                <APM:APMDataGridExtended.ContextMenu>
+                                    <ContextMenu>
+                                        <ContextMenu.Items>
+                                            <APM:APMMenuItem XCaption="مشاهدۀ کاردکس کالا" Click="mnuCardex_Click"/>
+                                        </ContextMenu.Items>
+                                    </ContextMenu>
+                                </APM:APMDataGridExtended.ContextMenu>
+                            </APM:APMDataGridExtended>
+                        </APM:APMGroupBox>
+                    </DockPanel>
+                </APM:APMTabItem>
+            </APM:APMTabControl>
+        </DockPanel>
+    </APM:APMBorder>
+</UIL:WindowTwoTabs>

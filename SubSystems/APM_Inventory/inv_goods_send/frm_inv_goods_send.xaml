@@ -1,0 +1,121 @@
+﻿<UIL:WindowTwoTabs x:Class="APM_SubSystems.frm_inv_goods_send"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents" 
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer" 
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer" 
+    xmlns:wpf="http://schemas.microsoft.com/wpf/2008/toolkit"
+    x:TypeArguments="DDB:stp_inv_goods_send_selResult , DDB:stp_inv_goods_send_article_selResult"
+    Title="حواله کالا" WindowState="Maximized" Height="922" Width="1150">
+    <APM:APMBorder>
+        <DockPanel>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="InvDocumentWindow"/>
+            <APM:APMToolBar Name="tbr_Send" XType="NormalWindow" >
+                <APM:APMLabel/>
+                <APM:APMToolbarButton XImage="Hesabdari" Name="tbrButton_hesabdari" Click="btnFinancial_Click"/>
+            </APM:APMToolBar>
+            <APM:APMTabControl Background="Transparent" Name="tab_main" >
+                <APM:APMTabItem Header="لیست حواله" Name="tbi_inv_send">
+                    <APM:APMDataGridExtended  Name="dbg_send_master" XShowTotalAmount="True" >
+                        <APM:APMDataGridExtended.ContextMenu>
+                            <ContextMenu>
+                                <APM:APMMenuItem XCaption="مشاهدۀ سند ریالی" Click="APMMenuItemShowFinancial_Click"  />
+                                <APM:APMMenuItem XCaption="مشاهده سند حسابداری " Click="APMMenuItemShowAccDoc_Click"/>
+                            </ContextMenu>
+                        </APM:APMDataGridExtended.ContextMenu>
+                    </APM:APMDataGridExtended>
+                </APM:APMTabItem>
+                <APM:APMTabItem  Header="جزئیات لیست حواله" Name="tbi_inv_send_article">
+                    <DockPanel>
+                        <APM:APMGroupBoxExtended DockPanel.Dock="Bottom" Header="آرتیکل های حواله" Name="grp_article_current_row"  >
+                            <Grid Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition  />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.RowSpan="2" Margin="1,0,9,0">
+                                    <APM:APMToolbarButton XImage="Previous" XSize="Small" />
+                                    <APM:APMToolbarButton XImage="Next" XSize="Small" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="14" Grid.RowSpan="2">
+                                    <APM:APMToolbarButton XImage="Delete" XSize="Small" />
+                                    <APM:APMToolbarButton XImage="Insert" XSize="Small" />
+                                </StackPanel>
+                                <APM:APMLabel Content="کالای ارسالی" Grid.Column="1" HorizontalAlignment="Left"  />
+
+                                <APM:APMBrowser Name="brw_inv_goods_send_article_inv_group_goods_id" Grid.Row="1" Grid.Column="1" XBrowseClick="SelectGoods_BrowseClick" XTextBoxKeyDown="brw_inv_goods_send_article_inv_group_goods_TextBoxKeyDown" />
+                                <APM:APMBorder Grid.Row="2" Grid.Column="1" Name="brd_info"  Grid.ColumnSpan="14" Width="auto" Visibility="Visible">
+                                    <StackPanel   Orientation="Horizontal">
+                                        <APM:APMToolbarButton XImage="Refresh" Height="25" Name="btn_selected_good_info" Click="btn_selected_good_info_Click" />
+                                        <APM:APMLabel Grid.Column="2" Content=" نام کالا:" Name="lbl_goods_name_title"  />
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_inv_group_goods_name" BorderThickness="1"/>
+                                        <APM:APMLabel Grid.Column="2" Content="  موجودی در" Name="lbl_stock_title"  />
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_inv_store_name" BorderThickness="1"/>
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_goods_stock_after_change" BorderThickness="1"/>
+                                        <APM:APMInfoLabel  Name="lab_inv_goods_send_article_main_glb_measure_name" BorderThickness="1"/>
+                                        <APM:APMInfoLabel  Name="lbl_financial_pricing_title"  Content="روش قیمت گزاری:" />
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_goods_financial_pricing"  BorderThickness="1" />
+                                        <APM:APMInfoLabel  Name="lbl_order_point_title"  Content="نقطه سفارش:"  />
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_inv_goods_order_point" BorderThickness="1"  />
+                                        <APM:APMInfoLabel  Name="lbl_order_min_title"  Content="حداقل موجودی:" />
+                                        <APM:APMInfoLabel  Name="lbl_inv_goods_send_article_inv_goods_order_min"  BorderThickness="1" />
+                                    </StackPanel>
+                                </APM:APMBorder>
+                                <APM:APMLabel Grid.Column="4" Content="تعداد ارسال"  Name="lbl_countTitle"  />
+                                <APM:APMFloatTextBox Grid.Column="4" Name="txt_inv_goods_send_article_count" Grid.Row="1"  />
+
+
+                                <APM:APMLabel Grid.Column="6" Content=" واحد کالا" HorizontalAlignment="Right"   />
+                                <APM:APMComboBox Grid.Column="6" Name="cmb_inv_goods_send_article_glb_measure_id" Grid.Row="1" />
+
+                                <Label Grid.Column="7"/>
+                                <APM:APMLabel Grid.Column="8" Content="قیمت واحد" Name="lbl_inv_goods_send_article_price_lbl"/>
+                                <APM:APMFloatTextBox Grid.Column="8" Grid.Row="1" Name="txt_inv_goods_send_article_price" />
+
+
+                                <APM:APMLabel Grid.Column="10" Content="شرح"    />
+                                <APM:APMTextBox Grid.Column="10" Name="txt_inv_goods_send_article_description" Grid.Row="1" />
+                            </Grid>
+                        </APM:APMGroupBoxExtended>
+                        <APM:APMDocumentHeader XType="Send" Name="documentHeader"
+                                               XBrowseClick_BaseReceive="SelectBaseReceive_Click"
+                                               XBrowseClick_MainStore="SelectStore_Click"
+                                               XBrowseClick_BaseGoodsRequest="SelectBaseRequest_Click"
+                                               XBrowseClick_DestinationDetail="DestinationPerson_Click"/>
+
+                        <APM:APMGroupBox Grid.Row="1" Header="جزئیات حواله" Name="grp_send_article_Base" >
+                            <APM:APMDataGridExtended  Name="dbg_send_article" XShowTotalAmount="True">
+                                <APM:APMDataGridExtended.ContextMenu>
+                                    <ContextMenu>
+                                        <ContextMenu.Items>
+                                            <APM:APMMenuItem XCaption="مشاهدۀ کاردکس کالا" Click="mnuCardex_Click"/>
+                                        </ContextMenu.Items>
+                                    </ContextMenu>
+                                </APM:APMDataGridExtended.ContextMenu>
+                            </APM:APMDataGridExtended>
+                        </APM:APMGroupBox>
+                    </DockPanel>
+                </APM:APMTabItem>
+            </APM:APMTabControl>
+        </DockPanel>
+    </APM:APMBorder>
+
+</UIL:WindowTwoTabs>

@@ -1,0 +1,15 @@
+Receive Price Situations :
+	1)Have Base document.
+		Bring Prices From Send
+	2)Without Base Document.
+		User Enters The Prices.
+
+Send Price Situations : 
+	1)Have Base Document.
+		Bring Prices From Send.
+	2)Without Base Document
+		21)Special Pricing.
+			User Enters The Price.
+		22)Fifo_Lifo_AVG_WAVG
+			Calculate Based On Previous Documents.
+		

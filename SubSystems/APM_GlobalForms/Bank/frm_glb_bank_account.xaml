@@ -1,0 +1,79 @@
+﻿<UIL:WindowEntityGroup x:Class="APM_SubSystems.frm_glb_bank_account"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_glb_bank_account_selResult,
+                     DDB:stp_glb_bank_account_selResult,
+                     DDB:stp_glb_bank_selResult" 
+    Title="حساب بانکی" Height="535" Width="688">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Top" Header="فیلتر کردن حساب های بانکی">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel Grid.Column="2" Content="انتخاب بانک" />
+                    <APM:APMComboBox Grid.Column="3" Name="cmb_glb_bank_account_glb_bank_id" SelectionChanged="cmb_glb_bank_account_glb_bank_id_SelectionChanged"/>
+                    
+                    <APM:APMLabel Grid.Column="6" Content="انتخاب شعب بانکی"/>
+                    <APM:APMComboBox Grid.Column="7" Name="cmb_glb_bank_account_glb_bank_branch_id" SelectionChanged="cmb_glb_bank_account_glb_bank_branch_id_SelectionChanged"/>
+                    
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox   Name="grpInfo"      Grid.Row="1"  Header="ردیف جاری" DockPanel.Dock="Bottom" >
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition Width="auto"  />
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        
+                        <RowDefinition/>
+                        <RowDefinition/>
+
+                    </Grid.RowDefinitions>
+                    <APM:APMBrowser Grid.Column="1"  Name="brw_glb_bank_account_glb_bank_id" XBrowseClick="brw_glb_bank_account_glb_bank_id_XBrowseClick" XTextBoxKeyDown="brw_glb_bank_account_glb_bank_id_XTextBoxKeyDown"/>
+                    <APM:APMLabel Content="نام بانک:" />
+                    <APM:APMLabel Content="کد حساب :" HorizontalAlignment="Left"  Grid.Column="0" Grid.Row="1"/>
+                    <APM:APMTwoPartCode Name="tpc_glb_bank_account_child_code" Grid.Row="1" Grid.Column="1"/>
+                    <APM:APMLabel Content="نام شعبه:" Grid.Row="0" Grid.Column="3"/>
+                    <APM:APMBrowser Name="brw_glb_bank_account_glb_bank_branch_id" Grid.Column="4" Grid.Row="0" XBrowseClick="brw_glb_bank_account_glb_bank_branch_id_XBrowseClick" XTextBoxKeyDown="brw_glb_bank_account_glb_bank_branch_id_XTextBoxKeyDown"/>
+                    <APM:APMTextBox Grid.Row="1"  Grid.Column="4" Name="txt_glb_bank_account_real_name"/>
+                    <APM:APMLabel Grid.Row="1" HorizontalAlignment="Left" Content="نام حساب:" Grid.Column="3" />
+                    <APM:APMComboBox Name="cmb_glb_bank_account_glb_bank_account_type_id" Grid.Column="7" Grid.Row="0"/>
+                    <APM:APMLabel Content="نوع حساب" Grid.Column="6" Grid.Row="0" />
+                </Grid>
+
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست حسابهای بانکی">
+                <APM:APMDataGridExtended  Name="grd_bank_account"></APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntityGroup>
+
+
+

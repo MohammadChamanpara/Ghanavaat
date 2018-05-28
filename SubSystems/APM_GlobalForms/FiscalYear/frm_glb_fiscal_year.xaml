@@ -1,0 +1,32 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_glb_fiscal_year"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_glb_fiscal_year_selResult"
+    Title="دوره مالی" Height="591" FontFamily="Tahoma">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar  Name="UserToolbar" XType="NormalWindow"/>
+            <DockPanel>
+                <APM:APMStatusBar XType="NormalWindow"/>
+                <APM:APMGroupBox Grid.Row="1" Header="ردیف جاری" Name="grpInfo" DockPanel.Dock="Bottom">
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                    <APM:APMLabel Name="lblfiscal_year_name" >نام دوره مالی:</APM:APMLabel>
+                        <APM:APMTextBox Name="txt_glb_fiscal_year_name" Grid.Row="0" Grid.Column="1"/>
+                        <APM:APMLabel/>
+                        <APM:APMLabel Name="lblfiscal_year_start_date" Grid.Row="0" Grid.Column="3">تاریخ شروع دوره مالی :</APM:APMLabel>
+                        <APM:PersianDatePicker Name="pdp_glb_fiscal_year_start_date" Grid.Column="4"  />
+                        <APM:APMLabel/>
+                        <APM:APMLabel Name="lblfiscal_year_end_date" Grid.Column="6">تاریخ پایان دوره مالی :</APM:APMLabel>
+                        <APM:PersianDatePicker  Name="pdp_glb_fiscal_year_end_date" Grid.Column="7" />
+                    </StackPanel>
+                </APM:APMGroupBox>
+                <APM:APMGroupBox Header="لیست دوره های مالی" DockPanel.Dock="Bottom">
+                    <APM:APMDataGridExtended Margin="10" Name="dbg_Fiscal_Year" Grid.Row="0"></APM:APMDataGridExtended>
+                </APM:APMGroupBox>
+            </DockPanel>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

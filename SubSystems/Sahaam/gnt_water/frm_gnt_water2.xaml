@@ -1,0 +1,51 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_water2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_gnt_water2_selResult"
+    Title="جوی ها" FontFamily="Tahoma" SizeToContent="Width" >
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Top" Header="نمایش جوی های یک آب اصلی">
+                <WrapPanel Margin="8">
+                    <APM:APMComboBox Name="cmb_gnt_water2_gnt_water1_id" SelectionChanged="cmb_gnt_water2_gnt_water1_id_SelectionChanged"/>
+                </WrapPanel>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox   Name="grpInfo" Header="ردیف جاری" DockPanel.Dock="Bottom" >
+                <APM:APMScrollViewer>
+                    <Grid Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+
+
+                        </Grid.RowDefinitions>
+                        <APM:APMBrowser Grid.Column="1" XShowCode="False" XBrowseClick="APMBrowser_XBrowseClick" Name="brw_gnt_water2_gnt_water1_id" />
+                        <APM:APMLabel Content="نام آب اصلی:" />
+                        <APM:APMLabel Content="نام جوی:" Grid.Row="0" Grid.Column="6"/>
+                        <APM:APMTextBox Name="txt_gnt_water2_name" Grid.Column="7"/>
+
+                    </Grid>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست جوی ها">
+                <APM:APMDataGridExtended  Name="grd_bank_branch"></APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>
+

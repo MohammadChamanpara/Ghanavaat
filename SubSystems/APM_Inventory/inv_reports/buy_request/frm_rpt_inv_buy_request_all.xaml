@@ -1,0 +1,29 @@
+﻿<UIL:WindowReport x:Class="APM_SubSystems.frm_rpt_inv_buy_request_all"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+     xmlns:crystal="clr-namespace:CrystalDecisions.Windows.Forms;assembly=CrystalDecisions.Windows.Forms"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    x:TypeArguments="DDB:stp_inv_rpt_buy_request_all_selResult"
+    Title="گزارش در خواست خرید" WindowState="Maximized" >
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_filter" XType="ReportWindow"  DockPanel.Dock="Top" />
+            <APM:APMDocumentHeader Name="dh_buyRequest" XType="BuyRequestReport"  
+                 XBrowseClick_MainStore="brw_inv_rpt_buy_request_all_inv_store_id_XBrowseClick"
+                 XBrowseClick_SelectGoods="brw_inv_rpt_buy_request_all_inv_group_goods_id_XBrowseClick"
+                 XBrowseClick_RequestConfirmerPersonel="APMDocumentHeader_XBrowseClick_RequestConfirmerPersonel"
+                 XBrowseClick_RegistererUser="APMDocumentHeader_XBrowseClick_RegistererUser"/>
+            <APM:APMGroupBox  Header="نتایج جستجو" Name="grp_show_filtered_result"  DockPanel.Dock="Bottom" >
+                <APM:APMDataGridExtended  Name="dbg_filter_results" XShowTotalAmount="False" >
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="مشاهدۀ سند اصلی" Click="APMMenuItem_Click" />
+                        </ContextMenu>
+                        </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowReport>

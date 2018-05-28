@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2BA447F1-BDE8-4D84-B149-BE4BE8BED6E1}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APMComponents</RootNamespace>
+    <AssemblyName>APMComponents</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="xaml_Components\PersianCalender\PersianCalendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="xaml_Components\PersianCalender\PersianDatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Components.cs">
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_Components\PersianCalender\PersianCalendar.xaml.cs">
+      <DependentUpon>PersianCalendar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="xaml_Components\PersianCalender\PersianDatePicker.xaml.cs">
+      <DependentUpon>PersianDatePicker.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteX_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveX_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_d1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\First_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Insert_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Last_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Previous_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UseLess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UseLess_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UseLessReturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UseLessReturn_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirm_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notepad_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoConfirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoConfirm_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveNote_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveTemp_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Browse_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\hesabdari-modiriat.ico" />
+    <Resource Include="Resources\Hesabdari.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_UndoConfirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_UseLess.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_UseLessReturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_First.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_SaveNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_SaveTemp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control_MonthCalendar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue-External-Drive-Backup-icon.png" />
+    <None Include="Resources\Blue-External-Drive-icon.png" />
+    <None Include="Resources\Blue-External-Drive-Backup[1] - Copy.png" />
+    <None Include="Resources\Blue-External-Drive[1] - Copy.png" />
+    <None Include="Resources\Blue-External-Drive[1].ico" />
+    <None Include="Resources\1263301710_hd2-backup[1].png" />
+    <None Include="Resources\1263302264_Time_Machine[1].png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\import.png" />
+    <None Include="Resources\UndoUseLess.png" />
+    <None Include="Resources\UndoUseLess_d.png" />
+    <Resource Include="Resources\redo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\APMLogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_down_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inv_up_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forosh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\03941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\04452.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GenerateManagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hesabresiDakheli.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Otomasion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inv_Action.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Inv_Action_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GridColumns\GridColumns.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hesabdari_d.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hesabdari_d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictures edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{DB70AC0F-7F65-48D5-A450-BFF9E16BB30C}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correct.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrong.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

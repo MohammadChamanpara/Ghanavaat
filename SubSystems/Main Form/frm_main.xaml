@@ -1,0 +1,268 @@
+﻿<Window x:Class="APM_SubSystems.frm_main"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    Title="منو اصلی" WindowStartupLocation="CenterScreen"   FontFamily="tahoma"  Loaded="Window_Loaded" Activated="Window_Activated" Closed="Window_Closed" KeyDown="Window_KeyDown" Width="auto">
+    <APM:APMBorder XSubSystem="Accounting" Width="auto">
+        <APM:APMDockPanel Name="main_DockPanel">
+            <APM:APMBorder XSubSystem="Accounting" DockPanel.Dock="Bottom">
+                <DockPanel>
+                    <StackPanel Orientation="Horizontal"  >
+                    <APM:APMLabel Content="["/>
+                    <APM:APMLabel Content="شعبه جاری :" Margin="0"/>
+                    <APM:APMInfoLabel Name="lbl_glb_barnch_name" Margin="0" XHaveBorder="False"/>
+                    <APM:APMLabel Content="]"/>
+                    
+                    <APM:APMLabel Content="  "/>
+                    
+                    <APM:APMLabel Content="["/>
+                    <APM:APMLabel Content="کاربر جاری :" Margin="0" />
+                    <APM:APMInfoLabel Name="lbl_glb_user_name" Margin="0" XHaveBorder="False"/>
+                    <APM:APMLabel Content="]"/>
+                    
+                    <APM:APMLabel Content="  "/>
+                    
+                    <APM:APMLabel Content="["/>
+                    <APM:APMLabel Content="دوره مالی جاری :" Margin="0"/>
+                    <APM:APMInfoLabel Name="lbl_glb_fiscal_year_name"  Margin="0" XHaveBorder="False" />
+                    <APM:APMLabel Content="]"/>
+                </StackPanel>
+                </DockPanel>
+            </APM:APMBorder>
+            <APM:APMBorder XSubSystem="Accounting" DockPanel.Dock="Top">
+                <APM:APMDockPanel Name="SubSystemsPanel">
+                    <APM:APMSubSystemButton Name="btn_global_subsystem"                 XImage="Global"         Xcaption="اطلاعات پایه"     XSubSystem="Global"  XClick="btnGlobal_Click"           DockPanel.Dock="Left"/>
+                    <APM:APMSubSystemButton Name="btn_inventory_subsystem"              XImage="Inventory"      Xcaption="انبارداری"        XSubSystem="Inventory"  XClick="btnInventory_Click"                 DockPanel.Dock="Left"/>
+                    <APM:APMSubSystemButton Name="btn_inventory_accounting_subsystem"   XImage="InnerAuditing"  Xcaption="حسابداری انبار " DockPanel.Dock="Left"  XClick="btnInventoryAccounting_Click"/>
+                    <APM:APMSubSystemButton Name="btn_accounting_subsystem"             XImage="Accounting"     Xcaption="حسابداری"         DockPanel.Dock="Left" XClick="btnAccounting_Click"         />
+                    <APM:APMSubSystemButton Name="btn_sahaam_subsystem"                 XImage="Exchange"       Xcaption="سهام"             DockPanel.Dock="Left" XClick="btnSahaam_Click"                   />
+                    <APM:APMSubSystemButton Name="btn_tools_subsystem"                  XImage="Tools"          Xcaption="ابزار ها و تنظیمات"         DockPanel.Dock="Left" XClick="btnTools_Click"                   />
+                    <APM:APMSubSystemButton XImage="Automation"     Xcaption="تغییر کاربر" XClick="btn_inv_login_Click" DockPanel.Dock="Right"/>
+                    <Label/>
+                </APM:APMDockPanel>
+            </APM:APMBorder >
+
+            <APM:APMGroupBox XSubSystem="Accounting" Header="اطلاعات پایه " DockPanel.Dock="Left" Name="grpGlobal">
+                <APM:APMScrollViewer >
+                    <StackPanel Margin="10">
+                        
+                        <APM:APMExpander Name="expGlbEntities"  XCaption="موجودیت ها" XSubsystem="Accounting" >
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Personel"             Content="پرسنل"                 Margin="3"  Click="btn_glb_Personel_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Personel_group"       Content="گروه پرسنلی"           Margin="3"  Click="btn_Personel_group_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Person"               Content="اشخاص"                 Margin="3"  Click="btn_glb_Person_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_PersonGroup"          Content="تعریف گروه اشخاص"      Margin="3"  Click="btn_glb_PersonGroup_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Company"              Content="تعریف شرکت"            Margin="3"  Click="btn_glb_Company_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Company_Group"        Content=" تعریف گروه شرکت ها"   Margin="3"  Click="btn_glb_Company_Group_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_cost_cntr"            Content="معرفی مراکز هزینه"     Margin="3"  Click="btn_glb_cost_center_click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_Project"              Content="تعریف پروژه"           Margin="3"  Click="btn_glb_Project_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_cash"                 Content="تعریف صندوق"           Margin="3"  Click="btn_cash_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_bank"                 Content="تعریف بانک"           Margin="3" Click="btn_bank_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_bank_branch"                 Content="تعریف شعب بانکها "           Margin="3" Click="btn_bank_branch_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_bank_account"                 Content="تعریف حساب بانکی "           Margin="3" Click="btn_bank_account_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_bank_account_type"                 Content="تعریف انواع حساب بانکی "           Margin="3" Click="btn_bank_account_type_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander XCaption="موجودیت های کاربر" XSubsystem="Accounting" Name="expGlbUserEntities">
+                            <StackPanel Name="skp_glb_user_entity">
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expGlbUsers" XCaption="کاربران" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_glb_user"              Content="معرفی کاربران"         Margin="3"  Click="btn_glb_user_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_glb_user_group"        Content="معرفی گروه کاربران"   Margin="3"  Click="btn_glb_user_group_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_glb_user_access"       Content="تعیین سطح دسترسی کاربران" Margin="3"  Click="btn_glb_user_access_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_glb_user_access_items" Content="آیتم های مورد دسترسی"     Margin="3"  Click="btn_glb_user_access_items_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expGlbFiscalYear" XCaption="دوره مالی"  XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_create_closing_document"  Content="عملیات دوره مالی "   Margin="3"  Click="btn_inv_create_closing_document_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                    </StackPanel>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox XSubSystem="Accounting"  DockPanel.Dock="Left"  Name="grpInventory" Header="انبارداری" >
+                <APM:APMScrollViewer >
+                    <StackPanel HorizontalAlignment="Left" Margin="10" >
+
+                        <APM:APMExpander Name="expInvStores" XSubsystem="Accounting" XCaption="انبار">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_new_store" Content="معرفی انبار" Margin="3" Click="btn_inv_store_Click" />
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expInvGoods" XSubsystem="Accounting" XCaption="کالا">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_group_goods" Content="گروه بندی کالا ها" Margin="3" Click="btn_inv_group_goods_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_new_glb_measure" Content="واحد های شمارش" Margin="3" Click="btn_glb_measure_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_product"    Content="معرفی اجزای محصول" Margin="3" Click="btn_inv_product_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_attribute" Content="خصوصیات کالاها" Margin="3" Click="btn_inv_attribute_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_goods_glb_measure" Content="معرفی واحدهای فرعی" Margin="3" Click="btn_inv_goods_glb_measure_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+
+                        <APM:APMExpander Name="expInvDocuments"  XCaption="اسناد" XSubsystem="Accounting" >
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_goods_request" Content="درخواست کالا" Margin="3" Click="btn_inv_goods_request_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_buy"    Content="درخواست خرید کالا" Margin="3" Click="btn_inv_buy_Click"  />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_goods_send" Content="حواله مقداری" Margin="3" Click="btn_inv_goods_send_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_goods_receipt"  Content="رسید مقداری"   Margin="3" Click="btn_inv_goods_receipt_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_opening" Content="سند افتتاحیه مقداری" Margin="3" Click="btn_inv_opening_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_closing" Content="سند اختتاحیه مقداری" Margin="3" Click="btn_inv_closing_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_physical_counting" Content="انبار گردانی" Margin="3" Click="btn_inv_physical_counting_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+
+
+                        <APM:APMExpander Name="expInvReports" XSubsystem="Accounting" XCaption=" گزارشات">
+                            <StackPanel>
+
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_request_all"    Content="گزارش  های درخواست کالا"      Margin="3" Click="btn_inv_rpt_goods_request_all_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_send_all"       Content="گزارش حواله های انبار"    Margin="3" Click="btn_inv_rpt_goods_send_all_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_send"       Content="گزارش تفکیکی حواله های انبار"    Margin="3" Click="btn_inv_rpt_goods_send_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_buy_request_all"      Content="گزارش  های درخواست خرید"     Margin="3" Click="btn_inv_rpt_buy_request_all_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_receive_all"    Content="گزارش  رسیدهای انبار"      Margin="3" Click="btn_inv_rpt_goods_receive_all_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_receive"       Content="گزارش تفکیکی رسید های انبار"    Margin="3" Click="btn_inv_rpt_goods_receive_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_opening_all"    Content="گزارش  افتتاحیه های انبار"      Margin="3" Click="btn_inv_rpt_goods_opening_all_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_cardex"         Content="گزارش کاردکس کالا"              Margin="3" Click="btn_inv_rpt_goods_cardex_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_stock"          Content="گزارش وضعیت گردش موجودیها"     Margin="3" Click="btn_inv_rpt_goods_stock_Click" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_rpt_goods_stock_all"         Content="گزارش وضعیت گردش عملیات"       Margin="3" Click="btn_inv_rpt_goods_stock_all_Click" />
+
+                            </StackPanel>
+                        </APM:APMExpander>
+                    </StackPanel>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox >
+            <APM:APMGroupBox  XSubSystem="Accounting" DockPanel.Dock="Left" Name="grpInventoryAccounting" Header="حسابداری انبار">
+                <APM:APMScrollViewer >
+                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                        <APM:APMExpander Name="expAccInvDocuments" XCaption="صدور سند" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_create_accounting_document_multi_select" Content="سند حسابداری برای اسناد انبار"  Margin="3" Click="btn_inv_create_accounting_document_multi_select_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expAccInvPriceDocuments" XCaption="اسناد ریالی" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_receive_financial" Content="رسید ریالی" Margin="3" Click="btn_inv_receive_financial_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_send_financial" Content="حواله ریالی" Margin="3" Click="btn_inv_send_financial_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_opening_financial" Content="سند افتتاحیه ریالی" Margin="3" Click="btn_inv_opening_financial_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_closing_financial" Content="سند اختتامیه ریالی" Margin="3" Click="btn_inv_closing_financial_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                    </StackPanel>
+                </APM:APMScrollViewer >
+            </APM:APMGroupBox>
+
+            <APM:APMGroupBox XSubSystem="Accounting" Header="حسابداری" Name="grpAccounting">
+                <APM:APMScrollViewer >
+                    <StackPanel Margin="10">
+                        <APM:APMExpander Name="expAccCoding" XCaption="کدینگ حسابداری" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_chart_account" Content="معرفی کدینگ حسابداری"  Margin="3" Click="btn_acc_chart_account_Click" />
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander  Name="expAccDocuments" XCaption="سند حسابداری" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_document_type" Content="معرفی انواع سند حسابداری"  Margin="3" Click="btn_acc_document_type_Click"  />
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_document" Content="صدور سند حسابداری"  Margin="3" Click="btn_acc_document_Click"  />
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander  Name="expAccDetails" XCaption="تفصیل" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_glb_entity_type" Content="معرفی انواع تفصیل" Margin="3" Click="btn_glb_entity_type_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_detail" Content="معرفی  تفصیل ها" Margin="3" Click="btn_acc_detail_Click"  />
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander  Name="expAccReports" XCaption="گزارشات" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_account_balance" Content="گزارش گردش حساب" Margin="3" Click="btn_acc_rpt_account_balance_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_chart_balance" Content="گزارش تراز حساب یک سطحی" Margin="3" Click="btn_acc_rpt_chart_balance_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_chart_balance_all_levels" Content="گزارش تراز حساب چند سطحی" Margin="3" Click="btn_acc_rpt_chart_balance_all_levels_Click" />
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_cover" Content="گزارش روکش اسناد" Margin="3" Click="btn_acc_rpt_cover_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_notebooks" Content="دفاتر"  Margin="3" Click="btn_acc_rpt_notebooks_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_daily_notebooks" Content="دفاتر روزنامه"  Margin="3" Click="btn_acc_rpt_daily_notebooks_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_kol_notebook_rule" Content="دفتر قانونی کل"  Margin="3" Click="btn_acc_rpt_kol_notebook_rule_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_rpt_balance_4columns" Content="تراز آزمایشی 4 ستونی"  Margin="3" Click="btn_acc_rpt_balance_4columns_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                    </StackPanel>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+
+            <APM:APMGroupBox XSubSystem="Accounting" Header="سهام"  Name="grpSahaam">
+                <APM:APMScrollViewer >
+                    <StackPanel Margin="10">
+                        <APM:APMExpander  Name="expGntCreditors"  XCaption="سهامداران" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_creditor" Content="لیست سهامداران"  Margin="3" Click="btn_gnt_creditor_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_creditor_group" Content="گروه سهامداران"  Margin="3" Click="btn_gnt_creditor_group_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander  Name="expGntEarthes" XCaption="زمین ها" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_earth" Content="زمین ها"  Margin="3" Click="btn_gnt_earth_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+
+                        <APM:APMExpander Name="expGntWaters" XCaption="معرفی آب ها" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_water1" Content="آب های اصلی"  Margin="3" Click="btn_gnt_water1_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_water2" Content="جوی ها"  Margin="3" Click="btn_gnt_water2_Click"/>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_water" Content="طاق ها"  Margin="3" Click="btn_gnt_water_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expGntDocuments" XCaption="اسناد" XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_deal" Content="سند انتقال سهام"  Margin="3" Click="btn_gnt_deal_Click"/>
+                                
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_service" Content="لیست اسناد خدمات خصوصی" Click="btn_service_masters_Click"  Margin="3" />
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expGntCosts" XCaption="هزینه ها " XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_cost_type" Content="معرفی انواع هزینه"  Margin="3" Click="btn_gnt_cost_type_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander  Name="expGntReports" XCaption="گزارشات " XSubsystem="Accounting" >
+                            <StackPanel >
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_rpt_creditor_deals" Content="نقل و انتقالات سهام سهامدار"  Margin="3" Click="btn_gnt_rpt_creditor_deals_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+
+                    </StackPanel>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+
+            <APM:APMGroupBox  XSubSystem="Accounting" DockPanel.Dock="Left" Name="grpTools" Header="ابزار ها و تنظیمات">
+                <APM:APMScrollViewer >
+                    <StackPanel HorizontalAlignment="Left" Margin="10">
+                        <APM:APMExpander Name="expGlbSettings" XCaption="تنظیمات" XSubsystem="Accounting" >
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_entity"  Content="تنظیمات موجودیت ها"  Margin="3"  Click="btn_glb_entity_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_goods_group_options"  Content="تنظیمات گروه کالا" Margin="3"  Click="btn_goods_group_options_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_inv_accounting_options"  Content="تنظیمات حسابداری"  Margin="3"  Click="btn_accounting_options_Click"/>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_gnt_settings"  Content="تنظیمات سیستم سهام"  Margin="3"  Click="btn_gnt_settings_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expAccInvTools" XCaption="ابزار ها" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_gnt_tools" Content="ابزار های سیستم سهام" Click="btn_gnt_tools_Click"  Margin="3" />
+                                <APM:APMButton XSubSystem="Accounting" Name="btn_acc_tools" Content="ابزار های سیستم حسابداری" Click="btn_acc_tools_Click"  Margin="3" />
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_acc_inv_tools" Content="ابزار های حسابداری انبار"  Margin="3" Click="btn_acc_inv_tools_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                        <APM:APMExpander Name="expBackupTools" XCaption="فایل پشتیبان" XSubsystem="Accounting">
+                            <StackPanel>
+                                <APM:APMButton XSubSystem="Accounting"  Name="btn_restore" Content="عملیات فایل پشتیبان"  Margin="3" Click="btn_backup_Click"/>
+                            </StackPanel>
+                        </APM:APMExpander>
+                    </StackPanel>
+                </APM:APMScrollViewer >
+            </APM:APMGroupBox>
+
+            <APM:APMInfoLabel DockPanel.Dock="Left"/>
+
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</Window>

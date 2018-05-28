@@ -1,0 +1,182 @@
+﻿<UIL:WindowEntityGroup x:Class="APM_SubSystems.frm_Person"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    x:TypeArguments="DDB:stp_glb_person_selResult,
+                     DDB:stp_glb_person_in_group_selResult,
+                     DDB:stp_glb_person_group_selResult"
+   
+    Title="اشخاص" FontFamily="tahoma" Height="560" Width="835" FontSize="13" >
+
+
+    <APM:APMBorder>
+        <APM:APMDockPanel >
+            <APM:APMToolBar Name="windowToolbar" />
+           <APM:APMStatusBar DockPanel.Dock="Bottom" XType="NormalWindow" />
+
+            <APM:APMGroupBox DockPanel.Dock="Top" Header="نمایش اشخاص یک گروه">
+                <WrapPanel Margin="8">
+                    <APM:APMComboBox Name="cmb_glb_person_glb_person_group_id" />
+                </WrapPanel>
+            </APM:APMGroupBox>
+                <APM:APMGroupBox Name="grpInfo" Grid.Row="2" Header="ردیف جاری" DockPanel.Dock="Bottom">
+                <APM:APMTabControl  >
+                    <APM:APMTabItem Header="مشخصات اصلی">
+
+                        <Grid Margin="8">
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <APM:APMLabel           Grid.Row="0" Grid.Column="0"  Name="lblglb_person_title_glb_coding_id" Content="عنوان:" />
+                            <APM:APMComboBoxCoding  Grid.Row="0" Grid.Column="1"  Name="cmb_glb_person_title_glb_coding_id" XCategory="Glb_Title"/>
+
+                            <APM:APMLabel           Grid.Row="0" Grid.Column="3" Name="lblglb_person_name" Content=" نام:"/>
+                            <APM:APMTextBox         Grid.Row="0" Grid.Column="4" Name="txt_glb_person_first_name"  />
+
+                            <APM:APMLabel           Grid.Row="0" Grid.Column="6" Name="lblglb_person_family" Content="نام خانوادگی:"/>
+                            <APM:APMTextBox         Grid.Row="0" Grid.Column="7" Name="txt_glb_person_family"  />
+
+                            <APM:APMLabel           Grid.Row="1" Grid.Column="0" Content="کد :"/>
+                            <APM:APMTwoPartCode     Grid.Row="1" Grid.Column="1" Name="txt_glb_person_child_code" />
+
+                            <APM:APMLabel           Grid.Row="1" Grid.Column="3" Content="شماره شناسنامه:"/>
+                            <APM:APMIntTextBox  Grid.Row="1" Grid.Column="4" Name="tlt_glb_person_identity_no"  />
+
+                            <APM:APMLabel           Grid.Row="1" Grid.Column="6" Content="کد ملی"/>
+                            <APM:APMIntTextBox  Grid.Row="1" Grid.Column="7" Name="txt_glb_person_national_code"  />
+
+                            <APM:APMLabel           Grid.Row="3" Grid.Column="0" Content="انتخاب گروه های شخص :"/>
+                            <APM:APMBrowser         Grid.Row="3" Grid.Column="1" XMultiSelect="True" Name="brw_glb_person_group" XBrowseClick="glb_person_group_XBrowseClick" />
+                        </Grid>
+
+
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تکمیلی">
+                        <Grid Margin="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+
+                            <APM:APMLabel               Grid.Row="0" Grid.Column="0"  Name="lblglb_person_latin_title_glb_coding_id" Content="Title:"/>
+                            <APM:APMComboBoxCoding      Grid.Row="0" Grid.Column="1"  Name="cmb_glb_person_latin_title_glb_coding_id"  XCategory="Glb_LatinTitle"/>
+
+                            <APM:APMLabel               Grid.Row="0" Grid.Column="3" Content="Name:"/>
+                            <APM:APMLatinTextBox        Grid.Row="0"   Grid.Column="4"    Name="txt_glb_person_latin_name"  />
+
+                            <APM:APMLabel               Grid.Row="0" Grid.Column="6" Content="Family:"/>
+                            <APM:APMLatinTextBox        Grid.Row="0"   Grid.Column="7"    Name="txt_glb_person_latin_family"  />
+
+                            <APM:APMLabel               Grid.Row="1" Grid.Column="0"  Content="کد اقتصادی:"/>
+                            <APM:APMIntTextBox      Grid.Row="1" Grid.Column="1"    Name="txt_glb_person_economic_code" />
+
+                            <APM:APMLabel               Grid.Row="1" Grid.Column="3"  Content="نام پدر:"/>
+                            <APM:APMTextBox             Grid.Row="1"   Grid.Column="4"    Name="txt_glb_person_father_name"  />
+
+                            <APM:APMLabel               Grid.Row="1" Grid.Column="6"  Content="تاریخ تولد:" />
+                            <APM:PersianDatePicker      Grid.Row="1"   Grid.Column="7"    Name="txt_glb_person_birth_date"  />
+
+                            <APM:APMLabel               Grid.Row="2"   Grid.Column="0"    Name="lblglb_person_description">توضیحات:</APM:APMLabel>
+                            <APM:APMTextBox             Grid.Row="2"   Grid.Column="1"    Name="txt_glb_person_description" Grid.ColumnSpan="3"/>
+                        </Grid>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات آدرس">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+
+
+
+
+                            </Grid.RowDefinitions>
+                            <APM:APMLabel Grid.Column="0" Grid.Row="0" Content="شماره تلفن:"/>
+                            <APM:APMIntTextBox Name="txt_glb_person_tel" Grid.Row="0" Grid.Column="1"/>
+                            <APM:APMIntTextBox Name="txt_glb_person_mobile" Grid.Row="0" Grid.Column="5"/>
+                            <APM:APMIntTextBox Name="txt_glb_person_postalcode" Grid.Row="1" Grid.Column="1"/>
+                            <APM:APMLabel Grid.Column="4" Grid.Row="0" Content="شماره همراه:"/>
+                            <APM:APMTextBox Name="txt_glb_person_address" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+                            <APM:APMLabel Grid.Column="0" Grid.Row="1" Content="کد پستی:"/>
+                            <APM:APMLabel Grid.Column="0" Grid.Row="3" Content="آدرس:"/>
+
+                        </Grid>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تفصیلی">
+                        <Grid Margin="8">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <APM:APMLabel     Grid.Column="0"  Content="کد تفصیل:"/>
+                            <APM:APMInfoLabel   Grid.Column="1"     Name="txt_glb_person_code"  />
+                            <APM:APMLabel             Grid.Column="3" Content="نام تفصیل:" />
+                            <APM:APMInfoLabel Name="lbl_glb_person_name" Grid.Column="4"/>
+
+                        </Grid>
+                    </APM:APMTabItem>
+
+                </APM:APMTabControl>
+            </APM:APMGroupBox>
+            
+            <APM:APMGroupBox Header="لیست اشخاص">
+                <APM:APMDataGridExtended  Name="dbgPerson" Margin="8"  />
+            </APM:APMGroupBox >
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntityGroup>

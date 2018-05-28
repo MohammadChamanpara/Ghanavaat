@@ -1,0 +1,82 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_tools"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents" 
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer" 
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer" 
+    xmlns:wpf="http://schemas.microsoft.com/wpf/2008/toolkit"
+    x:TypeArguments="DDB:stp_acc_document_selResult"
+    Title="ابزار های سیستم سهام" SizeToContent="WidthAndHeight" FontFamily="Tahoma">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMDockPanel>
+                <APM:APMGroupBox Header="انتقال مانده بدهی سهامدران از سال گذشته به سال جاری" DockPanel.Dock="Top">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <APM:APMLabel Content="میزان جریمه :"/>
+                                <APM:APMIntTextBox Name="txtFine" Text="5" MinWidth="20" TextAlignment="Center"/>
+                                <APM:APMLabel Content="%"/>
+                                <APM:APMSeprator/>
+                                <APM:APMLabel Content="شروع عملیات"/>
+                                <APM:APMToolbarButton XImage="Save" Name="btn_TransferCreditorsAccountToNewFiscalYear" Click="btn_TransferCreditorsAccountToNewFiscalYear_Click" XSize="Small"  XCanMagnify="False" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </APM:APMGroupBox>
+                <APM:APMGroupBoxExtended Name="grpCopy" DockPanel.Dock="Top" Header="انتقال تعرفه هزینه های عمومی از سال گذشته به سال جاری">
+                    <WrapPanel Margin="8">
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="میزان افزایش تعرفه"/>
+                        <APM:APMIntTextBox Name="txtIncrease" Text="10" MinWidth="15"/>
+                        <APM:APMLabel Content="%"/>
+                        <APM:APMSeprator/>
+                        <APM:APMLabel Content="انتقال"/>
+                        <APM:APMToolbarButton XImage="Save" Name="btnCopyCosts" XSize="Small" Click="btnCopyCosts_Click" XCanMagnify="False" />
+                    </WrapPanel>
+                </APM:APMGroupBoxExtended>
+                <APM:APMGroupBox Header="اعمال هزینه های عمومی سال جاری در حساب سهامداران" DockPanel.Dock="Top">
+                    <StackPanel Margin="10">
+                        <Label/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel>
+                                <APM:APMBrowser XTitle="انتخاب چند سهامدار" XShowCode="False" XBrowseClick="brwCreditors_XBrowseClick" />
+                                <StackPanel Orientation="Horizontal">
+                                    <APM:APMLabel Content="انتخاب همه سهامداران :"/>
+                                    <APM:APMCheckBox Name="chkSelectAllCreditors" VerticalAlignment="Center" Click="chkSelectAllCreditors_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <APM:APMSeprator/>
+                            <APM:APMLabel Content="تعداد سهامداران انتخاب شده : "/>
+                            <APM:APMInfoLabel Name="lbl_selected_creditors" BorderThickness="1"/>
+                        </StackPanel>
+                        <Label/>
+                        <StackPanel Orientation="Horizontal">
+                            <APM:APMLabel Content="شروع عملیات :"/>
+                            <APM:APMToolbarButton XImage="Save" XSize="Small"  XCanMagnify="False" Click="btnUpdateCreditorAccount_Click" />
+                        </StackPanel>
+                    </StackPanel>
+                </APM:APMGroupBox>
+                <APM:APMGroupBox Header="صدور سند حسابداری به ازای سند حساب سهامدار" DockPanel.Dock="Top">
+                    <StackPanel VerticalAlignment="Center" Margin="10">
+                        <StackPanel Margin="2"   Orientation="Horizontal">
+                            <APM:APMLabel Content="صدور سند برای اسناد تا تاریخ : "/>
+                            <APM:PersianDatePicker Name="pdpDate"/>
+                        </StackPanel>
+                        <Label/>
+                        <StackPanel Orientation="Horizontal">
+                            <APM:APMBrowser Name="brw_select_service_document" XMultiSelect="True" XTitle="انتخاب اسناد"/>
+                            <APM:APMLabel Content="تعداد اسناد انتخاب شده : "/>
+                            <APM:APMInfoLabel Name="lbl_selected_documents" BorderThickness="1"/>
+                        </StackPanel>
+                        <Label/>
+                        <StackPanel Orientation="Horizontal">
+                            <APM:APMLabel Content="صدور سند حسابداری"/>
+                            <APM:APMToolbarButton XCanMagnify="False" XImage="Save" XSize="Small" Name="btnCreateAccountingDocument" Click="btnCreateAccountingDocument_Click"/>
+                        </StackPanel>
+                    </StackPanel>
+                </APM:APMGroupBox>
+            </APM:APMDockPanel>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

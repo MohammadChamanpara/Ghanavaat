@@ -1,0 +1,38 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_UserGroup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"   
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    x:TypeArguments="DDB:stp_glb_user_group_selResult"
+    Title="گروه های کاربران" Height="465" Width="655" FontFamily="tahoma">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow" />
+         
+            <APM:APMStatusBar XType="NormalWindow"/>
+           
+            <APM:APMGroupBox Grid.Row="1" Name="grp_glb_user_group" Header="ردیف جاری" DockPanel.Dock="Bottom">
+                <Grid Margin="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <APM:APMLabel    Grid.Row="0" Grid.Column="0" Content="نام گروه کاربری :"/>
+                    <APM:APMTextBox Name="txt_glb_user_group_name" Grid.Row="0" Grid.Column="1"/>
+                    
+                    <APM:APMBrowser Grid.Column="3" XTitle="انتخاب کاربران عضو"  XMultiSelect="True" XBrowseClick="APMBrowser_XBrowseClick"/>
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Grid.Row="0" Header="لیست گروه های کاربری">
+                <APM:APMDataGridExtended Margin="10" Name="dbg_glb_user" />
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

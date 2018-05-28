@@ -1,0 +1,89 @@
+﻿<UIL:WindowTreeGridHuge x:Class="APM_Accounting.frm_acc_chart_account"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    x:TypeArguments="DDB:stp_acc_chart_account_selResult,DDB:stp_acc_chart_account_treResult"
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    Title="تعریف کدینگ"  FontFamily="tahoma" >
+    <APM:APMBorder >
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Bottom" Name="grpChartAccountCurrentRow">
+                <Grid Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <APM:APMLabel Name="lbl_CodeTitle" Content="کد :" Grid.Column="0"/>
+                    <APM:APMTwoPartCode Name="tpcCode" Grid.Column="1" />
+                    <!-- Code -->
+                    <Label Name="lblSpace" Width="30" Grid.Column="2"/>
+                    <APM:APMLabel Grid.Column="3" Content="نوع موجودیت :" Name="lblEntityTypeTitle"/>
+                    <APM:APMInfoLabel  Grid.Column="4" Name="lbl_acc_chart_account_glb_entity_type_name" />
+                    <!-- Entity Type -->
+
+                    <APM:APMLabel Grid.Column="6" Content="نام :" />
+                    <APM:APMTextBox  Grid.Column="7" Name="txt_acc_chart_account_name" />
+                    <!-- Name -->
+
+                    <APM:APMLabel Name="lbl_TypeTitle" Content="نوع حساب :" Grid.Column="9"/>
+                    <Grid Grid.Column="10">
+                        <APM:APMComboBoxCoding Name="cmb_acc_chart_account_type_glb_coding_id" XCategory="Acc_AccountType"/>
+                        <APM:APMInfoLabel Name="lbl_acc_chart_account_type_glb_coding_name" BorderThickness="1" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!--grp Account Type-->
+                    <APM:APMLabel Name="lbl_NatureTitle" Content="ماهیت حساب :" Grid.Column="12"/>
+                    <Grid Grid.Column="13">
+                        <APM:APMComboBoxCoding Name="cmb_acc_chart_account_nature_glb_coding_id" XCategory="Acc_AccountNature" />
+                        <APM:APMInfoLabel Name="lbl_acc_chart_account_nature_glb_coding_name" BorderThickness="1" VerticalAlignment="Center"/>
+                    </Grid>
+                    <!-- grp Account Nature-->
+
+                    <APM:APMCheckBox Name="chk_acc_chart_account_active" Content="فعال" Grid.Column="16" Margin="10"/>
+                    <!--chk Active-->
+                </Grid>
+                <!--CurrentRow Grid-->
+            </APM:APMGroupBox>
+            <!-- CurrentRow GroupBox-->
+            <APM:APMGroupBox Header="کدینگ حسابداری"  Name="grpTree" DockPanel.Dock="Left">
+                <APM:APMTree Margin="5" Name="trvChartAccount" />
+            </APM:APMGroupBox>
+            <!--grp Tree-->
+            <APM:APMGroupBox Cursor="Hand" Name="grpDataGrid" DockPanel.Dock="Left" >
+                <APM:APMDataGridExtended  Name="dbgChartAccount" Margin="10" >
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu >
+                            <APM:APMMenuItem XCaption="نمایش گردش حساب" Click="MenuItem_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+                <!-- dbg ChartAccount-->
+            </APM:APMGroupBox>
+            <!-- grp ChartAccount DataGrid -->
+        </APM:APMDockPanel>
+        <!-- Window DockPanel-->
+    </APM:APMBorder>
+    <!--Window Border-->
+</UIL:WindowTreeGridHuge>
+
+    

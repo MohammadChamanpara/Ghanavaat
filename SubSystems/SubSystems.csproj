@@ -1,0 +1,1312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC400765-862B-4BC4-B36B-1242273EA918}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APM_SubSystems</RootNamespace>
+    <AssemblyName>Ghanaat</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>APM_SubSystems.App</StartupObject>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>3</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="dao, Version=10.0.4504.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework.Classic">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="APM_Accounting\acc_chart_account\frm_chart_account.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_detail\frm_acc_detail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_document\frm_acc_document.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_document\frm_acc_document_type.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_options\frm_acc_options.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\account_balance\frm_acc_rpt_account_balance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\balance_4columns\frm_acc_rpt_balance_4columns.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\chart_balance\frm_acc_rpt_chart_balance.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\chart_balance_all_levels\frm_acc_rpt_chart_balance_all_levels.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\cover\frm_acc_rpt_cover.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\daily_notebooks\frm_acc_rpt_daily_notebooks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\kol_notebook_rule\frm_acc_rpt_kol_notebook_rule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Accounting\acc_Reports\notebooks\frm_acc_rpt_notebooks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Users\frm_UserAccessItems.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Users\frm_UserAccess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_InventoryAccounting\acc_inv_create_accounting_document\frm_acc_inv_create_accounting_document_multi_select.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_creditor\frm_gnt_creditor_group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_creditor\frm_gnt_creditor_account.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_service\frm_gnt_service.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_service\frm_gnt_service_masters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sahaam\gnt_service\frm_gnt_service_report_parameters.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_water\frm_gnt_water_ownerships.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsAndSettings\acc_inv_tools\frm_acc_inv_tools.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_buy_request\frm_inv_buy_request.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_goods_attribute\frm_inv_attribute.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_goods_glb_measure\frm_inv_goods_glb_measure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_goods_receive\frm_inv_goods_receive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_goods_request\frm_inv_goods_request.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_goods_send\frm_inv_goods_send.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_group_goods\frm_inv_group_goods.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_options\frm_inv_options.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_physical_counting\frm_inv_physical_counting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_product_part\frm_inv_product.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\buy_request\frm_rpt_inv_buy_request_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_cardex\frm_inv_rpt_goods_cardex.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_opening\frm_inv_rpt_goods_opening_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_receive\frm_inv_rpt_goods_receive.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_receive\frm_inv_rpt_goods_receive_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_request\frm_inv_rpt_goods_request_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_send\frm_inv_rpt_goods_send.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_send\frm_inv_rpt_goods_send_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_stock\frm_inv_rpt_goods_stock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_reports\goods_stock\frm_inv_rpt_goods_stock_all.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_Inventory\inv_store\frm_inv_store.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\user_entity\frm_glb_user_entity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsAndSettings\acc_tools\frm_acc_tools.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsAndSettings\gnt_tools\frm_gnt_tools.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_cost\frm_gnt_cost_type.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_reports\gnt_rpt_creditor_ownership\frm_gnt_rpt_creditor_ownership.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_reports\gnt_rpt_creditor_deals\frm_gnt_rpt_creditor_deals.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_settings\frm_gnt_settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Bank\frm_glb_bank_account_type.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Bank\frm_glb_bank.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Bank\frm_glb_bank_account.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Bank\frm_glb_bank_branch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Cash\frm_glb_cash.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Company\frm_Company.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Company\frm_CompanyGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\CostCenter\frm_CostCenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsAndSettings\backup\frm_Backup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsAndSettings\entities_settings\frm_entity.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\FiscalYear\frm_glb_fiscal_year.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Measure\frm_glb_measure.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Personel\frmPersonel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Personel\frmPersonelSearch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Personel\frm_personel_group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Person\frmPerson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Person\frmPerson_Group.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Person\frmPerson_Search.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Project\frmProject.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Users\frm_User.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="APM_GlobalForms\Users\frm_UserGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frm_Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Main Form\frm_main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="APM_Accounting\acc_chart_account\frm_chart_account.xaml.cs">
+      <DependentUpon>frm_chart_account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_detail\frm_acc_detail.xaml.cs">
+      <DependentUpon>frm_acc_detail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_document\frm_acc_document.xaml.cs">
+      <DependentUpon>frm_acc_document.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_document\frm_acc_document_type.xaml.cs">
+      <DependentUpon>frm_acc_document_type.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_document\rpt_acc_document.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_document.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_options\frm_acc_options.xaml.cs">
+      <DependentUpon>frm_acc_options.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\account_balance\frm_acc_rpt_account_balance.xaml.cs">
+      <DependentUpon>frm_acc_rpt_account_balance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\account_balance\rpt_acc_account_balance1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_account_balance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\AccReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\balance_4columns\frm_acc_rpt_balance_4columns.xaml.cs">
+      <DependentUpon>frm_acc_rpt_balance_4columns.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\balance_4columns\rpt_balance_4columns1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_balance_4columns.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\chart_balance\frm_acc_rpt_chart_balance.xaml.cs">
+      <DependentUpon>frm_acc_rpt_chart_balance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\chart_balance\rpt_acc_chart_balance1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_chart_balance.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\chart_balance_all_levels\frm_acc_rpt_chart_balance_all_levels.xaml.cs">
+      <DependentUpon>frm_acc_rpt_chart_balance_all_levels.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\chart_balance_all_levels\rpt_acc_chart_balance_all_levels1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_chart_balance_all_levels.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\cover\frm_acc_rpt_cover.xaml.cs">
+      <DependentUpon>frm_acc_rpt_cover.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\cover\rpt_acc_cover.cs">
+      <DependentUpon>rpt_acc_cover.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\daily_notebooks\frm_acc_rpt_daily_notebooks.xaml.cs">
+      <DependentUpon>frm_acc_rpt_daily_notebooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\daily_notebooks\rpt_acc_daily_notebooks1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_daily_notebooks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\kol_notebook_rule\frm_acc_rpt_kol_notebook_rule.xaml.cs">
+      <DependentUpon>frm_acc_rpt_kol_notebook_rule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\kol_notebook_rule\rpt_kol_notebook_rule.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_kol_notebook_rule.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\notebooks\frm_acc_rpt_notebooks.xaml.cs">
+      <DependentUpon>frm_acc_rpt_notebooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Accounting\acc_Reports\notebooks\rpt_acc_notebooks.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_acc_notebooks.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Users\frm_UserAccessItems.xaml.cs">
+      <DependentUpon>frm_UserAccessItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Users\frm_UserAccess.xaml.cs">
+      <DependentUpon>frm_UserAccess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_InventoryAccounting\acc_inv_create_accounting_document\frm_acc_inv_create_accounting_document_multi_select.xaml.cs">
+      <DependentUpon>frm_acc_inv_create_accounting_document_multi_select.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_all_creditors.cs">
+      <DependentUpon>gnt_rpt_all_creditors.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_earth\gnt_rpt_creditor_stock_back.cs">
+      <DependentUpon>gnt_rpt_creditor_stock_back.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_stock.cs">
+      <DependentUpon>gnt_rpt_creditor_stock.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\frm_gnt_creditor_group.xaml.cs">
+      <DependentUpon>frm_gnt_creditor_group.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_debtors.cs">
+      <DependentUpon>gnt_rpt_creditor_debtors.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_helps.cs">
+      <DependentUpon>gnt_rpt_creditor_helps.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_list.cs">
+      <DependentUpon>gnt_rpt_creditor_list.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_payment.cs">
+      <DependentUpon>gnt_rpt_creditor_payment.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\frm_gnt_creditor_account.xaml.cs">
+      <DependentUpon>frm_gnt_creditor_account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_account.cs">
+      <DependentUpon>gnt_rpt_creditor_account.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_service\frm_gnt_service.xaml.cs">
+      <DependentUpon>frm_gnt_service.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_service\frm_gnt_service_masters.xaml.cs">
+      <DependentUpon>frm_gnt_service_masters.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sahaam\gnt_service\frm_gnt_service_report_parameters.xaml.cs">
+      <DependentUpon>frm_gnt_service_report_parameters.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_service\gnt_rpt_service.cs">
+      <DependentUpon>gnt_rpt_service.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sahaam\gnt_water\frm_gnt_water_ownerships.xaml.cs">
+      <DependentUpon>frm_gnt_water_ownerships.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_water\gnt_rpt_water_ownerships.cs">
+      <DependentUpon>gnt_rpt_water_ownerships.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ToolsAndSettings\acc_inv_tools\frm_acc_inv_tools.xaml.cs">
+      <DependentUpon>frm_acc_inv_tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_buy_request\frm_inv_buy_request.xaml.cs">
+      <DependentUpon>frm_inv_buy_request.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_buy_request\rpt_inv_buy_request1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_buy_request.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_attribute\frm_inv_attribute.xaml.cs">
+      <DependentUpon>frm_inv_attribute.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_glb_measure\frm_inv_goods_glb_measure.xaml.cs">
+      <DependentUpon>frm_inv_goods_glb_measure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_receive\frm_inv_goods_receive.xaml.cs">
+      <DependentUpon>frm_inv_goods_receive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_opening1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_opening.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_receive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive_financal1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_receive_financal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive_opening_isfinincial1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_receive_opening_isfinincial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_request\frm_inv_goods_request.xaml.cs">
+      <DependentUpon>frm_inv_goods_request.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_request\rpt_inv_goods_request1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_request.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_send\frm_inv_goods_send.xaml.cs">
+      <DependentUpon>frm_inv_goods_send.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_send\rpt_inv_goods_send1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_send.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_goods_send\rpt_inv_goods_send_financial1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_send_financial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_group_goods\frm_inv_group_goods.xaml.cs">
+      <DependentUpon>frm_inv_group_goods.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_options\frm_inv_options.xaml.cs">
+      <DependentUpon>frm_inv_options.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_physical_counting\frm_inv_physical_counting.xaml.cs">
+      <DependentUpon>frm_inv_physical_counting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_physical_counting\rpt_inv_physical_counting1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_physical_counting.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_product_part\frm_inv_product.xaml.cs">
+      <DependentUpon>frm_inv_product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\buy_request\frm_rpt_inv_buy_request_all.xaml.cs">
+      <DependentUpon>frm_rpt_inv_buy_request_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\buy_request\rpt_inv_buy_request_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_buy_request_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_cardex\frm_inv_rpt_goods_cardex.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_cardex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_cardex\rpt_inv_goods_cardex2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_cardex.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_opening\frm_inv_rpt_goods_opening_all.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_opening_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_opening\rpt_inv_goods_opening_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_opening_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_receive\frm_inv_rpt_goods_receive.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_receive.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_receive\frm_inv_rpt_goods_receive_all.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_receive_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_receive\rpt_inv_goods_receive2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_receive.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_receive\rpt_inv_goods_receive_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_receive_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_request\frm_inv_rpt_goods_request_all.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_request_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_request\rpt_inv_goods_request_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_request_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_send\frm_inv_rpt_goods_send.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_send.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_send\frm_inv_rpt_goods_send_all.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_send_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_send\rpt_inv_goods_send2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_send.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_send\rpt_inv_goods_send_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_send_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_stock\frm_inv_rpt_goods_stock.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_stock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_stock\frm_inv_rpt_goods_stock_all.xaml.cs">
+      <DependentUpon>frm_inv_rpt_goods_stock_all.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_stock\rpt_inv_goods_stock2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_stock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\goods_stock\rpt_inv_goods_stock_all2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_inv_goods_stock_all.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_reports\InvReportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="APM_Inventory\inv_store\frm_inv_store.xaml.cs">
+      <DependentUpon>frm_inv_store.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Sahaam\gnt_creditor\frmCreditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_earth\frm_gnt_earth.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_deal\frm_gnt_deal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_creditor\frm_gnt_ownership.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sahaam\gnt_water\frm_gnt_water1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_water\frm_gnt_water.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Sahaam\gnt_water\frm_gnt_water2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APM_GlobalForms\user_entity\frm_glb_user_entity.xaml.cs">
+      <DependentUpon>frm_glb_user_entity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsAndSettings\acc_tools\frm_acc_tools.xaml.cs">
+      <DependentUpon>frm_acc_tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsAndSettings\gnt_tools\frm_gnt_tools.xaml.cs">
+      <DependentUpon>frm_gnt_tools.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_cost\frm_gnt_cost_type.xaml.cs">
+      <DependentUpon>frm_gnt_cost_type.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_reports\gntReportsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>gntReportsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_reports\gnt_rpt_creditor_ownership\frm_gnt_rpt_creditor_ownership.xaml.cs">
+      <DependentUpon>frm_gnt_rpt_creditor_ownership.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_reports\gnt_rpt_creditor_deals\gnt_rpt_creditor_deals.cs">
+      <DependentUpon>gnt_rpt_creditor_deals.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sahaam\gnt_reports\gnt_rpt_creditor_deals\frm_gnt_rpt_creditor_deals.xaml.cs">
+      <DependentUpon>frm_gnt_rpt_creditor_deals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\gnt_rpt_creditor_ownership.cs">
+      <DependentUpon>gnt_rpt_creditor_ownership.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sahaam\gnt_settings\frm_gnt_settings.xaml.cs">
+      <DependentUpon>frm_gnt_settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Bank\frm_glb_bank_account_type.xaml.cs">
+      <DependentUpon>frm_glb_bank_account_type.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Bank\frm_glb_bank.xaml.cs">
+      <DependentUpon>frm_glb_bank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Bank\frm_glb_bank_account.xaml.cs">
+      <DependentUpon>frm_glb_bank_account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Bank\frm_glb_bank_branch.xaml.cs">
+      <DependentUpon>frm_glb_bank_branch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Cash\frm_glb_cash.xaml.cs">
+      <DependentUpon>frm_glb_cash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Company\frm_Company.xaml.cs">
+      <DependentUpon>frm_Company.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Company\frm_CompanyGroup.xaml.cs">
+      <DependentUpon>frm_CompanyGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\CostCenter\frm_CostCenter.xaml.cs">
+      <DependentUpon>frm_CostCenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsAndSettings\backup\frm_Backup.xaml.cs">
+      <DependentUpon>frm_Backup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsAndSettings\entities_settings\frm_entity.xaml.cs">
+      <DependentUpon>frm_entity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\FiscalYear\frm_glb_fiscal_year.xaml.cs">
+      <DependentUpon>frm_glb_fiscal_year.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Measure\frm_glb_measure.xaml.cs">
+      <DependentUpon>frm_glb_measure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Personel\frmPersonel.xaml.cs">
+      <DependentUpon>frmPersonel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Personel\frmPersonelSearch.xaml.cs">
+      <DependentUpon>frmPersonelSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Personel\frm_personel_group.xaml.cs">
+      <DependentUpon>frm_personel_group.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Person\frmPerson.xaml.cs">
+      <DependentUpon>frmPerson.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Person\frmPerson_Group.xaml.cs">
+      <DependentUpon>frmPerson_Group.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Person\frmPerson_Search.xaml.cs">
+      <DependentUpon>frmPerson_Search.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Project\frmProject.xaml.cs">
+      <DependentUpon>frmProject.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Users\frm_User.xaml.cs">
+      <DependentUpon>frm_User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="APM_GlobalForms\Users\frm_UserGroup.xaml.cs">
+      <DependentUpon>frm_UserGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.xaml.cs">
+      <DependentUpon>frm_Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Main Form\frm_main.xaml.cs">
+      <DependentUpon>frm_main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\frmCreditor.xaml.cs">
+      <DependentUpon>frmCreditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_earth\frm_gnt_earth.xaml.cs">
+      <DependentUpon>frm_gnt_earth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_deal\frm_gnt_deal.xaml.cs">
+      <DependentUpon>frm_gnt_deal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_creditor\frm_gnt_ownership.xaml.cs">
+      <DependentUpon>frm_gnt_ownership.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_water\frm_gnt_water1.xaml.cs">
+      <DependentUpon>frm_gnt_water1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_water\frm_gnt_water.xaml.cs">
+      <DependentUpon>frm_gnt_water.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sahaam\gnt_water\frm_gnt_water2.xaml.cs">
+      <DependentUpon>frm_gnt_water2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SingleInstance.cs" />
+    <Compile Include="SubSystems_Tools\UITools.cs" />
+    <EmbeddedResource Include="APM_Accounting\acc_document\rpt_acc_document.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_document.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\account_balance\rpt_acc_account_balance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_account_balance1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\balance_4columns\rpt_balance_4columns.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_balance_4columns1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\chart_balance\rpt_acc_chart_balance.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_chart_balance1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\chart_balance_all_levels\rpt_acc_chart_balance_all_levels.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_chart_balance_all_levels1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\cover\rpt_acc_cover.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_cover.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\daily_notebooks\rpt_acc_daily_notebooks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_daily_notebooks1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\kol_notebook_rule\rpt_kol_notebook_rule.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_kol_notebook_rule.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Accounting\acc_Reports\notebooks\rpt_acc_notebooks.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_acc_notebooks.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_buy_request\rpt_inv_buy_request.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_buy_request1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_opening.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_opening1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_receive1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive_financal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_receive_financal1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_receive\rpt_inv_goods_receive_opening_isfinincial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_receive_opening_isfinincial1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_request\rpt_inv_goods_request.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_request1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_send\rpt_inv_goods_send.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_send1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_goods_send\rpt_inv_goods_send_financial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_send_financial1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_physical_counting\rpt_inv_physical_counting.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_physical_counting1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\buy_request\rpt_inv_buy_request_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_buy_request_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_cardex\rpt_inv_goods_cardex.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_cardex2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_opening\rpt_inv_goods_opening_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_opening_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_receive\rpt_inv_goods_receive.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_receive2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_receive\rpt_inv_goods_receive_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_receive_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_request\rpt_inv_goods_request_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_request_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_send\rpt_inv_goods_send.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_send2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_send\rpt_inv_goods_send_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_send_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_stock\rpt_inv_goods_stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_stock2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APM_Inventory\inv_reports\goods_stock\rpt_inv_goods_stock_all.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_inv_goods_stock_all2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_all_creditors.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_all_creditors.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_earth\gnt_rpt_creditor_stock_back.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_stock_back.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_stock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_debtors.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_debtors.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_helps.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_helps.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_list.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_list.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_payment.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_payment.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_reports\gnt_rpt_creditor_deals\gnt_rpt_creditor_deals.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_deals.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_ownership.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_ownership.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_creditor\gnt_rpt_creditor_account.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_creditor_account.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_service\gnt_rpt_service.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_service.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sahaam\gnt_water\gnt_rpt_water_ownerships.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>gnt_rpt_water_ownerships.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="APM_Accounting\acc_Reports\AccReportDataSet.xsc">
+      <DependentUpon>AccReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APM_Accounting\acc_Reports\AccReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>AccReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="APM_Accounting\acc_Reports\AccReportDataSet.xss">
+      <DependentUpon>AccReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APM_Inventory\inv_reports\InvReportsDataSet.xsc">
+      <DependentUpon>InvReportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="APM_Inventory\inv_reports\InvReportsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvReportsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="APM_Inventory\inv_reports\InvReportsDataSet.xss">
+      <DependentUpon>InvReportsDataSet.xsd</DependentUpon>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sahaam\gnt_reports\gntReportsDataSet.xsc">
+      <DependentUpon>gntReportsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sahaam\gnt_reports\gntReportsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gntReportsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Sahaam\gnt_reports\gntReportsDataSet.xss">
+      <DependentUpon>gntReportsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{B02B4100-F486-4DBF-85FB-A7749CABCE75}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Components\Components.csproj">
+      <Project>{2BA447F1-BDE8-4D84-B149-BE4BE8BED6E1}</Project>
+      <Name>Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{47257268-7D7D-4290-A4C2-BE370B18243B}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tools\Tools.csproj">
+      <Project>{DB70AC0F-7F65-48D5-A450-BFF9E16BB30C}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserInterfaceLayer\UserInterfaceLayer.csproj">
+      <Project>{6ADE2C00-07DF-4DF9-89A6-8365B3005A5B}</Project>
+      <Name>UserInterfaceLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="APM_Inventory\Algorithms\Product.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="APM_InventoryAccounting\Algorithms\FIFO.txt" />
+    <Resource Include="APM_InventoryAccounting\Algorithms\LIFO.txt" />
+    <Resource Include="APM_InventoryAccounting\Algorithms\Prices.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ok.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

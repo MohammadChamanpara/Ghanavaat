@@ -1,0 +1,109 @@
+﻿<UIL:WindowTwoTabs x:Class="APM_Accounting.frm_acc_document"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents" 
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer" 
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer" 
+    xmlns:wpf="http://schemas.microsoft.com/wpf/2008/toolkit"
+    x:TypeArguments="DDB:stp_acc_document_selResult,
+                     DDB:stp_acc_document_article_selResult"
+    Title="سند حسابداری" WindowState="Maximized" Height="578">
+    <APM:APMBorder>
+
+        <APM:APMDockPanel>
+            <APM:APMStatusBar  XType="AccDocumentWindow"/>
+            <APM:APMToolBar Name="tbr_acc_document" DockPanel.Dock="Top" XType="AccDocumentWindow"/>
+            <APM:APMTabControl  Name="tab_acc_document">
+                <APM:APMTabItem Header="لیست سند حسابداری"   >
+                    <APM:APMDockPanel>
+                        <APM:APMGroupBox Header="لیست سند حسابداری">
+                            <APM:APMDataGridExtended  Name="dbg_acc_document"/>
+                        </APM:APMGroupBox>
+                    </APM:APMDockPanel>
+                </APM:APMTabItem>
+                <APM:APMTabItem  Header=" جزئیات سند حسابداری"  >
+                    <APM:APMDockPanel>
+                        <APM:APMDockPanel DockPanel.Dock="Top">
+                            <APM:APMDocumentHeader Name="documentHeader" XType="AccountingDocument"  />
+                        </APM:APMDockPanel>
+                        <APM:APMBorder >
+                            <APM:APMDockPanel>
+                                <APM:APMGroupBoxExtended DockPanel.Dock="Bottom"  Header="ورود اطلاعات جزئیات :" Name="grp_atticle">
+                                    <Grid Margin="0,0,0,5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="5*"/>
+                                            <ColumnDefinition Width="auto"/>
+
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="0,0,15,0">
+                                            <APM:APMToolbarButton XImage="Previous" XSize="Small" />
+                                            <APM:APMToolbarButton XImage="Next" XSize="Small" />
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="11" Grid.Row="0" Grid.RowSpan="2" Margin="15,0,0,0">
+                                            <APM:APMToolbarButton XImage="Delete" XSize="Small" />
+                                            <APM:APMToolbarButton XImage="Insert"  XSize="Small"/>
+                                        </StackPanel>
+                                        <APM:APMLabel Content="حساب" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center"/>
+                                        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                                            <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                                                <APM:APMRadioButton Name="radSelectFromGrid" Margin="1" ToolTip="انتخاب حساب از جدول" IsChecked="True" />
+                                                <APM:APMRadioButton Name="radSelectFromTree" Margin="1" ToolTip="انتخاب حساب از درخت"/>
+
+                                            </StackPanel>
+                                            <APM:APMBrowser XBrowseClick="brw_acc_document_article_acc_chart_account_id_XBrowseClick" XTextBoxKeyDown="brw_acc_document_article_acc_chart_account_id_XTextBoxKeyDown" Name="brw_acc_document_article_acc_chart_account_id"/>
+                                        </StackPanel>
+                                        <APM:APMLabel Grid.Column="5" Grid.Row="0" Content="بستانکار" Name="lbl_countTitle" HorizontalAlignment="Center"/>
+
+                                        <APM:APMLabel Grid.Column="3" Grid.Row="0" Content=" بدهکار" HorizontalAlignment="Center"/>
+                                        <APM:APMFloatTextBox Grid.Column="3"   Grid.Row="1" Name="txt_acc_document_article_debt"  LostFocus="txt_acc_document_article_debt_LostFocus" />
+                                        <APM:APMFloatTextBox Grid.Column="5" Grid.Row="1" Name="txt_acc_document_article_credit"  LostFocus="txt_acc_document_article_credit_LostFocus"/>
+                                        <APM:APMLabel Grid.Column="7" Grid.Row="0" Content="شرح " HorizontalAlignment="Center"/>
+                                        <APM:APMTextBox Grid.Column="7" Grid.Row="1" Name="txt_acc_document_article_description"   />
+                                        <!--<StackPanel Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="10" Orientation="Horizontal">
+                                            <APM:APMLabel Content=" گروه : " BorderThickness="1"/>
+                                            <APM:APMInfoLabel Name="lbl_acc_document_article_acc_chart_account_group_name" BorderThickness="1"/>
+                                            <APM:APMLabel Content=" کل : " BorderThickness="1"/>
+                                            <APM:APMInfoLabel Name="lbl_acc_document_article_acc_chart_account_kol_name" BorderThickness="1"/>
+                                            <APM:APMLabel Content=" معین : " BorderThickness="1"/>
+                                            <APM:APMInfoLabel Name="lbl_acc_document_article_acc_chart_account_moein_name" BorderThickness="1"/>
+                                            <APM:APMLabel Content=" تفصیل : " BorderThickness="1" Name="lblDetail"/>
+                                            <APM:APMInfoLabel Name="lbl_acc_document_article_acc_chart_account_detail_name" BorderThickness="1"/>
+                                        </StackPanel>-->
+                                    </Grid>
+
+                                </APM:APMGroupBoxExtended>
+                                <APM:APMGroupBoxExtended Grid.Row="1" Header=" جزئیات سند حسابداری :" Name="grp_acc_document_article" Margin="10" >
+                                    <APM:APMDataGridExtended  Name="dbg_acc_document_article" XShowTotalAmount="False" XShowTotalCredit="True" XShowTotalDept="True" XShowRemaining="True" >
+                                        <APM:APMDataGridExtended.ContextMenu>
+                                            <ContextMenu >
+                                                <APM:APMMenuItem XCaption="نمایش سند اصلی" Click="ShowInvDocument_MenuClick" Name="ctm_acc_document_article"/>
+                                                <APM:APMMenuItem XCaption="نمایش گردش حساب" Click="ShowAccountReport_MenuClick"/>
+                                                <APM:APMMenuItem XCaption="نمایش گردش تمام حساب های این تفصیل" Click="ShowDetailReport_MenuClick"/>
+                                            </ContextMenu>
+                                        </APM:APMDataGridExtended.ContextMenu>
+                                    </APM:APMDataGridExtended>
+                                </APM:APMGroupBoxExtended>
+                            </APM:APMDockPanel>
+                        </APM:APMBorder>
+                    </APM:APMDockPanel>
+                </APM:APMTabItem>
+            </APM:APMTabControl>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowTwoTabs>

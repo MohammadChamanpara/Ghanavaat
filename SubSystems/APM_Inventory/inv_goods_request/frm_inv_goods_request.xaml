@@ -1,0 +1,101 @@
+﻿<UIL:WindowTwoTabs x:Class="APM_SubSystems.frm_inv_goods_request"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents" 
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer" 
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer" 
+    xmlns:wpf="http://schemas.microsoft.com/wpf/2008/toolkit"
+    x:TypeArguments="DDB:stp_inv_goods_request_selResult , DDB:stp_inv_goods_request_article_selResult"
+    Title="در خواست کالا" WindowState="Maximized" Height="650">
+    <APM:APMBorder>
+        
+        <APM:APMDockPanel>
+            <APM:APMStatusBar  XType="InvDocumentWindow"/>
+            <APM:APMToolBar Name="tbr_goods_request" DockPanel.Dock="Top" XType="InvDocumentWindow" />
+
+            <APM:APMTabControl  Name="tab_main">
+                <APM:APMTabItem Header="لیست درخواست کالا"   >
+                    <APM:APMDockPanel>
+                        <APM:APMGroupBox Header="لیست درخواست کالا">
+                            <APM:APMDataGridExtended  Name="dbg_Request_list"/>
+                        </APM:APMGroupBox>
+                    </APM:APMDockPanel>
+                </APM:APMTabItem>
+                <APM:APMTabItem  Header=" جزئیات درخواست کالا"  >
+                    <APM:APMDockPanel>
+                        <APM:APMDockPanel DockPanel.Dock="Top">
+                            <APM:APMDocumentHeader Name="documentHeader" XType="GoodsRequest" 
+                                                   XBrowseClick_MainStore="MainStore_BrowseClick"
+                                                   XBrowseClick_GoodsRequesterCostCenter="SelectCostCenter_BrowseClick"
+                                                   XBrowseClick_GoodsRequesterPersonel="RequesterPersonel_BrowseClick"
+                                                   XBrowseClick_RequestConfirmerPersonel="ConfirmerPersonel_BrowseClick"
+                                                   />
+
+                        </APM:APMDockPanel>
+                        <APM:APMBorder >
+                            <APM:APMDockPanel>
+                                <APM:APMGroupBoxExtended DockPanel.Dock="Bottom"  Header="ورود اطلاعات جزئیات :"  Name="grp_atticle" >
+                                    <Grid Margin="0,0,0,5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="auto" />
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="1*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="1*" />
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="5*"/>
+                                            <ColumnDefinition Width="auto"/>
+
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Margin="0,0,15,0">
+                                            <APM:APMToolbarButton XImage="Previous" XSize="Small" />
+                                            <APM:APMToolbarButton XImage="Next" XSize="Small" />
+                                        </StackPanel>
+                                        <StackPanel Grid.Column="11" Grid.Row="0" Grid.RowSpan="2" Margin="15,0,0,0">
+                                            <APM:APMToolbarButton XImage="Delete" XSize="Small" />
+                                            <APM:APMToolbarButton XImage="Insert"  XSize="Small" />
+                                        </StackPanel>
+                                        <APM:APMLabel Content="کالای درخواستی" Grid.Column="1" Grid.Row="0"/>
+
+                                        <APM:APMBrowser Name="brw_inv_goods_request_article_inv_group_goods_id" Grid.Column="1" Grid.Row="1" XBrowseClick="SelectGood_BrowseClick" XTextBoxKeyDown="brw_inv_goods_request_article_inv_group_goods_TextBoxKeyDown" />
+                                        <APM:APMLabel Grid.Column="3" Grid.Row="0" Content="تعداد درخواست" Name="lbl_countTitle"/>
+                                        <APM:APMFloatTextBox Grid.Column="3" Grid.Row="1" Name="txt_inv_goods_request_article_count"/>
+
+                                        <APM:APMLabel Grid.Column="5" Grid.Row="0" Content=" واحد کالا"/>
+                                        <APM:APMComboBox Grid.Column="5"   Grid.Row="1" Name="cmb_inv_goods_request_article_glb_measure_id" />
+                                        <APM:APMLabel Grid.Column="7" Grid.Row="0" Content=" محل مصرف"/>
+                                        <APM:APMTextBox Grid.Column="7"  Grid.Row="1" Name="txt_inv_goods_request_article_consume_place"/>
+                                           
+                                        <APM:APMLabel Grid.Column="9" Grid.Row="0" Content="شرح " />
+                                        <APM:APMTextBox Grid.Column="9" Grid.Row="1" Name="txt_inv_goods_request_article_description"   />
+                                    </Grid>
+
+                                </APM:APMGroupBoxExtended>
+                                <APM:APMGroupBox Grid.Row="1" Header=" جزئیات درخواست کالا :" Name="grp_goods_request_article" Margin="10" >
+                                    <APM:APMDataGridExtended  Name="dbg_request_article" XShowTotalAmount="True">
+                                        <APM:APMDataGridExtended.ContextMenu>
+                                            <ContextMenu>
+                                                <ContextMenu.Items>
+                                                    <APM:APMMenuItem XCaption="مشاهدۀ کاردکس کالا" Click="mnuCardex_Click"/>
+                                                </ContextMenu.Items>
+                                            </ContextMenu>
+                                        </APM:APMDataGridExtended.ContextMenu>
+                                    </APM:APMDataGridExtended>
+                                </APM:APMGroupBox>
+                            </APM:APMDockPanel>
+                        </APM:APMBorder>
+                    </APM:APMDockPanel>
+                </APM:APMTabItem>
+            </APM:APMTabControl>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowTwoTabs>

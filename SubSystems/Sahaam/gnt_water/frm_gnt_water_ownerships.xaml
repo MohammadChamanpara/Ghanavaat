@@ -1,0 +1,33 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_water_ownerships"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    x:TypeArguments="DDB:stp_gnt_ownership_selResult"
+    WindowState="Maximized"
+    Title="مالکیت یک آب" FontFamily="tahoma">
+
+    <APM:APMBorder>
+        <APM:APMDockPanel >
+            <APM:APMToolBar Name="windowToolbar" XType="ReportWindow" />
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <APM:APMGroupBoxExtended XCanClear="True" DockPanel.Dock="Top" Header="مشخصات آب :">
+                    <StackPanel Margin="8" Orientation="Horizontal">
+                        <APM:APMLabel Name="lbl_water_name" Content="نام آب"/>
+                    </StackPanel>
+                </APM:APMGroupBoxExtended>
+            </StackPanel>
+            <APM:APMGroupBox Header="لیست سهامدارانی که از این آب سهم دارند">
+                <APM:APMDataGridExtended  Name="dbgCreditor" Margin="8"  >
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="چاپ لیست در حال نمایش" Name="btnPrintMenu" Click="btnPrint_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox >
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

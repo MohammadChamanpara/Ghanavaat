@@ -1,0 +1,33 @@
+﻿acc_inv_calculate_price_of_send_article_LIFO(article)
+{
+	declare 
+		sendCount=article.count;
+		totalCountPrice=0
+		totalCount=0;
+	
+	declare CURSOR ON 
+		SELECT rCount,rPrice 
+		FROM ReceiveArticle RA join Receive R
+		WHERE 
+			R.no<article.masterNo
+		ORDER BY R.no DESC
+		{
+			if(sendCount>=racount) /* for all articles except last one */
+			{
+				sendCount-=raCount;
+				totalCountPrice = totalCountPrice + raCount * raPrice
+				totalCount += raCount
+			}
+			else /* for last article */
+			{
+				totalCountPrice = totalCountPrice + sendCount * raPrice
+				totalCount += sendCount
+				sendCount=0;
+			}			
+			if(sendCount <= 0)
+			{
+				article.price = totalPrice / totalCount
+				return article.price
+			}
+		}
+}

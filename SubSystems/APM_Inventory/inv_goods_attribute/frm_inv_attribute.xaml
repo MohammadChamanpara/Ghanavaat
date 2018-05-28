@@ -1,0 +1,42 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_inv_attribute"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_inv_attribute_selResult"
+    Title="خصوصیات" Height="624" Width="576" >
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_inv_attribute" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox Header="مشخصات" Name="grb_Info" DockPanel.Dock="Bottom">
+                <Grid Margin="15">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <APM:APMLabel Grid.Column="0" >نام خصوصيت :</APM:APMLabel>
+                    <APM:APMTextBox Grid.Column="1" Name="txt_inv_attribute_name"  />
+                    <APM:APMLabel Grid.Column="2" >نوع خصوصيت :</APM:APMLabel>
+                    <APM:APMComboBoxCoding Grid.Column="3" Name="cmb_inv_attribute_type_glb_coding_id" XCategory="Inv_AttributeType"/>
+                    <APM:APMBrowser Name="groupBrowser" XTitle=" تعیین گروههای دارای این خصوصیت"  
+                                    XMultiSelect="True" Grid.Row="1" Grid.ColumnSpan="3" 
+                                    XBrowseClick="group_browse_Click" />
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="انواع خصوصيت" Name="grupe_inv_attribute"  >
+                <APM:APMDataGridExtended  Name="dbg_inv_attribute" />
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

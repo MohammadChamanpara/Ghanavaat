@@ -1,0 +1,49 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_ownership"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+        xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+        xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+        x:TypeArguments="DDB:stp_gnt_ownership_selResult"
+        Title="مالکیت سهامدار" FontFamily="Tahoma">
+    <APM:APMBorder>
+        <APM:APMDockPanel >
+            <APM:APMToolBar Name="windowToolbar" />
+            <APM:APMGroupBoxExtended XCanClear="True" DockPanel.Dock="Top" Header="سهامدار :">
+                <StackPanel Margin="8" Orientation="Horizontal">
+                    <APM:APMLabel Name="lbl_creditor_name" Content="سهامدار"/>
+                </StackPanel>
+            </APM:APMGroupBoxExtended>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="NormalWindow" />
+            <APM:APMGroupBox Name="grpInfo" Grid.Row="2" Header="ردیف جاری" DockPanel.Dock="Bottom">
+                <APM:APMScrollViewer>
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="8">
+                            <APM:APMBrowser Name="brw_gnt_ownership_gnt_water_id" XTitle="انتخاب آب" XShowCode="False" XBrowseClick="brw_gnt_ownership_gnt_water_id_XBrowseClick" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="8,0,8,8">
+                            <APM:APMLabel Content="سهمیه آب : "/>
+                            <APM:APMIntTextBox Name="txt_gnt_ownership_jerib" LostFocus="txt_gnt_ownership_jeribMinuteSecond_LostFocus" />
+                            <APM:APMLabel Content="جریب"/>
+                            <APM:APMLabel Content="و"/>
+                            <APM:APMIntTextBox Name="txt_gnt_ownership_minute" LostFocus="txt_gnt_ownership_jeribMinuteSecond_LostFocus"/>
+                            <APM:APMLabel Content="دقیقه"/>
+                            <APM:APMLabel Content="و"/>
+                            <APM:APMIntTextBox Name="txt_gnt_ownership_second" LostFocus="txt_gnt_ownership_jeribMinuteSecond_LostFocus" KeyDown="txt_gnt_ownership_second_KeyDown"/>
+                            <APM:APMLabel Content="ثانیه"/>
+                            <APM:APMLabel Content="برابر با"/>
+                            <APM:APMInfoLabel Name="lbl_gnt_ownership_credit" XHaveBorder="True"/>
+                            <APM:APMLabel Content="سهم"/>
+                            <APM:APMLabel Content="و"/>
+                            <APM:APMMoneyLabel Name="lbl_gnt_ownership_earth" />
+                            <APM:APMLabel Content="متر مربع زمین"/>
+                        </StackPanel>
+                    </StackPanel>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست مالکیت">
+                <APM:APMDataGridExtended  Name="dbgOwnership" Margin="8"  />
+            </APM:APMGroupBox >
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

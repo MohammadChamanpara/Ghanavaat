@@ -1,0 +1,225 @@
+﻿<UIL:WindowTreeGridTwoTables x:Class="APM_SubSystems.frm_group_goods"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_inv_group_goods_selResult"
+    Title="کالا و گروه کالا" Width="918" Height="600">
+    <APM:APMBorderComponent>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbrMain" XType="NormalWindow"/>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Bottom" Name="grpGroupGoods" >
+                <Grid>
+                    <!--Group Information-->
+                    <Grid Margin="8" Name="grd_info_group">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition />
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <APM:APMLabel     Grid.Row="1" Grid.Column="0" Content="کد گروه :" />
+                        <APM:APMTwoPartCode Grid.Row="1" Grid.Column="1" Name="tpcGroup"/>
+                        <APM:APMLabel     Grid.Row="1" Grid.Column="3"  Content="نام گروه :"/>
+                        <APM:APMTextBox   Grid.Row="1" Grid.Column="4"  Name="txt_inv_group_goods_real_name" />
+                        <APM:APMToolbarButton Grid.Row="1"   Grid.Column="6" XImage="Browse" Name="btn_Browse_group_attribute" Click="btn_Browse_group_attribute_Click" />
+                        <APM:APMLabel Content="انتخاب خصوصیات گروه" Grid.Row="1"  Grid.Column="7"/>
+                    </Grid>
+                    <!--Goods Information-->
+                    <Grid Margin="8"  Name="grd_info_good">
+                        <APM:APMTabControl Name="tab_detail" >
+                            <APM:APMTabItem  Header="مشخصات اصلی کالا">
+                                <Grid Name="dbg_main_info" Margin="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto"  />
+                                        <ColumnDefinition Width="auto"  />
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <APM:APMLabel        Grid.Row="0" Content="کد کالا :"></APM:APMLabel>
+                                    <APM:APMTwoPartCode  Grid.Column="1" Name="tpc_Goods"  />
+
+                                    <APM:APMLabel        Grid.Row="1" Content="نام کالا :" />
+                                    <APM:APMTextBox      Grid.Column="1"  Grid.Row="1" Name="txg_inv_group_goods_real_name"  />
+
+                                    <APM:APMLabel        Grid.Column="0"  Grid.Row="2" Content="گروه کالا :"/>
+                                    <APM:APMInfoLabel    Grid.Row="2" Grid.Column="1"  Name="lbl_inv_group_goods_parent_name"/>
+
+                                    <APM:APMBrowser Grid.Column="5" Grid.ColumnSpan="2" XTitle="موجودی کالا در انبار های مختلف" XMultiSelect="True" XBrowseClick="btn_Browse_store_Click"  />
+
+                                    <APM:APMBrowser Name="brw_inv_group_goods_glb_measure_id" XTitle="واحد اصلی" Grid.Column="3"
+                                                    XShowCode="False"
+                                                    XBrowseClick="btn_Browse_main_glb_measure_Click" 
+                                                    />
+                                    <StackPanel Grid.Column="3"  Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center">
+                                        <APM:APMLabel     Content="انتخاب واحد های فرعی :"/>
+                                        <APM:APMBrowser XBrowseClick="btn_browse_glb_measureClick" XMultiSelect="True" />
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="3" Grid.Row="2" Orientation="Horizontal">
+                                        <APM:APMLabel   Content="الگوی عملیات مالی :"/>
+                                        <APM:APMComboBoxCoding  Name="cmb_inv_group_goods_financial_glb_coding_id"  XCategory="Inv_GoodsPriceing"/>
+                                    </StackPanel>
+                                    <Border Grid.Column="5" Grid.Row="1" Margin="3" VerticalAlignment="Center"  BorderThickness="1" BorderBrush="Thistle"  CornerRadius="20">
+                                        <StackPanel Orientation="Horizontal" Margin="10,2,10,2">
+                                            <APM:APMCheckBox Content="محصول" Grid.Column="5" Grid.Row="1" IsEnabled="False" Name="chk_inv_group_goods_is_product" BorderThickness="10" BorderBrush="Thistle"/>
+                                            <StackPanel Name="stkShowParts"  Orientation="Horizontal" Margin="5,0,0,0">
+                                                <APM:APMLabel Content="  مشاهدۀ اجزا" />
+                                                <APM:APMToolbarButton XImage="Browse" Click="btnShowParts_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </Grid>
+                            </APM:APMTabItem>
+                            <APM:APMTabItem  Header="مشخصات تکمیلی کالا">
+                                <Grid Name="dbg_complete_info" Margin="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"  />
+                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="auto" />
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition Width="auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <APM:APMLabel           Grid.Column="0"  Grid.Row="0">کد قبلی کالا :</APM:APMLabel>
+                                    <APM:APMTextBox         Grid.Column="1"  Grid.Row="0" Name="txt_inv_group_goods_old_code"></APM:APMTextBox>
+                                    <APM:APMLabel           Grid.Column="0"  Grid.Row="2" Content="کد ملی :"></APM:APMLabel>
+                                    <APM:APMTextBox         Grid.Column="1"  Grid.Row="2" Name="txt_inv_group_goods_national_code"></APM:APMTextBox>
+                                    <APM:APMLabel           Grid.Column="0"  Grid.Row="1" Content="کد فنی کالا :"></APM:APMLabel>
+                                    <APM:APMTextBox         Grid.Column="1"  Grid.Row="1" Name="txt_inv_group_goods_technical_code"></APM:APMTextBox>
+
+                                    <APM:APMLabel           Grid.Column="3" Content="نقطه سفارش :" Height="27"  VerticalAlignment="Top" ></APM:APMLabel>
+                                    <APM:APMFloatTextBox  Grid.Column="4" Name="txt_inv_group_goods_order_point"/>
+                                    <APM:APMLabel           Grid.Column="3"  Grid.Row="1" Content="حداقل موجودی :"  />
+                                    <APM:APMFloatTextBox  Grid.Column="4"  Grid.Row="1" Name="txt_inv_group_goods_order_min"  />
+                                    <APM:APMLabel           Grid.Column="3"  Grid.Row="2" Content="حداکثر موجودی :"  ></APM:APMLabel>
+                                    <APM:APMFloatTextBox  Grid.Column="4"  Grid.Row="2" Name="txt_inv_group_goods_order_max"/>
+
+                                    <APM:APMLabel                   Grid.Column="6" Content="نام لاتین کالا :" ></APM:APMLabel>
+                                    <APM:APMLabel                   Grid.Column="9" Content="کالای سریالی : " Grid.Row="1" />
+                                    <APM:APMLabel                   Grid.Column="9" Content="کالای خدماتی :" Grid.Row="0" ></APM:APMLabel>
+                                    <APM:APMLatinTextBox            Grid.Column="7" Name="txt_inv_group_goods_latinname" ></APM:APMLatinTextBox>
+                                    <APM:APMCheckBox                Grid.Column="10"  Grid.Row="1" Content=""  Name="chk_inv_group_goods_is_seriyal_number"  VerticalAlignment="Center"></APM:APMCheckBox>
+                                    <APM:APMCheckBox                Grid.Column="10"  Grid.Row="0" Content=""  Name="chk_inv_group_goods_is_services"  VerticalAlignment="Center"></APM:APMCheckBox>
+                                    <APM:APMLabel                   Grid.Column="6"  Grid.Row="1" Content="سری ساخت کالا :"/>
+                                    <APM:APMTextBox                 Grid.Column="7" Grid.Row="1" Name="txt_inv_group_goods_construct_series"/>
+                                </Grid>
+                            </APM:APMTabItem>
+                            <APM:APMTabItem  Header="عناصر مرتبط">
+                                <Grid Margin="8" Name="dbg_goods_attribute">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <APM:APMLabel Content="انتخاب خصوصیت:" Height="24.483" HorizontalAlignment="Left" Margin="29.097,0,0,0" VerticalAlignment="Center" Width="96.85" />
+                                    <APM:APMBrowser  Grid.Column="1" Grid.Row="0" XBrowseClick="btn_browse_goods_attribute_Click" XMultiSelect="True"  />
+
+
+                                    <APM:APMLabel Content="انتخاب کالاهای مشابه:"    Grid.Column="0" Grid.Row="1"/>
+                                    <APM:APMBrowser   Grid.Column="1" Grid.Row="1"  XBrowseClick="btn_browse_similar_Click" XMultiSelect="True"  />
+
+                                    <APM:APMLabel Content="انتخاب اجزاء کالا:"       Grid.Column="3" Grid.Row="1"/>
+                                    <APM:APMBrowser   Grid.Column="4" Grid.Row="1"  XBrowseClick="btn_browse_parts_Click" XMultiSelect="True" />
+
+
+                                    <APM:APMLabel Grid.Column="6" Grid.Row="1" Content=" تغییر گروه کالا :"/>
+                                    <APM:APMBrowser Grid.Column="7" Grid.Row="1" XBrowseClick="btn_browse_change_group_Click"  XShowCode="False" Name="brw_inv_group_goods_parent_id" />
+
+
+                                </Grid>
+                            </APM:APMTabItem>
+                            <APM:APMTabItem  Header="تنظیمات حسابداری کالا">
+                                <Grid Name="dbg_account_info" Margin="8">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <APM:APMLabel       Grid.Column="0" Content="کد تفصیل:"/>
+                                    <APM:APMInfoLabel   Grid.Column="1" Name="txt_inv_group_goods_code"  />
+
+                                    <APM:APMLabel       Grid.Column="3" Content="نام تفصیل:" />
+                                    <APM:APMInfoLabel   Grid.Column="4" Name="txt_inv_group_goods_name" />
+
+                                    <!--<APM:APMLabel       Grid.Column="6"  Grid.Row="1"   Content="الگوی عملیات مالی :"/>
+                                    <APM:APMComboBoxCoding Grid.Column="7"  Grid.Row="1" Name="cmb_inv_group_goods_financial_glb_coding_id"  XCategory="Inv_GoodsPriceing"/>-->
+                                </Grid>
+                            </APM:APMTabItem>
+                        </APM:APMTabControl>
+                    </Grid>
+                </Grid>
+            </APM:APMGroupBox>
+            <!-- Information grid (parent of goods and group GroupBoxes)-->
+            <APM:APMGroupBox DockPanel.Dock="Left" Header="گروههای کالا" MinWidth="200">
+                <APM:APMTree  Margin="5" Name="trv_inv_group" XHaveContextMenu="True" />
+            </APM:APMGroupBox>
+            <!-- Tree GroupBox -->
+            <APM:APMGroupBox Header="مشاهده زیر گروهها">
+                <APM:APMDataGridExtended  Name="dbg_group" >
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="نمایش کاردکس کالا" Click="APMMenuItem_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+            <!-- DataGrid GroupBox-->
+        </APM:APMDockPanel>
+    </APM:APMBorderComponent>
+</UIL:WindowTreeGridTwoTables>

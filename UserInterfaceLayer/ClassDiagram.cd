@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UserInterfaceLayer.WindowTwoTabs&lt;MasterRT, ArticleRT&gt;" Collapsed="true">
+    <Position X="4.75" Y="2" Width="3" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>zlBKwICAAAARoLTc44AgFQgApgOCSoGABQERQMEwQeA=</HashCode>
+      <FileName>WindowTwoTabs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowBase&lt;RT&gt;" Collapsed="true">
+    <Position X="11" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>HEQSJJIcUACqgdSKxxRiAQhwhKUkGJymJyJAwIGRADM=</HashCode>
+      <FileName>WindowBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowEntity&lt;RT&gt;" Collapsed="true">
+    <Position X="8" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAgAUAAAAAAAICAAhAAAAgADAAAAAAABQAAAAAAADA=</HashCode>
+      <FileName>WindowEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowEntityGroup&lt;EntityRT, RelationRT, GroupRT&gt;" Collapsed="true">
+    <Position X="6.75" Y="3.25" Width="4" />
+    <InheritanceLine Type="UserInterfaceLayer.WindowEntity&lt;RT&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="8.875" Y="2.63" />
+        <Point X="8.875" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAABAIAAAQAAAAAAgAAAAAAAAABAAAAAQQAAA=</HashCode>
+      <FileName>WindowEntityGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowOptions&lt;RT&gt;" Collapsed="true">
+    <Position X="14.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WindowOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowPrint&lt;MasterRT, ArticleRT&gt;" Collapsed="true">
+    <Position X="1.75" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgAAAAAACAEAiAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>WindowPrint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowReport&lt;RT&gt;" Collapsed="true">
+    <Position X="10" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAIASQMAAAEAAgEgEAAAACAAAEAAEAQEAA=</HashCode>
+      <FileName>WindowReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowSearch&lt;RT&gt;" Collapsed="true">
+    <Position X="12" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAIAAAAAAAAAQQQAAgAAAgGEAAAAAAACAgAAAAQAAQ=</HashCode>
+      <FileName>WindowSearch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowSelect&lt;RT&gt;" Collapsed="true">
+    <Position X="16.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ARQiAAAAAAAJQCj4AgHQAAgCACAAAEoCAABAAAOACAw=</HashCode>
+      <FileName>WindowSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowSelectGrid&lt;RT&gt;" Collapsed="true">
+    <Position X="15.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAABAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>WindowSelectGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowSelectGridGroup&lt;RT, GroupRT&gt;">
+    <Position X="15" Y="4.5" Width="3" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="UserInterfaceLayer.WindowSelectGrid&lt;RT&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="3.88" />
+        <Point X="16.5" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>WindowSelectGridGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowSelectTree&lt;RT&gt;" Collapsed="true">
+    <Position X="17.75" Y="3.25" Width="2" />
+    <InheritanceLine Type="UserInterfaceLayer.WindowSelect&lt;RT&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="17.5" Y="2.63" />
+        <Point X="17.5" Y="2.95" />
+        <Point X="18.562" Y="2.95" />
+        <Point X="18.562" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAABgAAAAAAAAAAAAAAASAAAAAAAAAAA=</HashCode>
+      <FileName>WindowSelectTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowTreeGrid&lt;RT&gt;" Collapsed="true">
+    <Position X="22.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQMkICAAAAAAAgQBAAQAAAAJQIAAAAAADA=</HashCode>
+      <FileName>WindowTreeGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowTreeGridHuge&lt;GridRT, TreeRT&gt;" Collapsed="true">
+    <Position X="20.25" Y="3.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAIAAAAAAAEgAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>WindowTreeGridHuge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UserInterfaceLayer.WindowTreeGridTwoTables&lt;RT&gt;" Collapsed="true">
+    <Position X="23.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEYAAAAAAAIAAAgAAAAAAgAQAAAAAQQAAAAKAABA=</HashCode>
+      <FileName>WindowTreeGridTwoTables.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

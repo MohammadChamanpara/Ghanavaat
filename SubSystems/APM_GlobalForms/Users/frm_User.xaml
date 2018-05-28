@@ -1,0 +1,60 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_User"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"    
+    x:TypeArguments="DDB:stp_glb_user_selResult"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"        
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+     Title="معرفی کاربران"  Height="541" Width="741" FontFamily="TAHOMA" FontSize="13">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow" />     
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox Header="ردیف جاری" Name="grpInputInfo" DockPanel.Dock="Bottom" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                       
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel           Name="lblُSelectPersonel"     Grid.Row="0" Grid.Column="0" Content="انتخاب پرسنل:"/>
+                    <APM:APMBrowser         Name="brw_glb_user_glb_personel_id" Grid.Row="0" Grid.Column="1"  XBrowseClick="brw_user_glb_personel_BrowseClick" XTextBoxKeyDown="brw_user_glb_personel_TextBoxKeyDown"/>
+                    
+                    <APM:APMLabel           Name="lbl_group" Grid.Column="3" Content="انتخاب گروه کاربری :"  VerticalAlignment="Center" />
+                    <APM:APMBrowser         Name="brw_glb_user_group_id" Grid.Column="4" XBrowseClick="brw_glb_user_group_XBrowseClick" XMultiSelect="True"/>
+                    
+                    <APM:APMLabel           Name="lblPassword"        Grid.Row="1" Grid.Column="0" Content="کلمه عبور :"/>
+                    <PasswordBox            Name="psw_glb_user_password"         Grid.Row="1" Grid.Column="1"  />
+                    
+                    <APM:APMLabel           Name="lblPasswordConfirm" Grid.Row="1" Grid.Column="3" Content="تأیید کلمه عبور :" VerticalAlignment="Center" />
+                    <PasswordBox            Name="psw2_user_password"  Grid.Row="1" Grid.Column="4" LostFocus="psw2_user_password_LostFocus"  PasswordChar="*"/>
+                    
+                    <APM:APMLabel           Name="lblSeqQuestion"     Grid.Row="3" Grid.Column="0" Content="سوال امنیتی :"/>
+                    <APM:APMComboBoxCoding  XCategory="Glb_SecurityQuestion" Name="cmb_glb_user_security_question_glb_coding_id"     Grid.Row="3" Grid.Column="1" />
+                    
+                    <APM:APMLabel           Name="lblSeqAnswer"       Grid.Row="3" Grid.Column="3" Content="جواب :"  />
+                    <APM:APMTextBox         Name="txt_glb_user_security_answer"       Grid.Row="3" Grid.Column="4"/>
+                    
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست کاربران نرم افزار" >
+                <APM:APMDataGridExtended Margin="10" Name="dbgUsers" />
+            </APM:APMGroupBox>
+
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

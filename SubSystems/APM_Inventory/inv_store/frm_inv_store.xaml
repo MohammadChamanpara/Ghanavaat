@@ -1,0 +1,130 @@
+﻿<UIL:WindowEntity x:Class="APM_SubSystems.frm_inv_store"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+     x:TypeArguments="DDB:stp_inv_store_selResult"
+     Title="معرفی انبار ها" Height="589" Width="798">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_inv_store"/>
+           <APM:APMStatusBar XType="NormalWindow" />
+            <APM:APMGroupBox DockPanel.Dock="Bottom" Name="grpStoreInfo">
+                <APM:APMTabControl DockPanel.Dock="Bottom">
+                    <APM:APMTabItem Header="مشخصات انبار" >
+                        <Grid Margin="10" Name="grd_inv_store" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition  />
+                            </Grid.ColumnDefinitions>
+                            <!--<APM:APMInfoLabel Grid.Row="0" Grid.Column="5" Name="lbl_inv_store_dtil_name"/>-->
+                            <APM:APMLabel Grid.Row="0" Grid.Column="0" Content="کد انبار :"/>
+                            <APM:APMTwoPartCode Grid.Row="0" Grid.Column="1" Name="tpc_inv_store_child_code" />
+                            <APM:APMLabel Grid.Row="0" Grid.Column="3" Content="نام انبار :"/>
+                            <APM:APMTextBox Grid.Row="0" Grid.Column="4" Name="txt_inv_store_real_name"/>
+                            <!--<APM:APMLabel Grid.Row="1" Grid.Column="1" Content="نوع انبار :"/>
+                            <APM:APMComboBoxCoding XCategory="Inv_StoreType"  Grid.Row="1" Grid.Column="2" Name="cmb_inv_store_type_glb_coding_id"/>-->
+                            <APM:APMLabel Grid.Row="0" Grid.Column="5" Content="نام انباردار :"/>
+                            <!--<StackPanel Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="3" Orientation="Horizontal">
+                                <APM:APMToolbarButton XImage="Browse" Name="btn_inv_store_glb_personel_id" Click="btn_inv_store_glb_personel_id_Click" />
+                                <APM:APMIntTextBox Width="80" Name="txt_inv_store_glb_personal_code" KeyDown="txt_inv_store_glb_personal_code_KeyDown"/>
+                                <APM:APMInfoLabel Width="auto" Name="lbl_inv_store_glb_personal_name"/>
+                            </StackPanel>-->
+                            <APM:APMBrowser Name="brw_inv_store_glb_personel_id" Grid.Column="6" Grid.Row="0" XBrowseClick="brw_inv_store_glb_personal_browseclick" XTextBoxKeyDown="brw_inv_store_glb_personal_KeyDown"/>
+                        </Grid>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تکمیلی">
+                        <Grid Margin="10" Name="grd_info" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition   Width="1*"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition  Width="auto"/>
+                                <ColumnDefinition  />
+                            </Grid.ColumnDefinitions>
+
+                            <APM:APMLabel Grid.Row="1" Grid.Column="0" Content="نام لاتین انبار :"/>
+                            <APM:APMTextBox Grid.Row="1" Grid.Column="1" Name="txt_inv_store_latin_name" />
+                            <APM:APMBrowser Grid.Row="1" Grid.Column="3" XTitle="موجودی انبار:" Name="brw_browse_goods" XBrowseClick="brw_browse_goods_XBrowseClick" XMultiSelect="True"/>
+                            
+                            <!--Row : 2-->
+                            <APM:APMLabel Grid.Row="2" Grid.Column="0" Content="توضیحات :"/>
+                            <APM:APMTextBox Grid.Row="2" Grid.Column="1"  Name="txt_inv_store_description"/>
+                            
+                        </Grid>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات آدرس" >
+                        <Grid Margin="10" Name="grd_store_address" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <!--Row : 0-->
+                            <APM:APMLabel Grid.Row="0" Grid.Column="0" Content="شماره تلفن :"/>
+                            <APM:APMTextBox Grid.Row="0" Grid.Column="1" Name="txt_inv_store_address_phone_no"/>
+                            <!--Row : 1-->
+                            <APM:APMLabel Grid.Row="1" Grid.Column="0" Content="شماره فکس :"/>
+                            <APM:APMTextBox Grid.Row="1" Grid.Column="1" Name="txt_inv_store_address_fax_no"/>
+                            <!--Row : 2-->
+                            <APM:APMLabel Grid.Row="2" Grid.Column="0" Content="کد پستی :"/>
+                            <APM:APMTextBox Grid.Row="2" Grid.Column="1" Name="txt_inv_store_address_postal_code"/>
+                            <!--Row : 3-->
+                            <APM:APMLabel Grid.Row="3" Grid.Column="0" Content="آدرس :"/>
+                            <APM:APMTextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Name="txt_inv_store_address_title"/>
+                        </Grid>
+
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تفصیلی">
+                        <Grid Margin="8">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <APM:APMLabel     Grid.Column="0"  Content="کد تفصیل:"/>
+                            <APM:APMInfoLabel   Grid.Column="1"     Name="lbl_inv_store_code"  />
+                            <APM:APMLabel      Grid.Column="3" Content="نام تفصیل:" />
+                            <APM:APMInfoLabel Name="lbl_inv_store_name" Grid.Column="4"/>
+
+                        </Grid>
+                    </APM:APMTabItem>
+                </APM:APMTabControl>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="انواع انبار" >
+                 <APM:APMDataGridExtended  Name="dbg_inv_store"/>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntity>
+

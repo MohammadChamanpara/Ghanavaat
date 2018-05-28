@@ -1,0 +1,72 @@
+﻿<UIL:WindowBase x:Class="APM_SubSystems.frm_gnt_water"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_gnt_water_selResult"
+    Title="معرفی طاق ها" Height="535" Width="688">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="windowToolbar" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Top" Header="فیلتر کردن طاق ها">
+                <Grid Margin="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel Grid.Column="0" Content="انتخاب آب اصلی" />
+                    <APM:APMComboBox Grid.Column="1" Name="cmb_gnt_water_gnt_water1_id" SelectionChanged="cmb_gnt_water_gnt_water1_id_SelectionChanged"/>
+                    
+                    <APM:APMLabel Grid.Column="3" Content="انتخاب جوی"/>
+                    <APM:APMComboBox Grid.Column="4" Name="cmb_gnt_water_gnt_water2_id" SelectionChanged="cmb_gnt_water_gnt_water2_id_SelectionChanged"/>
+                    
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox   Name="grpInfo"      Grid.Row="1"  Header="ردیف جاری" DockPanel.Dock="Bottom" >
+                <APM:APMScrollViewer>
+                    <Grid Margin="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition Width="auto"  />
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+                        <APM:APMBrowser XShowCode="False" Grid.Column="1"  Name="brw_gnt_water_gnt_water1_id" XBrowseClick="brw_gnt_water_gnt_water1_id_XBrowseClick"/>
+                        <APM:APMLabel Content="نام آب اصلی :" />
+                        <APM:APMLabel Content="نام جوی :" Grid.Row="0" Grid.Column="3"/>
+                        <APM:APMBrowser  Name="brw_gnt_water_gnt_water2_id" Grid.Column="4" Grid.Row="0" XShowCode="False" XBrowseClick="brw_gnt_water_gnt_water2_id_XBrowseClick" />
+                        <APM:APMTextBox Grid.Row="0"  Grid.Column="7" Name="txt_gnt_water_taagh_name"/>
+                        <APM:APMLabel Grid.Row="0" HorizontalAlignment="Left" Content="نام طاق :" Grid.Column="6" />
+                    </Grid>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست طاق ها">
+                <APM:APMDataGridExtended  Name="grd_bank_account">
+                    <APM:APMDataGridExtended.ContextMenu>
+                        <ContextMenu>
+                            <APM:APMMenuItem XCaption="مشاهده ریز مالکیت" Name="btnShowOwnership" Click="btnShowOwnership_Click"/>
+                        </ContextMenu>
+                    </APM:APMDataGridExtended.ContextMenu>
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

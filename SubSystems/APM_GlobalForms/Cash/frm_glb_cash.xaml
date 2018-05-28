@@ -1,0 +1,65 @@
+﻿<UIL:WindowEntity x:Class="APM_SubSystems.frm_glb_cash"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    x:TypeArguments="DDB:stp_glb_cash_selResult"
+    Title="frm_glb_cash" Height="473">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_glb_cash" XType="NormalWindow"/>
+            <APM:APMStatusBar XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Bottom" Header="ردیف جاری" Name="grp_glb_cash" >
+                <APM:APMTabControl>
+                    <APM:APMTabItem Header="مشخصات اصلی">
+                <Grid Margin="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>              
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel Grid.Row="0" Grid.Column="0" Content="کد صندوق :"/>
+                    <APM:APMTwoPartCode Grid.Row="0" Grid.Column="1" Name="tpc_glb_cash_child_code"/>
+                    
+                    <APM:APMLabel Grid.Row="0" Grid.Column="3" Content="نام صندوق :"/>
+                    <APM:APMTextBox Grid.Row="0" Grid.Column="4" Name="txt_glb_cash_real_name"/>
+                    
+                    <APM:APMLabel Grid.Row="1" Grid.Column="0" Content="انتخاب صندوق دار :"/>
+                    <APM:APMBrowser Grid.Row="1" Grid.Column="1" XBrowseClick="APMBrowser_XBrowseClick" XTextBoxKeyDown="APMBrowser_XTextBoxKeyDown" Name="brw_glb_cash_cashier_glb_personel_id"/>
+                </Grid>
+                        </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تفصیلی">
+                        <Grid Margin="8">
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width=" auto"/>
+                                <ColumnDefinition Width="10*"/>
+                            </Grid.ColumnDefinitions>
+                            <APM:APMLabel     Grid.Column="0" Content="کد تفصیل:"/>
+                            <APM:APMInfoLabel Grid.Column="1" Name="txt_glb_cash_code"  />
+                            <APM:APMLabel     Grid.Column="3" Content="نام تفصیل:" />
+                            <APM:APMInfoLabel Grid.Column="4" Name="lbl_glb_cash_name" />
+
+                        </Grid>
+                    </APM:APMTabItem>
+                    </APM:APMTabControl>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست صندوق ">
+                <APM:APMDataGridExtended  Name="dbg_glb_cash" />
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntity>

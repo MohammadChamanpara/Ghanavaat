@@ -1,0 +1,36 @@
+﻿<UIL:WindowBase x:Class="APM_Accounting.frm_acc_document_type"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    x:TypeArguments="DDB:stp_acc_document_type_selResult"
+    Title="frm_acc_document_type" Height="474" Width="800">
+    <APM:APMBorder>
+        <APM:APMDockPanel>
+            <APM:APMToolBar Name="tbr_acc_document_type"/>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="NormalWindow"/>
+            <APM:APMGroupBox DockPanel.Dock="Bottom" Name="grp_acc_document_type" Header="ردیف جاری">
+                <Grid Margin="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <APM:APMLabel Grid.Row="0" Grid.Column="0" Content="نام"/>
+                    <APM:APMTextBox Grid.Row="0" Grid.Column="1" Name="txt_acc_document_type_name"/>
+                </Grid>
+            </APM:APMGroupBox>
+            <APM:APMGroupBox Header="لیست انواع سند حسابداری">
+                <APM:APMDataGridExtended  Name="dbg_acc_document_type"/>
+            </APM:APMGroupBox>
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowBase>

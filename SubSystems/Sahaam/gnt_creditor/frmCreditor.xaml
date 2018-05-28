@@ -1,0 +1,316 @@
+﻿<UIL:WindowEntity x:Class="APM_SubSystems.frm_gnt_creditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents"
+    x:TypeArguments="DDB:stp_gnt_creditor_selResult"
+    WindowState="Maximized"
+    Title="سهامداران" FontFamily="tahoma" Width="1462.46">
+
+    <APM:APMBorder>
+        <APM:APMDockPanel >
+            <APM:APMToolBar Name="windowToolbar">
+                <APM:APMInfoLabel BorderThickness="0" BorderBrush="Transparent"/>
+                <Menu VerticalAlignment="Center">
+                    <APM:APMMenuItem XImageType="Print" XCaption="گزارشات" VerticalAlignment="Center" FontFamily="Tahoma" Margin="0" Background="AliceBlue">
+                        <APM:APMMenuItem XCaption="چاپ لیست در حال نمایش" XImageType="Print" Click="btnPrintCreditorsList_Click" Background="AliceBlue"/>
+                        <APM:APMMenuItem XCaption="چاپ لیست کمک های بلاعوض" XImageType="Print" Click="btnPrintHelps_Click" Background="AliceBlue"/>
+                        <APM:APMMenuItem XCaption="چاپ لیست بدهکاران" XImageType="Print" Click="btnPrintDebtors_Click" Background="AliceBlue"/>
+                        <APM:APMMenuItem XCaption="چاپ لیست کل سهامداران" XImageType="Print" Click="btnPrintAllCreditors_Click" Background="AliceBlue"/>
+                        <APM:APMMenuItem XCaption="چاپ برگه سهام" XImageType="Print" Click="btnPrintStockSheet_Click" Background="AliceBlue"/>
+                    </APM:APMMenuItem>
+                </Menu>
+                <APM:APMLabel/>
+                <Menu VerticalAlignment="Center" >
+                    <APM:APMMenuItem XImageType="Browse" XCaption="لینک ها" VerticalAlignment="Center" FontFamily="Tahoma" Margin="0" Background="AliceBlue">
+                        <APM:APMMenuItem  XImageType="Browse" XCaption="مشاهده ریز حساب سهامدار" Name="btnShowAccount" Click="btnShowAccount_Click"/>
+                        <APM:APMMenuItem  XImageType="Browse" XCaption="مشاهده ریز مالکیت سهامدار" Name="btnShowOwnership" Click="btnShowOwnership_Click"/>
+                        <APM:APMMenuItem  XImageType="Browse" XCaption="مشاهده زمین های سهامدار" Name="btnShowEarths" Click="btnShowEarths_Click"/>
+                        <APM:APMMenuItem  XImageType="Browse" XCaption="مشاهده اسناد خدمات سهامدار" Name="btnShowServices" Click="btnShowServices_Click"/>
+                        <APM:APMMenuItem  XImageType="Browse" XCaption="مشاهده کلیه اسناد خدمات " Name="btnShowService_masters" Click="btnShowService_masters_Click"/>
+                    </APM:APMMenuItem>
+                </Menu>
+            </APM:APMToolBar>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="NormalWindow" />
+            <APM:APMGroupBoxExtended Name="grpInfo" Grid.Row="2" Header="ردیف جاری" DockPanel.Dock="Bottom">
+                <APM:APMTabControl  >
+                    <APM:APMTabItem Header="مشخصات اصلی">
+                        <APM:APMScrollViewer>
+                            <Grid Margin="8">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="109*" />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="40*"/>
+                                    <ColumnDefinition Width="109*" />
+                                    <ColumnDefinition  Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="109*" />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition  Width="auto"/>
+                                    <ColumnDefinition Width="109*" />
+                                </Grid.ColumnDefinitions>
+
+                                <APM:APMLabel           Grid.Row="0" Grid.Column="0"  Name="lblgnt_creditor_title_glb_coding_id" Content="عنوان:" />
+                                <APM:APMComboBoxCoding  Grid.Row="0" Grid.Column="1"  Name="cmb_gnt_creditor_title_glb_coding_id" XCategory="Glb_Title"/>
+
+                                <APM:APMLabel           Grid.Row="0" Grid.Column="3" Name="lblgnt_creditor_name" Content=" نام:"/>
+                                <APM:APMTextBox         Grid.Row="0" Grid.Column="4" Name="txt_gnt_creditor_first_name" GotFocus="txt_GotFocus" />
+
+                                <APM:APMLabel           Grid.Row="0" Grid.Column="6" Name="lblgnt_creditor_family" Content="نام خانوادگی:"/>
+                                <APM:APMTextBox         Grid.Row="0" Grid.Column="7" Name="txt_gnt_creditor_family" GotFocus="txt_GotFocus" />
+
+                                <APM:APMLabel           Grid.Row="1" Grid.Column="0" Content="شماره پرونده :" />
+                                <APM:APMTwoPartCode     Grid.Row="1" Grid.Column="1" Name="txt_gnt_creditor_child_code" GotFocus="txt_GotFocus" />
+
+                                <APM:APMLabel           Grid.Row="1" Grid.Column="3" Content="شماره شناسنامه:"/>
+                                <APM:APMTextBox  Grid.Row="1" Grid.Column="4" Name="tlt_gnt_creditor_identity_no" TextChanged="tlt_gnt_creditor_identity_no_TextChanged" GotFocus="txt_GotFocus" />
+                                <APM:APMInfoLabel Grid.Row="1" Grid.Column="5" Name="lbl_identity_no_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>
+
+                                <APM:APMLabel           Grid.Row="1" Grid.Column="6" Content="کد ملی"/>
+                                <APM:APMTextBox  Grid.Row="1" Grid.Column="7" Name="txt_gnt_creditor_national_code" TextChanged="txt_gnt_creditor_national_code_TextChanged" GotFocus="txt_GotFocus" />
+                                <!--<APM:APMInfoLabel Grid.Row="1" Grid.Column="8" Name="lbl_national_code_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>-->
+                                <APM:APMCorrectImage Grid.Row="1" Grid.Column="8" Name="img_national_code"/>
+
+                            </Grid>
+                        </APM:APMScrollViewer>
+
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات سهام و حساب">
+                        <APM:APMScrollViewer >
+                            <StackPanel  Orientation="Horizontal" >
+                                <APM:APMLabel Margin="10,10,0,10" Content="سهمیۀ زمین : "/>
+                                <APM:APMMoneyLabel Name="lbl_gnt_creditor_sum_earth" XHaveBorder="True" />
+                                <APM:APMLabel Content="متر"/>
+                                <APM:APMSeprator/>
+                                <APM:APMLabel Content="میزان سهام : "/>
+                                <APM:APMInfoLabel Name="lbl_gnt_creditor_sum_credit" XHaveBorder="True"/>
+                                <APM:APMSeprator/>
+                                <APM:APMLabel Content="میزان حساب"/>
+                                <APM:APMMoneyLabel Name="lbl_gnt_creditor_account_remaining_c"/>
+                                <APM:APMLabel Content="ریال"/>
+                                <APM:APMSeprator/>
+                                <APM:APMLabel Content="وضعیت حساب"/>
+                                <APM:APMInfoLabel Name="lbl_gnt_creditor_account_status" BorderThickness="1"/>
+                                <APM:APMSeprator/>
+                                <APM:APMLabel Name="lblShowAllAccounts" Content="نمایش وضعیت حساب همه سهامداران"/>
+                                <APM:APMToolbarButton XImage="Refresh" Name="btnShowAllAccounts" Click="btnShowAllAccounts_Click" Margin="5"/>
+                                <APM:APMLabel Name="lblShowAllEarthCounts" Content="نمایش تعداد زمین همه سهامداران"/>
+                                <APM:APMToolbarButton XImage="Refresh" Name="btnShowAllEarthCounts" Click="btnShowAllEarthCounts_Click" Margin="5"/>
+                            </StackPanel>
+                        </APM:APMScrollViewer>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تکمیلی">
+                        <APM:APMScrollViewer>
+                            <Grid Margin="8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <APM:APMLabel               Grid.Row="0" Grid.Column="0"  Content="نام پدر:"/>
+                                <APM:APMTextBox             Grid.Row="0"   Grid.Column="1"    Name="txt_gnt_creditor_father_name" GotFocus="txt_GotFocus" />
+
+                                <APM:APMLabel               Grid.Row="0" Grid.Column="3"  Content="تاریخ تولد:" />
+                                <APM:PersianDatePicker      Grid.Row="0"   Grid.Column="4"    Name="txt_gnt_creditor_birth_date" GotFocus="txt_gnt_creditor_birth_date_GotFocus" />
+
+                                <APM:APMLabel               Grid.Row="1"   Grid.Column="0"    Name="lblgnt_creditor_description">توضیحات:</APM:APMLabel>
+                                <APM:APMTextBox             Grid.Row="1"   Grid.Column="1"    Name="txt_gnt_creditor_description" Grid.ColumnSpan="7" GotFocus="txt_GotFocus" />
+
+                                <APM:APMLabel           Grid.Row="0" Grid.Column="6" Content="انتخاب گروه های سهامدار :"/>
+                                <APM:APMBrowser         Grid.Row="0" Grid.Column="7" XMultiSelect="True" Name="brw_gnt_creditor_group" XBrowseClick="gnt_creditor_group_XBrowseClick" />
+
+                            </Grid>
+                        </APM:APMScrollViewer>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات آدرس">
+                        <APM:APMScrollViewer>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto" />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+                                <APM:APMLabel Grid.Column="0" Grid.Row="0" Content="شماره تلفن:"/>
+                                <APM:APMIntTextBox Name="txt_gnt_creditor_tel" Grid.Row="0" Grid.Column="1" TextChanged="txt_gnt_creditor_tel_TextChanged" GotFocus="txt_GotFocus" />
+                                <!--<APM:APMInfoLabel Grid.Row="0" Grid.Column="2" Name="lbl_phone_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>-->
+                                <APM:APMCorrectImage Grid.Row="0" Grid.Column="2" Name="img_phone"/>
+
+                                <APM:APMLabel Grid.Column="3" Grid.Row="0" Content="شماره همراه:"/>
+                                <APM:APMTextBox Name="txt_gnt_creditor_mobile" Grid.Row="0" Grid.Column="4" TextChanged="txt_gnt_creditor_mobile_TextChanged" GotFocus="txt_GotFocus" />
+                                <!--<APM:APMInfoLabel Grid.Row="0" Grid.Column="5" Name="lbl_mobile_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>-->
+                                <APM:APMCorrectImage Grid.Row="0" Grid.Column="5" Name="img_mobile"/>
+
+                                <APM:APMLabel Grid.Column="0" Grid.Row="1" Content="کد پستی:"/>
+                                <APM:APMTextBox Name="txt_gnt_creditor_postalcode" Grid.Row="1" Grid.Column="1" TextChanged="txt_gnt_creditor_postalcode_TextChanged" GotFocus="txt_GotFocus" />
+                                <!--<APM:APMInfoLabel Grid.Row="1" Grid.Column="2" Name="lbl_postalcode_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>-->
+                                <APM:APMCorrectImage Grid.Row="1" Grid.Column="2" Name="img_postal_code"/>
+
+                                <APM:APMLabel Grid.Column="3" Grid.Row="1" Content="شماره حساب :"/>
+                                <APM:APMTextBox Name="txt_gnt_creditor_account_number" Grid.Row="1" Grid.Column="4" TextChanged="txt_gnt_creditor_account_number_TextChanged" GotFocus="txt_GotFocus" />
+                                <!--<APM:APMInfoLabel Grid.Row="1" Grid.Column="5" Name="lbl_account_length" Margin="0,3,0,2"  Foreground="Gray" HorizontalAlignment="Left"/>-->
+                                <APM:APMCorrectImage Grid.Row="1" Grid.Column="5" Name="img_account"/>
+
+
+                                <APM:APMLabel Grid.Column="0" Grid.Row="2" Content="آدرس:"/>
+                                <APM:APMTextBox Name="txt_gnt_creditor_address" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="5" GotFocus="txt_GotFocus" />
+
+                            </Grid>
+                        </APM:APMScrollViewer>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="مشخصات تفصیلی">
+                        <APM:APMScrollViewer>
+                            <Grid Margin="8">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width=" auto"/>
+                                    <ColumnDefinition Width="1*"/>
+                                    <ColumnDefinition Width=" auto"/>
+                                    <ColumnDefinition Width=" auto"/>
+                                    <ColumnDefinition Width="10*"/>
+                                </Grid.ColumnDefinitions>
+                                <APM:APMLabel     Grid.Column="0"  Content="کد تفصیل:"/>
+                                <APM:APMInfoLabel   Grid.Column="1"     Name="txt_gnt_creditor_code"  />
+                                <APM:APMLabel             Grid.Column="3" Content="نام تفصیل:" />
+                                <APM:APMInfoLabel Name="lbl_gnt_creditor_name" Grid.Column="4"/>
+
+                            </Grid>
+                        </APM:APMScrollViewer>
+                    </APM:APMTabItem>
+                    <APM:APMTabItem Header="شماره پرونده های بدون استفاده">
+                        <APM:APMScrollViewer>
+                            <StackPanel Margin="8" Orientation="Horizontal" Name="stkEmptyCodes">
+                                <APM:APMToolbarButton XImage="Refresh" Name="btnRefreshEmptyCodes" Click="btnRefreshEmptyCodes_Click" XSize="Small"/>
+                                <ListBox HorizontalAlignment="Left" MaxHeight="70" Height="70"  Width="70" VerticalAlignment="Top" Name="lst_empty_codes" Grid.Row="1" Grid.Column="2"/>
+                                <APM:APMLabel  Name="lblEmptyCodesCountTitle" Content="تعداد :" Margin="10,0,0,0"/>
+                                <APM:APMInfoLabel Name="lblEmptyCodesCount" BorderBrush="LightGray" Margin="0" BorderThickness="1"/>
+                            </StackPanel>
+                        </APM:APMScrollViewer>
+                    </APM:APMTabItem>
+                </APM:APMTabControl>
+            </APM:APMGroupBoxExtended>
+            <APM:APMGroupBoxExtended Name="grpAdvancedSearch" Header="جستجو" DockPanel.Dock="Top">
+                <APM:APMScrollViewer>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <APM:APMLabel Content="شماره پرونده : " Grid.Column="0" Grid.Row="0"/>
+                        <APM:APMTextBox Name="txtSearchCode" Grid.Column="1" Grid.Row="0" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="عنوان:" Grid.Column="2" Grid.Row="0" />
+                        <APM:APMComboBoxCoding Name="cmbSearchTitle" Grid.Column="3" Grid.Row="0" XCategory="Glb_Title" SelectionChanged="cmbSearchTitle_SelectionChanged"/>
+                        <APM:APMLabel Content="نام :" Grid.Column="4" Grid.Row="0" />
+                        <APM:APMTextBox Name="txtSearchName" Grid.Column="5" Grid.Row="0" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="نام خانوادگی :" Grid.Column="6" Grid.Row="0"/>
+                        <APM:APMTextBox Name="txtSearchFamily" Grid.Column="7" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="نام پدر :" Grid.Column="8" Grid.Row="0"/>
+                        <APM:APMTextBox Name="txtSearchFatherName" Grid.Column="9" Grid.Row="0" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="کد ملی :" Grid.Column="10" Grid.Row="0"/>
+                        <APM:APMTextBox Name="txtSearchNationalCode" Grid.Column="11" Grid.Row="0" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="تلفن :" Grid.Column="0" Grid.Row="1"/>
+                        <APM:APMTextBox Name="txtSearchPhone" Grid.Column="1" Grid.Row="1" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="آدرس :" Grid.Column="2" Grid.Row="1"/>
+                        <APM:APMTextBox Name="txtSearchAddress" Grid.Column="3" Grid.Row="1" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="کد سیستم قدیم :" Grid.Column="4" Grid.Row="1"/>
+                        <APM:APMTextBox Name="txtSearchOldCode" Grid.Column="5" Grid.Row="1" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="کد سهامدار اصلی در سیستم قدیم :" Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="3"/>
+                        <APM:APMTextBox Name="txtSearchOldParentCode" Grid.Column="9" Grid.Row="1" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        <APM:APMLabel Content="گروه سهامدار :" Grid.Column="10" Grid.Row="1"/>
+                        <APM:APMBrowser Name="brwFilterGroup" Grid.Column="11" Grid.Row="1" XShowCode="False" XBrowseClick="brwFilterGroup_XBrowseClick" />
+                        <APM:APMSeprator Grid.Column="12" Grid.RowSpan="2" Margin="10,0,0,0" />
+                        <Grid Margin="0" Grid.Column="13" Grid.RowSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <APM:APMLabel Grid.Column="0" Grid.RowSpan="2" Content="آدرس زمین" />
+                            <APM:APMLabel Grid.Column="1" Grid.Row="0" Content="خیابان :" />
+                            <APM:APMLabel Grid.Column="1" Grid.Row="1" Content="ردیف :"  />
+                            <APM:APMIntTextBox Grid.Column="2" Grid.Row="0" Name="txtSearchEarthStreet" KeyDown="txtAdvancedSearch_KeyDown" />
+                            <APM:APMIntTextBox Grid.Column="2" Grid.Row="1" Name="txtSearchEarthline" KeyDown="txtAdvancedSearch_KeyDown"/>
+                            <APM:APMLabel Grid.Column="3" Grid.Row="0" Content="بلوک :"/>
+                            <APM:APMLabel Grid.Column="3" Grid.Row="1" Content="پلاک :" />
+                            <APM:APMIntTextBox Grid.Column="4" Grid.Row="0" Name="txtSearchEarthBlock" KeyDown="txtAdvancedSearch_KeyDown"/>
+                            <APM:APMIntTextBox Grid.Column="4" Grid.Row="1" Name="txtSearchEarthPlaque" KeyDown="txtAdvancedSearch_KeyDown"/>
+                        </Grid>
+                        <APM:APMSeprator Grid.Column="14" Grid.RowSpan="2" Margin="10,0,0,0" />
+                        <StackPanel Orientation="Vertical" Grid.Column="15" Grid.RowSpan="2">
+                            <APM:APMLabel Content="جستجو روی همه فیلد ها "/>
+                            <APM:APMTextBox Width="110" Name="txtSearch" KeyDown="txtSimpleSearch_KeyDown"/>
+                        </StackPanel>
+                        <APM:APMSeprator Grid.Column="16" Grid.RowSpan="2" Margin="0" />
+                        <StackPanel Orientation="Horizontal" Grid.Column="17" Grid.RowSpan="2">
+                            <APM:APMLabel Content="تعداد بازیابی : "/>
+                            <APM:APMTextBox Name="txtSearchCount" Grid.Column="10" Grid.Row="1" Text="20" MinWidth="30" KeyDown="txtAdvancedSearch_KeyDown"/>
+                            <APM:APMToolbarButton XImage="Refresh" XSize="Big" Name="btnAdvancedSearch" Click="btnAdvancedSearch_Click" Margin="5"/>
+                        </StackPanel>
+                    </Grid>
+                </APM:APMScrollViewer>
+            </APM:APMGroupBoxExtended>
+            <APM:APMGroupBox Header="لیست سهامداران">
+                <APM:APMDataGridExtended  Name="dbgCreditor" Margin="8"  >
+                </APM:APMDataGridExtended>
+            </APM:APMGroupBox >
+        </APM:APMDockPanel>
+    </APM:APMBorder>
+</UIL:WindowEntity>

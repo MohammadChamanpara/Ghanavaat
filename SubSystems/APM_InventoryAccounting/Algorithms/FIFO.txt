@@ -1,0 +1,31 @@
+FIFO
+{
+	SumSendWithoutThisSend=50
+	thisSend=75;
+	SumSendWithThisSend=125
+	SumCount=SumCountPrice=0
+	foreach ReceiveArticle RA
+	{
+		if (RA.count<SumSendWithoutThisSend)
+		{
+			SumSendWithoutThisSend - = RA.Count
+			SumSendWithThisSend - = RA.Count
+		}
+		ELSE
+		{
+			RA.count =Convert ( RA.Count )
+			RA.count - = sumSendWithoutThisSend
+			sumSendWithThisSend - = sumSendWithoutThisSend
+			sumSendWithoutThisSend-=sumSendWithoutThisSend
+			calculatingCount=min(RA.count,thisSend)
+			SumCount + = calculatingCount
+			SumCountPrice + = calculatingCount * convert(RA.Price)
+			thisSend - = calculatingCount
+			if(thisSend<=0)
+				break 
+		}
+	}
+	return sumCountPrice/sumCount;
+}
+			
+			

@@ -1,0 +1,73 @@
+﻿<UIL:WindowTwoTabs x:Class="APM_SubSystems.frm_gnt_service"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:APM="clr-namespace:APMComponents;assembly=APMComponents" 
+    xmlns:UIL="clr-namespace:UserInterfaceLayer;assembly=UserInterfaceLayer"
+    xmlns:DDB="clr-namespace:DataAccessLayer;assembly=DataAccessLayer"  
+    x:TypeArguments="DDB:stp_gnt_service_selResult, DDB:stp_gnt_service_article_selResult"
+    Title="خدمات" FontFamily="Tahoma" >
+    <APM:APMBorder>
+        <DockPanel>
+            <APM:APMStatusBar DockPanel.Dock="Bottom" XType="InvDocumentWindow"/>
+            <APM:APMToolBar Name="tbr_buy_request" XType="NormalWindow" />
+            <APM:APMGroupBox Header="نام سهامدار" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="2,1,1,0">
+                <APM:APMInfoLabel Name="lbl_creditor" HorizontalAlignment="Left"/>
+            </APM:APMGroupBox>
+            <APM:APMTabControl Background="Transparent" Name="tab_main" >
+                <APM:APMTabItem Header="لیست خدمات">
+                    <APM:APMDataGridExtended  Name="dbg_gnt_service" />
+                </APM:APMTabItem>
+                <APM:APMTabItem Header="جزئیات خدمات">
+                    <DockPanel>
+                        <APM:APMGroupBoxExtended DockPanel.Dock="Bottom" Header="ورود اطلاعات جزئیات" Name="grp_article_current_row"  >
+                            <APM:APMScrollViewer>
+                                <DockPanel Margin="5">
+                                    <StackPanel DockPanel.Dock="Left" VerticalAlignment="Center">
+                                        <APM:APMToolbarButton XImage="Previous" XSize="Small" />
+                                        <APM:APMToolbarButton XImage="Next" XSize="Small" />
+                                    </StackPanel>
+                                    <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
+                                        <APM:APMToolbarButton XImage="Delete" XSize="Small" />
+                                        <APM:APMToolbarButton XImage="Insert" XSize="Small"/>
+                                    </StackPanel >
+                                    <StackPanel Margin="10">
+                                        <StackPanel Orientation="Horizontal" Margin="5">
+                                            <!--<APM:APMLabel Content="تاریخ :" />
+                                            <APM:PersianDatePicker Name="pdp_gnt_service_article_date" />-->
+                                            <!--<APM:APMLabel Content="سهامدار :"/>
+                                            <APM:APMBrowser Name="brw_gnt_service_article_gnt_creditor_id" XShowCode="False" XBrowseClick="brw_gnt_service_article_gnt_creditor_id_XBrowseClick" />-->
+                                            <APM:APMLabel Content="نوع هزینه :" />
+                                            <APM:APMBrowser Name="brw_gnt_service_article_gnt_cost_type_id" XShowCode="False" XBrowseClick="brw_gnt_service_article_gnt_cost_type_XBrowseClick" />
+                                            <APM:APMLabel Content="تعداد یا مقدار : "/>
+                                            <APM:APMFloatTextBox Name="txt_gnt_service_article_count" LostFocus="txt_gnt_service_article_count_LostFocus"/>
+                                            <APM:APMLabel Content=""/>
+                                            <APM:APMLabel Content="مبلغ واحد : "/>
+                                            <APM:APMMoneyLabel Name="lbl_gnt_service_article_unit_price"/>
+                                            <APM:APMLabel Content="ریال"/>
+                                            <APM:APMLabel Content=" "/>
+                                            <APM:APMLabel Content="مبلغ کل :"/>
+                                            <APM:APMMoneyTextBox Name="txt_gnt_service_article_total_price"/>
+                                            <APM:APMLabel Content="ریال"/>
+                                            <APM:APMLabel Content=" "/>
+                                            <APM:APMLabel Content="شرح: "/>
+                                            <APM:APMTextBox Name="txt_gnt_service_article_description"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DockPanel>
+                            </APM:APMScrollViewer>
+                        </APM:APMGroupBoxExtended>
+                        <APM:APMDocumentHeader Name="documentHeader" XType="GntDeal" />
+                        <APM:APMGroupBox Grid.Row="1" Header="آرتیکل های خدمات" Name="grp_buy_request_article_Base" >
+                            <APM:APMDataGridExtended  Name="dbg_gnt_service_article" XShowTotalRials="True">
+                                <!--<APM:APMDataGridExtended.ContextMenu>
+                                    <ContextMenu>
+                                    </ContextMenu>
+                                </APM:APMDataGridExtended.ContextMenu>-->
+                            </APM:APMDataGridExtended>
+                        </APM:APMGroupBox>
+                    </DockPanel>
+                </APM:APMTabItem>
+            </APM:APMTabControl>
+        </DockPanel>
+    </APM:APMBorder>
+</UIL:WindowTwoTabs>
